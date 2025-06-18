@@ -58,7 +58,7 @@ Elles sont regroupées par **jalon (milestone)**, chacune décrite par son objec
 
 |Issue|Titre | Label principal | Branche prévue | État |
 |-|-|-|-|-|
-| #2 | Mise au point de l’environnement | `Tifosi-SQL` | `MonLucCo/issue2` | ⬜ à venir |
+| #2 | Mise au point de l’environnement | `Tifosi-SQL` | `MonLucCo/issue2` | ✔️ terminée |
 | #3 | Modélisation MCD et MLD | `Tifosi-Modélisation` | `MonLucCo/issue3`| ⬜ à venir |
 | #4 | Création de la base SQL + utilisateur | `Tifosi-SQL` | `MonLucCo/issue4` | ⬜ à venir |
 | #5 | Insertion des données | `Tifosi-Import` | `MonLucCo/issue5` | ⬜ à venir |
@@ -108,7 +108,7 @@ Chaque issue donne lieu à :
 | Issue | Tâches principales | Livrable attendu |
 |-|-|-|
 | #1 | Structuration, planification, Kanban, documentation de méthode | `README_process.md`, `README_building.md`, `README_plan.md`, labels, Kanban |
-| #2 | Installation WAMP/XAMPP, accès phpMyAdmin, création base `tifosi` vide | Export de la base vide (`init_tifosi.sql`) |
+| #2 | Installation WAMP/XAMPP, accès phpMyAdmin, création base `tifosi` vide | Export de la base vide (`create_tifosi.sql`) |
 | #3 | Reproduction du MCD fourni + élaboration MLD | Fichier `.drawio` ou image du MCD, script `mld.sql` si applicable |
 | #4 | Écriture du script SQL avec tables + utilisateur | `create_tifosi.sql`, création utilisateur `tifosi` |
 | #5 | Exploitation des données Excel + insertion | `insert_data.sql` prêt à charger les données |
