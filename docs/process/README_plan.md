@@ -29,6 +29,16 @@ Elles sont regroupées par **jalon (milestone)**, chacune décrite par son objec
 
 ### 🚩 Milestone `v0.1 – Structuration`
 
+> **Description :**
+> Organisation initiale du projet : structure du dépôt, documentation du cadre méthodologique, planification, tableau de bord GitHub.
+>
+> **Livrables attendus :**
+>
+> - README_process.md
+> - README_plan.md
+> - README_building.md
+> - Création du Kanban (Project GitHub)
+
 |Issue|Titre | Label principal | Branche prévue | État |
 |-|-|-|-|-|
 | #1 | Structuration du projet | `Tifosi-Organisation` | `MonLucCo/issue1` | ✔️ terminée |
@@ -36,6 +46,15 @@ Elles sont regroupées par **jalon (milestone)**, chacune décrite par son objec
 ---
 
 ### 🚩 Milestone `v0.2 – Modélisation & base`
+
+> **Description :**
+> Installation de l’environnement, modélisation des données (MCD/MLD), création de la base SQL et insertion des données.
+>
+> **Livrables attendus :**
+>
+> - Export base vide init_tifosi.sql
+> - Modélisation MCD/MLD (.png, .drawio, .sql)
+> - Scripts : create_tifosi.sql, insert_data.sql
 
 |Issue|Titre | Label principal | Branche prévue | État |
 |-|-|-|-|-|
@@ -48,6 +67,15 @@ Elles sont regroupées par **jalon (milestone)**, chacune décrite par son objec
 
 ### 🚩 Milestone `v0.3 – Requêtes & livraison`
 
+> **Description :**
+> Vérification de la cohérence de la base via requêtes de test, sauvegarde complète de la base et documentation technique.
+>
+> **Livrables attendus :**
+>
+> - requetes_tests.sql
+> - backup_tifosi.sql
+> - README(s) mis à jour
+
 | Issue | Titre | Label principal | Branche prévue | État |
 |-|-|-|-|-|
 | #6 |Requêtes de test + sauvegarde + documentation|`Tifosi-Livrable`|`MonLucCo/issue6`| ⬜ à venir |
@@ -55,6 +83,14 @@ Elles sont regroupées par **jalon (milestone)**, chacune décrite par son objec
 ---
 
 ### 🚩 Milestone `v1.0 – Version finale`
+
+> **Description :**
+> Finalisation, relecture, nettoyage du dépôt et publication d’une release stable.
+>
+> **Livrables attendus :**
+>
+> - Release v1.0.0
+> - Pack de livraison (script complet, sauvegarde, README)
 
 | Issue | Titre | Label principal | Branche prévue | État |
 |-|-|-|-|-|
