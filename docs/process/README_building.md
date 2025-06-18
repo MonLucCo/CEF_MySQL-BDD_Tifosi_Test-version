@@ -55,7 +55,7 @@ le tableau **synthétise l’état d’avancement global** et présente une situ
 | Milestone | Issues | État | Notes |
 |--|--|-|-|
 | `v0.1 – Structuration` | #1 | ✔️ terminé - 17/06/2025 | Documentation projet finalisée, plan validé, Kanban actif |
-| `v0.2 – Modélisation & base` | #2 à #5 | ⏳ en cours | Environnement validé, modélisation reproduite, scripts SQL exécutés |
+| `v0.2 – Modélisation & base` | #2 à #5 | ⏳ en cours depuis 17/06/2025 | Environnement validé, modélisation reproduite, scripts SQL exécutés |
 | `v0.3 – Requêtes & livraison` | #6 | ⬜ à venir  | Requêtes validées, sauvegarde générée, livrables consolidés |
 | `v1.0 – Version finale` | #7 | ⬜ à venir | Clôture du dépôt, publication de la release, archivage projet |
 
