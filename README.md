@@ -11,7 +11,7 @@
     - [🛠️ 2.2- Pré-requis](#️-22--pré-requis)
     - [📦 2.3- Exploitation du devoir](#-23--exploitation-du-devoir)
   - [💬 3- Contribution](#-3--contribution)
-  - [📌 4- État du projet](#-4--état-du-projet)
+  - [� 4- État du projet](#-4--état-du-projet)
   - [📄 5- Licence](#-5--licence)
 
 ## 📘 1- Projet Tifosi — Base de données MySQL
@@ -35,12 +35,13 @@ Ce dépôt constitue le livrable du Devoir n°10 du Centre Européen de Formatio
 /
 ├── README.md                     # Ce fichier
 ├── docs/
-│   ├── Sujet-Devoir10.pdf        # Sujet du devoir
-│   ├── readme_docs.md            # Sommaire documentaire
+│   ├── README_docs.md            # Sommaire documentaire
+│   └── sources/
+│       └── Sujet-Devoir10.pdf    # Sujet du devoir
 │   └── process/
-│       └── readme_process.md     # Démarche de réalisation du projet
+│       └── README_process.md     # Démarche de réalisation du projet
 ├── sql/
-│   ├── readme_sql.md             # Description des scripts SQL
+│   ├── README_sql.md             # Description des scripts SQL
 │   └── create_tifosi.sql         # Script de création des tables
 └── .gitignore
 ```
@@ -79,7 +80,7 @@ Les issues sont utilisées comme outil de suivi projet personnel.
 
 ---
 
-## 📌 4- État du projet
+## 📊 4- État du projet
 
 > 🟢 **Projet en cours de réalisation**  
 > Ce dépôt évolue par étapes avec des commits itératifs documentés dans un GitHub Project (kanban).

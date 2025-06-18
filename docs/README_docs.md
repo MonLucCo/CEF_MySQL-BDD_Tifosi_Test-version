@@ -4,9 +4,9 @@ Ce dossier regroupe tous les documents de référence du projet : consignes, not
 
 ## 🧾 Contenu
 
-- `Sujet-Devoir10_BddTifosiAvecMySQL.pdf` : énoncé officiel du devoir
-- `readme_docs.md` : point d’entrée vers la documentation
-- `readme_process.md` : journal et méthode projet
+- `README_docs.md` : ce document -> point d’entrée vers la documentation
+- [README_process.m](./process/README_process.md) : journal et méthode projet (accès : `./process/`)
+- [Sujet-Devoir10_BddTifosiAvecMySQL.pdf](./sources/Sujet-Devoir10_BddTifosiAvecMySQL.pdf) : énoncé officiel du devoir (accès : `./sources/`)
 - D’autres documents viendront au fil des évolutions (captures, exports Excel, log de test, etc.)
 
 ## 🔄 Mises à jour

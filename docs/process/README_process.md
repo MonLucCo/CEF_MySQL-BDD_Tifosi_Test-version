@@ -145,6 +145,6 @@ Ce cadre peut être appliqué à d’autres projets de bases de données, de dé
 
 Projet conçu et documenté par **PerLucCo**
 📫 contac : [contact.perlucco@gmail.com](mailto:contact.perlucco@gmail.com)
-📌 Contexte : Devoir N°10 – CEF, base de données Tifosi avec MySQL
+🧩 Contexte : Devoir N°10 – CEF, base de données Tifosi avec MySQL
 
 ---

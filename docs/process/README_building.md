@@ -1,6 +1,6 @@
 # Documentation README_building.md – Processus de Réalisation – Projet Tifosi (MySQL)
 
-Ce document applique le cadre méthodologique défini dans [README_process.md](README_process.md) au projet **Tifosi (MySQL)**. Il permet de retracer la mise en œuvre concrète dans le dépôt, issue après issue, étape après étape, avec les jalons, les branches créées et les livrables produits.
+Ce document applique au projet **Tifosi (MySQL)** le cadre méthodologique défini dans [README_process.md](README_process.md). Il permet de retracer la mise en œuvre concrète dans le dépôt, issue après issue, étape après étape, avec les jalons, les branches créées et les livrables produits.
 
 ---
 
@@ -35,7 +35,7 @@ Ce document applique le cadre méthodologique défini dans [README_process.md](R
 
 - 📁 Initialisation du dépôt (`chore(init)`) :
   - 🛠️ création de l’arborescence `/sql`, `/docs`, `/docs/process`
-  - 🧱 ajout des fichiers : [README.md](../../README.md), [LICENSE](../../LICENSE), fichiers `readme_*.md`
+  - 🧱 ajout des fichiers : [README.md](../../README.md), [LICENSE](../../LICENSE), fichiers `README_*.md`
   - 🗂️ Upload du sujet : [docs/sources/Sujet-Devoir10_BddTifosiAvecMySQL.pdf](../sources/Sujet-Devoir10_BddTifosiAvecMySQL.pdf)
 - 🛠️ Création du [Kanban Tifosi](https://github.com/users/MonLucCo/projects/3/views/1?layout=board) dans l’onglet “Projects” de Github
 - 📘 Application du cadre méthodologique :
@@ -54,7 +54,7 @@ le tableau **synthétise l’état d’avancement global** et présente une situ
 
 | Milestone | Issues | État | Notes |
 |--|--|-|-|
-| `v0.1 – Structuration` | #1 | ✔️ terminé - 18/06 | Documentation projet finalisée, plan validé, Kanban actif |
+| `v0.1 – Structuration` | #1 | ✔️ terminé - 17/06/2025 | Documentation projet finalisée, plan validé, Kanban actif |
 | `v0.2 – Modélisation & base` | #2 à #5 | ⏳ en cours | Environnement validé, modélisation reproduite, scripts SQL exécutés |
 | `v0.3 – Requêtes & livraison` | #6 | ⬜ à venir  | Requêtes validées, sauvegarde générée, livrables consolidés |
 | `v1.0 – Version finale` | #7 | ⬜ à venir | Clôture du dépôt, publication de la release, archivage projet |
@@ -71,7 +71,7 @@ le tableau **synthétise l’état d’avancement global** et présente une situ
 ## ✍️ Auteur
 
 Projet réalisé et structuré par **PerLucCo**  
-📌 Devoir N°10 – Centre Européen de Formation  
+🧩 Devoir N°10 – Centre Européen de Formation  
 📫 contact : [contact.perlucco@gmail.com](mailto:contact.perlucco@gmail.com)
 
 ---
