@@ -15,4 +15,13 @@ Ce dossier regroupe tous les documents de référence du projet : consignes, not
 
 Ce fichier est actualisé à chaque PR merge commit comportant une évolution documentaire.
 
+## 🔄 Suivi des évolutions par domaine
+
+| Domaine | Historique |
+|--|--|
+| 📦 Structure globale | [`CHANGELOG.md`](../CHANGELOG.md) |
+| 🧱 MCD | [`docs/mcd/mcd-historique.md`](mcd/mcd-historique.md) |
+| 🧩 MRLD | [`docs/implementation/mrld-historique.md`](implementation/mrld-historique.md) |
+| 🧰 SQL | [`docs/sql/sql-historique.md`](../sql/sql-historique.md) |
+
 ---

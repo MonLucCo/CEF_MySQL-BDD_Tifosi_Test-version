@@ -14,6 +14,8 @@
     - [📦 2.3- Exploitation du devoir](#-23--exploitation-du-devoir)
   - [💬 3- Contribution](#-3--contribution)
   - [📊 4- État du projet](#-4--état-du-projet)
+    - [4.1- Avancement du projet](#41--avancement-du-projet)
+    - [4.2- Suivi des évolutions](#42--suivi-des-évolutions)
   - [📄 5- Licence](#-5--licence)
 
 ## 📘 1- Projet Tifosi — Base de données MySQL
@@ -136,11 +138,22 @@ Les issues sont utilisées comme outil de suivi projet personnel.
 
 ## 📊 4- État du projet
 
+### 4.1- Avancement du projet
+
 > 🟢 **Projet en cours de réalisation**  
 > Ce dépôt évolue par étapes avec des commits itératifs documentés dans un GitHub Project (kanban).
 
 Pour suivre l’avancement et la roadmap :
 👉 [Tableau de projet GitHub associé](https://github.com/users/MonLucCo/projects/3/views/1?layout=board)
+
+### 4.2- Suivi des évolutions
+
+L'historique des décisions et versions est consigné dans :
+
+- [`CHANGELOG.md`](CHANGELOG.md) — Journal version du projet
+- [`mcd-historique.md`](./docs/mcd/mcd-historique.md) — Journal évolution du MCD
+- [`mrld-historique.md`](./docs/implementation/mrld-historique.md) — Journal structure de la BDD
+- [`sql-historique.md`](./sql/sql-historique.md) — Journal SQL produit
 
 ---
 
