@@ -12,6 +12,7 @@ _Dernière mise à jour :_ 20 juin 2025
   - [🧭 Versions successives](#-versions-successives)
   - [📚 MRLD de référence](#-mrld-de-référence)
     - [🧩 MRLD v0.1 — Transposition brute](#-mrld-v01--transposition-brute)
+    - [🧩 MRLD v0.2 — Centralisation de `jour` (essai)](#-mrld-v02--centralisation-de-jour-essai)
 
 ---
 
@@ -50,7 +51,8 @@ Inspirée des recommandations de [LaConsole.dev](https://www.laconsole.dev) et d
 | Version | Objectif principal | Document |
 |-|-|-|
 | v0.1 | Transposition brute du MCD | [`MRLD-v0.1_tifosi.md`](./mrld-versions/MRLD-v0.1_tifosi.md) |
-| v1 | Modèle logique final retenu | **ci-dessous** |
+| v0.2 | Tentative de centralisation de l’attribut `jour` | [`MRLD-v0.2_tifosi.md`](./mrld-versions/MRLD-v0.2_tifosi.md) |
+| v1 | Modèle logique final retenu | **non défini** |
 
 ---
 
@@ -62,4 +64,12 @@ Version directement issue du MCD v1, sans facteur d’optimisation.
 Champ `jour` présent en double dans les relations `achète` et `paye`.
 
 📄 Voir : [MRLD-v0.1_tifosi.md](./mrld-versions/MRLD-v0.1_tifosi.md)  
-📐 Schéma : [mrld_v0.1_tifosi.drawio.png](./schemas/mrld_v0.1_tifosi.drawio.png)
+📐 Schéma : [mrld-v0.1_tifosi.drawio.png](./schemas/mrld-v0.1_tifosi.drawio.png)
+
+### 🧩 MRLD v0.2 — Centralisation de `jour` (essai)
+
+Tentative d’élimination de la redondance `jour` via une table `jours`.  
+Résultat : structure techniquement viable, mais conceptuellement incomplète.
+
+📄 Voir : [MRLD-v0.2_tifosi.md](./mrld-versions/MRLD-v0.2_tifosi.md)  
+📐 Schéma : [mrld-v0.2_tifosi.drawio.png](./schemas/mrld-v0.2_tifosi.drawio.png)
