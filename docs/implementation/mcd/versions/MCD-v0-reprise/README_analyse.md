@@ -3,7 +3,7 @@
 _Rédigé par :_ PerLucCo  
 _Date :_ Juin 2025
 
-Ce dossier regroupe l’ensemble des documents liés à l’analyse du **Modèle Conceptuel de Données (MCD)** du projet.
+Ce dossier regroupe l’ensemble des documents liés à l’analyse du **Modèle Conceptuel de Données (MCD)** du projet. Les informations intitales sont reprises du sujet fournis pour le projet.
 
 - [`README_analyse.md`](README_analyse.md) : synthèse de la démarche et du modèle retenu
 - [`mcd-tifosi_analyse.md`](mcd-tifosi_analyse.md) : tableau d’analyse technique complet des entités et relations
@@ -88,10 +88,10 @@ Pour une critique détaillée des formulations sémantiques, voir le document co
 
 ## 🧭 MCD de référence retenu pour l'implémentation (V1)
 
-Le modèle du MCD tel qu’il est modélisé dans `tifosi_modelisation.drawio` est conservé comme **structure de référence pour l’implémentation V1**, avec la lecture métier précisée ci-dessus.
+Le modèle du MCD tel qu’il est modélisé est conservé comme **structure de référence pour l’implémentation V1**, avec la lecture métier précisée ci-dessus.
 
-📎 _Version de référence (Reprise - version 1) établie avec draw.io :_ `docs/mcd/tifosi_mcd_reprise-v1.png`
->![alt text](tifosi_mcd_reprise-v1.png)
+📎 _Version de référence (Reprise - version 1) établie avec draw.io :_ `docs/mcd/versions-mcd-vo-reprise/tifosi_mcd_reprise-v0.png`
+>![alt text](tifosi_mcd_reprise-v0.png)
 
 ---
 

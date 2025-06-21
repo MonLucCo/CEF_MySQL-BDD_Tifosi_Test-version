@@ -20,8 +20,8 @@ Ce fichier est actualisé à chaque PR merge commit comportant une évolution do
 | Domaine | Historique |
 |--|--|
 | 📦 Structure globale | [`CHANGELOG.md`](../CHANGELOG.md) |
-| 🧱 MCD | [`docs/mcd/mcd-historique.md`](mcd/mcd-historique.md) |
-| 🧩 MRLD | [`docs/implementation/mrld-historique.md`](implementation/mrld-historique.md) |
-| 🧰 SQL | [`docs/sql/sql-historique.md`](../sql/sql-historique.md) |
+| 🧱 MCD | [`docs/mcd/HISTORIQUE_mcd.md`](./implementation/mcd/HISTORIQUE_mcd.md) |
+| 🧩 MRLD | [`docs/implementation/HISTORIQUE_mld.md`](./implementation/mld/HISTORIQUE_mld.md) |
+| 🧰 SQL | [`docs/sql/HISTORIQUE_sql.md`](../sql/HISTORIQUE_sql.md) |
 
 ---

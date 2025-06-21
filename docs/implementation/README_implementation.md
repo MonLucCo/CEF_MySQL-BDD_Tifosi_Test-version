@@ -1,14 +1,26 @@
-# 🧾 Historique — Implémentation du projet (Tifosi)
+# 🧾 Implémentation du projet (Tifosi)
+
+Ce dossier centralise l’ensemble des livrables techniques du projet :  
+modélisation relationnelle, schémas d’évolution, scripts SQL.
 
 ---
 
-- [🧾 Historique — Implémentation du projet (Tifosi)](#-historique--implémentation-du-projet-tifosi)
-  - [🧾 Suivi de conception du MRLD / MPD](#-suivi-de-conception-du-mrld--mpd)
+## 🧱 Modèle Conceptuel (MCD)
+
+- [`HISTORIQUE_mcd_tifosi.md`](./mcd/HISTORIQUE_mcd_tifosi.md) — Traçabilité complète des étapes de modélisation
+- [`MCD_tifosi.md`](./mcd/MCD_tifosi.md) — Fichier central des versions
+- [`schemas/`](./mcd/schemas/) — Schémas visuels `.drawio.png` pour chaque version
 
 ---
 
-## 🧾 Suivi de conception du MRLD / MPD
+## 🧾 Modèle Relationnel Logique de Données (MRLD)
 
-- [`mrld-historique.md`](mrld-historique.md) — Historique technique du modèle logique (tables, relations, contraintes)
-- [`MRLD_tifosi.md`](MRLD_tifosi.md) — MRLD retenu
-- [`MPD_tifosi.sql`](MPD_tifosi.sql) — Script SQL produit
+- [`HISTORIQUE_mld_tifosi.md`](./mrld-versions/HISTORIQUE_mld_tifosi.md) — Historique technique du MRLD
+- [`MRLD_tifosi.md`](./mrld-versions/MRLD_tifosi.md) — Document de référence des versions logiques
+- [`schemas/`](./schemas/) — Schémas `.drawio.png` du MRLD
+
+---
+
+## 🧩 Modèle Physique (MPD)
+
+- [`MPD_tifosi.sql`](./MPD_tifosi.sql) — Script SQL final généré depuis le MRLD v1
