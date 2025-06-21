@@ -24,25 +24,25 @@ Il conserve fidèlement l’architecture conceptuelle proposée, sans optimisati
 
 ## 🧱 Entités
 
-- **client** (id_client, nom_client, age)
-- **menu** (id_menu, nom_menu, prix_menu)
-- **focaccia** (id_focaccia, nom_focaccia, prix_focaccia)
-- **boisson** (id_boisson, nom_boisson)
-- **marque** (id_marque, nom_marque)
-- **ingredient** (id_ingredient, nom_ingredient)
+- **clients** (id_client, nom_client, age)
+- **menus** (id_menu, nom_menu, prix_menu)
+- **focaccias** (id_focaccia, nom_focaccia, prix_focaccia)
+- **boissons** (id_boisson, nom_boisson)
+- **marques** (id_marque, nom_marque)
+- **ingredients** (id_ingredient, nom_ingredient)
 
 ---
 
 ## 🔄 Relations
 
-| Relation      | De → Vers              | Cardinalités      | Attributs   |
-|---------------|------------------------|-------------------|-------------|
-| `paye`        | client — menu          | 0,n ↔ 0,n         | `jour`      |
-| `achète`      | client — focaccia      | 0,n ↔ 0,n         | `jour`      |
-| `est constitué` | menu — focaccia      | 1,1 ↔ 0,n         | —           |
-| `comprend`    | focaccia — ingrédient  | 0,n ↔ 1,n         | —           |
-| `contient`    | menu — boisson         | 0,n ↔ 0,n         | —           |
-| `appartient`  | boisson — marque       | 1,1 ↔ 0,n         | —           |
+| Relation        | De → Vers                | Cardinalités      | Attributs   |
+|-----------------|--------------------------|-------------------|-------------|
+| `paye`          | clients — menus          | 0,n ↔ 0,n         | `jour`      |
+| `achète`        | clients — focaccias      | 0,n ↔ 0,n         | `jour`      |
+| `est constitué` | menus — focaccias        | 1,1 ↔ 0,n         | —           |
+| `comprend`      | focaccias — ingrédients  | 0,n ↔ 1,n         | —           |
+| `contient`      | menus — boissons         | 0,n ↔ 0,n         | —           |
+| `appartient`    | boissons — marques       | 1,1 ↔ 0,n         | —           |
 
 ---
 
