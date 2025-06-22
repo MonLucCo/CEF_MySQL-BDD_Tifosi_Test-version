@@ -164,7 +164,7 @@ Le champ `#jour_id` porte une date ou un horodatage selon la configuration chois
 
 ## 🖼️ Schéma associé
 
-📁 ![MRLD v1](../schemas/mrld-v1_tifosi.drawio.png)
+📁 ![MRLD v1](../schemas/MRLD-v1_tifosi.drawio.png)
 
 ---
 
@@ -173,4 +173,4 @@ Le champ `#jour_id` porte une date ou un horodatage selon la configuration chois
 - MCD source : [`MCD-v2_tifosi.md`](../../mcd/versions/MCD-v2_tifosi.md)
 - Historique associé : [`HISTORIQUE_mld_tifosi.md`](./HISTORIQUE_mld_tifosi.md)
 - Schéma MCD source : [`MCD-v2_tifosi.drawio.png`](../../mcd/schemas/MCD-v2_tifosi.drawio.png)
-- Schéma MLD source : [`mrld-v1_tifosi.drawio.png`](../schemas/mrld-v1_tifosi.drawio.png)
+- Schéma MLD source : [`MRLD-v1_tifosi.drawio.png`](../schemas/MRLD-v1_tifosi.drawio.png)

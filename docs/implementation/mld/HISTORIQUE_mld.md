@@ -44,7 +44,7 @@ _Dernière mise à jour :_ 19 juin 2025
 - Intégration des relations `paye` et `achète` avec champ `jour` dupliqué
 - Clés primaires + clés étrangères positionnées selon convention
 - Fichier : `MRLD-v0.1_tifosi.md`  
-- Schéma : `mrld-v0.1_tifosi.drawio.png`
+- Schéma : `MRLD-v0.1_tifosi.drawio.png`
 
 ---
 
@@ -54,7 +54,7 @@ _Dernière mise à jour :_ 19 juin 2025
 - Remplacement des attributs `jour` par des clés étrangères `jour_id`
 - Mise en évidence d’un problème conceptuel
 - Fichier : `MRLD-v0.2_tifosi.md`  
-- Schéma : `mrld-v0.2_tifosi.drawio.png`
+- Schéma : `MRLD-v0.2_tifosi.drawio.png`
 
 ---
 

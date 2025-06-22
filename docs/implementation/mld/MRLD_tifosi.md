@@ -65,7 +65,7 @@ Version directement issue du MCD v1, sans facteur d’optimisation.
 Champ `jour` présent en double dans les relations `achète` et `paye`.
 
 📄 Voir : [MRLD-v0.1_tifosi.md](./mrld-versions/MRLD-v0.1_tifosi.md)  
-📐 Schéma : [mrld-v0.1_tifosi.drawio.png](./schemas/mrld-v0.1_tifosi.drawio.png)
+📐 Schéma : [MRLD-v0.1_tifosi.drawio.png](./schemas/MRLD-v0.1_tifosi.drawio.png)
 
 ### 🧩 MRLD v0.2 — Centralisation de `jour` (essai)
 
@@ -73,7 +73,7 @@ Tentative d’élimination de la redondance `jour` via une table `jours`.
 Résultat : structure techniquement viable, mais conceptuellement incomplète.
 
 📄 Voir : [MRLD-v0.2_tifosi.md](./mrld-versions/MRLD-v0.2_tifosi.md)  
-📐 Schéma : [mrld-v0.2_tifosi.drawio.png](./schemas/mrld-v0.2_tifosi.drawio.png)
+📐 Schéma : [MRLD-v0.2_tifosi.drawio.png](./schemas/MRLD-v0.2_tifosi.drawio.png)
 
 ### 🧩 MRLD v1 — Version logique de référence (stabilisée)
 
@@ -85,4 +85,4 @@ Version complète, conforme au `MCD v2`, intégrant :
 - un champ `date_jour` dont le **type (`DATE` / `DATETIME` / `TIMESTAMP`) reste à définir au niveau MPD**, selon le niveau d’unicité métier souhaité.
 
 📄 Voir : [MRLD-v1_tifosi.md](./mrld-versions/MRLD-v1_tifosi.md)  
-📐 Schéma : [mrld-v1_tifosi.drawio.png](./schemas/mrld-v1_tifosi.drawio.png)
+📐 Schéma : [MRLD-v1_tifosi.drawio.png](./schemas/MRLD-v1_tifosi.drawio.png)

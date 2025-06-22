@@ -189,7 +189,7 @@ Voir [`MRLD_tifosi.md`](MRLD_tifosi.md#-conventions-de-nommage-adoptées) :
 
 ### 🧩 Schéma de référence MRLD v0.1
 
->![`mrld-v0.1_tifosi.drawio.png`](../schemas/mrld-v0.1_tifosi.drawio.png)
+>![`MRLD-v0.1_tifosi.drawio.png`](../schemas/MRLD-v0.1_tifosi.drawio.png)
 
 ---
 

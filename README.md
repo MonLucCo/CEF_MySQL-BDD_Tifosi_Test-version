@@ -151,9 +151,9 @@ Pour suivre l’avancement et la roadmap :
 L'historique des décisions et versions est consigné dans :
 
 - [`CHANGELOG.md`](CHANGELOG.md) — Journal version du projet
-- [`mcd-historique.md`](./docs/mcd/mcd-historique.md) — Journal évolution du MCD
-- [`mrld-historique.md`](./docs/implementation/mrld-historique.md) — Journal structure de la BDD
-- [`sql-historique.md`](./sql/sql-historique.md) — Journal SQL produit
+- [`HISTORIQUE_mcd.md`](./docs/implementation/mcd/HISTORIQUE_mcd.md) — Journal évolution du MCD
+- [`HISTORIQUE_mld.md`](./docs/implementation/mld/HISTORIQUE_mld.md) — Journal structure de la BDD
+- [`HISTORIQUE_sql.md`](./sql/HISTORIQUE_sql.md) — Journal SQL produit
 
 ---
 

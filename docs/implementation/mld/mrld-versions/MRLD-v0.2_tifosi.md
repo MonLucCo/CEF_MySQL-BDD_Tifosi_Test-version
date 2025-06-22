@@ -80,10 +80,10 @@ Elle permet de centraliser la colonne `jour` et de la relier via une clé étran
 
 ## 🖼️ Schéma logique
 
-📄 Fichier associé à créer : `mrld-v0.2_tifosi.drawio.png`  
+📄 Fichier associé à créer : `MRLD-v0.2_tifosi.drawio.png`  
 📁 Localisation : `docs/implementation/mld/schemas/`
 
-> ![MRLD v0.2](../schemas/mrld-v0.2_tifosi.drawio.png)
+> ![MRLD v0.2](../schemas/MRLD-v0.2_tifosi.drawio.png)
 
 ---
 
