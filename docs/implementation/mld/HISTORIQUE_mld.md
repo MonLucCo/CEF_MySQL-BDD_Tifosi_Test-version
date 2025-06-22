@@ -11,10 +11,13 @@ _Dernière mise à jour :_ 19 juin 2025
   - [Phases de réalisation du MLD](#phases-de-réalisation-du-mld)
     - [✅ Phase 3a – MRLD v0.1 : transposition brute du MCD v1](#-phase-3a--mrld-v01--transposition-brute-du-mcd-v1)
     - [✅ Phase 3b – MRLD v0.2 : centralisation technique du champ `jour`](#-phase-3b--mrld-v02--centralisation-technique-du-champ-jour)
+    - [✅ Phase 3f – MRLD v1 : consolidation finale et modélisation complète](#-phase-3f--mrld-v1--consolidation-finale-et-modélisation-complète)
 
 ---
 
 ## Versions du MLD
+
+📌 Issue : [#4](https://github.com/MonLucCo/CEF_MySQL-BDD_Tifosi_Test-version/issues/4)
 
 ### ✅ V1 – Construction du MRLD initial (2025-06-XX)
 
@@ -53,4 +56,21 @@ _Dernière mise à jour :_ 19 juin 2025
 - Fichier : `MRLD-v0.2_tifosi.md`  
 - Schéma : `mrld-v0.2_tifosi.drawio.png`
 
-📌 Issue : [#4](https://github.com/MonLucCo/CEF_MySQL-BDD_Tifosi_Test-version/issues/4)
+---
+
+### ✅ Phase 3f – MRLD v1 : consolidation finale et modélisation complète
+
+- Description de la référence :
+  - Transposition du MCD v2 dans un MRLD stabilisé, prêt pour implémentation physique.
+  - Intégration des relations ternaires achète et paye sous forme de tables clients_focaccias et clients_menus à 3 clés étrangères.
+  - Structuration cohérente de la table jours :
+    - champ date_jour laissé libre entre DATE / DATETIME / TIMESTAMP,
+    - permettant d’adapter la granularité temporelle du MPD à l’unicité attendue de l’action (jour ou instant).
+  - Respect des conventions syntaxiques : noms au pluriel, snake_case, attributs clairs, clés composées explicites.
+  - Document MRLD-v1_tifosi.md rendu autoporteur, intégrant une description rigoureuse des entités, relations, et contraintes.
+- Fichier produit : `MRLD-v1_tifosi.md`
+- Schéma : `mrld-v1_tifosi.drawio.png`
+
+> Cette version sert de socle final pour la transcription physique dans le MPD.
+
+---

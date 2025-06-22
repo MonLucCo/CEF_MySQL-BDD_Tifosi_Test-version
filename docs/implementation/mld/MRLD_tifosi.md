@@ -13,6 +13,7 @@ _Dernière mise à jour :_ 20 juin 2025
   - [📚 MRLD de référence](#-mrld-de-référence)
     - [🧩 MRLD v0.1 — Transposition brute](#-mrld-v01--transposition-brute)
     - [🧩 MRLD v0.2 — Centralisation de `jour` (essai)](#-mrld-v02--centralisation-de-jour-essai)
+    - [🧩 MRLD v1 — Version logique de référence (stabilisée)](#-mrld-v1--version-logique-de-référence-stabilisée)
 
 ---
 
@@ -52,7 +53,7 @@ Inspirée des recommandations de [LaConsole.dev](https://www.laconsole.dev) et d
 |-|-|-|
 | v0.1 | Transposition brute du MCD | [`MRLD-v0.1_tifosi.md`](./mrld-versions/MRLD-v0.1_tifosi.md) |
 | v0.2 | Tentative de centralisation de l’attribut `jour` | [`MRLD-v0.2_tifosi.md`](./mrld-versions/MRLD-v0.2_tifosi.md) |
-| v1 | Modèle logique final retenu | **non défini** |
+| v1 | Modèle logique final retenu | [`MRLD-v1_tifosi.md`](./mrld-versions/MRLD-v1_tifosi.md) |
 
 ---
 
@@ -73,3 +74,15 @@ Résultat : structure techniquement viable, mais conceptuellement incomplète.
 
 📄 Voir : [MRLD-v0.2_tifosi.md](./mrld-versions/MRLD-v0.2_tifosi.md)  
 📐 Schéma : [mrld-v0.2_tifosi.drawio.png](./schemas/mrld-v0.2_tifosi.drawio.png)
+
+### 🧩 MRLD v1 — Version logique de référence (stabilisée)
+
+Version complète, conforme au `MCD v2`, intégrant :
+
+- la centralisation de la date dans la table `jours` ;
+- la modélisation des actions `paye` et `achète` comme relations ternaires `clients_menus` et `clients_focaccias` ;
+- une structure conforme aux conventions du projet (pluriel, snake_case, clés explicites) ;
+- un champ `date_jour` dont le **type (`DATE` / `DATETIME` / `TIMESTAMP`) reste à définir au niveau MPD**, selon le niveau d’unicité métier souhaité.
+
+📄 Voir : [MRLD-v1_tifosi.md](./mrld-versions/MRLD-v1_tifosi.md)  
+📐 Schéma : [mrld-v1_tifosi.drawio.png](./schemas/mrld-v1_tifosi.drawio.png)
