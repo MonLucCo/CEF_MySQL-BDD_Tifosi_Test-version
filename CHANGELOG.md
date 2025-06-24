@@ -14,6 +14,7 @@ Versionnage selon [Semantic Versioning](https://semver.org/lang/fr/).
       - [🔍 Etape 1 : Ajout de la modélisation MCD (version 1)](#-etape-1--ajout-de-la-modélisation-mcd-version-1)
       - [🔍 Etape 2 : Installation de l'environnement technique](#-etape-2--installation-de-lenvironnement-technique)
       - [🔍 Etape 3 : Construction du MRLD et alignement avec le MCD v2](#-etape-3--construction-du-mrld-et-alignement-avec-le-mcd-v2)
+      - [🔍 Etape 4 (2025-06-24) : Construction du MRLD v1.1 et alignement avec le MCD v2.1](#-etape-4-2025-06-24--construction-du-mrld-v11-et-alignement-avec-le-mcd-v21)
     - [🧭 Phase 2 - 2025-06-XX — Modèle logique (MRLD) \& base SQL](#-phase-2---2025-06-xx--modèle-logique-mrld--base-sql)
       - [🚧 Etape 1 (2025-06-23) : Organisation documentaire et versionnning du SQL](#-etape-1-2025-06-23--organisation-documentaire-et-versionnning-du-sql)
       - [🚧 Etape \[Unreleased\] \[Phase 2 - v0.2\]](#-etape-unreleased-phase-2---v02)
@@ -90,7 +91,30 @@ Versionnage selon [Semantic Versioning](https://semver.org/lang/fr/).
 - Renommage normalisé des fichiers `.drawio.png` avec préfixe `MRLD-` en majuscules
 
 📎 Issue concernée : [#4](https://github.com/MonLucCo/CEF_MySQL-BDD_Tifosi_Test-version/issues/4)  
-📁 Dossiers concernés : `/docs/implementation/mrld-versions/`, `/docs/implementation/schemas/`, `/sql/`
+📁 Dossiers concernés : `/docs/implementation/mrld-versions/`, `/docs/implementation/.../schemas/`, `/sql/`
+
+---
+
+#### 🔍 Etape 4 (2025-06-24) : Construction du MRLD v1.1 et alignement avec le MCD v2.1
+
+- Transposition progressive du MCD :
+  - `MRLD v0.1` : version brute depuis `MCD v1`
+  - `MRLD v0.2` : centralisation de l'attribut `jour`
+  - `MRLD v1` : version logique de référence alignée sur `MCD v2`
+  - `MRLD v1.1` : version logique de référence alignée sur `MCD v2.1`
+- Modélisation des actions `achète` et `paye` sous forme de **relations ternaires**
+- Création de la table `jours` :
+  - champ `date_jour` défini comme `DATE`, `DATETIME` ou `TIMESTAMP`
+  - le **choix du type est laissé ouvert au MPD**, selon le niveau d’unicité attendu
+- Schéma visuel consolidé : `MRLD-v1.1_tifosi.drawio.png`
+- Documentation associée :
+  - `MRLD-v1.1_tifosi.md`
+  - `MRLD_tifosi.md` (table de version centralisée)
+  - `HISTORIQUE_mld_tifosi.md` (étape 4)
+- Renommage normalisé des fichiers `.drawio.png` avec préfixe `MRLD-` en majuscules
+
+📎 Issue concernée : [#4 / #16](https://github.com/MonLucCo/CEF_MySQL-BDD_Tifosi_Test-version/issues/16)  
+📁 Dossiers concernés : `/docs/implementation/mrld-versions/`, `/docs/implementation/.../schemas/`
 
 ---
 
