@@ -46,7 +46,8 @@ FLUSH PRIVILEGES;
 🔎 Justification :
 
 - `GRANT ALL PRIVILEGES ON tifosi.*` permet à `tifosi` de gérer les objets de la base : création, modification, suppression.
-- Le `REVOKE GRANT OPTION` désactive la capacité à transférer ses droits à d’autres comptes.
+- La commande `GRANT` n’inclut pas automatiquement le droit de délégation (`GRANT OPTION`) — sauf si on l’ajoute explicitement. 
+Par conséquent, aucune révocation n’est nécessaire, car `tifosi` ne dispose pas du droit de délégation à l’origine.
 - Ces droits respectent strictement la phrase du sujet : *“tous les droits sur la base de données tifosi”* — sans extrapoler à des privilèges d’administration serveur.
 
 ---

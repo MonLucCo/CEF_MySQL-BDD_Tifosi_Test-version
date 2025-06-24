@@ -2,8 +2,11 @@
 -- Auteur : PerLucCo
 -- Date : 2025-06-24
 
+-- ⚠️ Réinitialisation de la base (supprime toutes les données existantes)
+DROP DATABASE IF EXISTS tifosi_v011;
+
 -- 🔧 Création de la base
-CREATE DATABASE IF NOT EXISTS tifosi_v011 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+CREATE DATABASE tifosi_v011 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
 
 USE tifosi_v011;
 
