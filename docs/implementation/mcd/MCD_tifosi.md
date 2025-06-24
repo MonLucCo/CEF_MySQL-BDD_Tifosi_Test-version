@@ -31,8 +31,9 @@ Elle contient :
 
 | Version | Objectif principal | Document |
 |---------|---------------------|----------|
-| v1      | MCD instancié à partir du sujet, sans restructuration | [`MCD-v1_tifosi.md`](./versions/MCD-v1_tifosi.md) |
-| v2      | Centralisation de `jour` via entité dédiée + clarification des actions client | [`MCD-v2_tifosi.md`](./versions/MCD-v2_tifosi.md) |
+| v1      | MCD instancié à partir du sujet, sans restructuration | [MCD-v1_tifosi.md](./versions/MCD-v1_tifosi.md) |
+| v2      | Centralisation de `jour` via entité dédiée + clarification des actions client | [MCD-v2_tifosi.md](./versions/MCD-v2_tifosi.md) |
+| v2.1    | Ajout attribut `cp_client` dans l'entité `clients` | [MCD-v2.1_tifosi.md](./versions/MCD-v2.1_tifosi.md) |
 
 ---
 

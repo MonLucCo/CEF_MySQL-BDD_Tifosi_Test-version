@@ -1,7 +1,7 @@
 # 🧾 Historique — Modélisation MCD (Tifosi)
 
 _Rédigé par :_ PerLucCo  
-_Dernière mise à jour :_ 21 juin 2025  
+_Dernière mise à jour :_ 24 juin 2025  
 
 ---
 
@@ -11,6 +11,7 @@ _Dernière mise à jour :_ 21 juin 2025
   - [Phases de réalisation du MCD](#phases-de-réalisation-du-mcd)
     - [✅ Phase 3c – Structuration initiale du MCD](#-phase-3c--structuration-initiale-du-mcd)
     - [✅ Phase 3d – Évolution MCD v2 (centralisation de la date)](#-phase-3d--évolution-mcd-v2-centralisation-de-la-date)
+    - [✅ Phase 4 – Évolution MCD v2.1 (ajout attribut `cp_client`)](#-phase-4--évolution-mcd-v21-ajout-attribut-cp_client)
 
 ---
 
@@ -53,5 +54,16 @@ _Dernière mise à jour :_ 21 juin 2025
 - Rédaction de `MCD-v2_tifosi.md`
 - Schéma modifié : `MCD-v2_tifosi.drawio.png`
 
-🗓️ Commit : [`à compléter après le commit`]  
+🗓️ Commit : [`2e610058`]  
 📎 Issue : [#4](https://github.com/MonLucCo/CEF_MySQL-BDD_Tifosi_Test-version/issues/4)
+
+---
+
+### ✅ Phase 4 – Évolution MCD v2.1 (ajout attribut `cp_client`)
+
+- Ajout d'un attribut `cp_client` de l'entité `clients` dans le MCD
+- Rédaction de `MCD-v2.1_tifosi.md`
+- Schéma modifié : `MCD-v2.1_tifosi.drawio.png`
+
+🗓️ Commit : [`à compléter après le commit`]  
+📎 Issue : [#16](https://github.com/MonLucCo/CEF_MySQL-BDD_Tifosi_Test-version/issues/16)
