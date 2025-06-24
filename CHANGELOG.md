@@ -15,7 +15,8 @@ Versionnage selon [Semantic Versioning](https://semver.org/lang/fr/).
       - [🔍 Etape 2 : Installation de l'environnement technique](#-etape-2--installation-de-lenvironnement-technique)
       - [🔍 Etape 3 : Construction du MRLD et alignement avec le MCD v2](#-etape-3--construction-du-mrld-et-alignement-avec-le-mcd-v2)
     - [🧭 Phase 2 - 2025-06-XX — Modèle logique (MRLD) \& base SQL](#-phase-2---2025-06-xx--modèle-logique-mrld--base-sql)
-      - [🚧 Etape 1 (2025-06-23) : Organisation documentaire et versionnning du SQL](#-etape-1-2025-06-23--organisation-documentaire-et-versionnning-du-sql)
+      - [🔍 Etape 1 (2025-06-23) : Organisation documentaire et versionnning du SQL](#-etape-1-2025-06-23--organisation-documentaire-et-versionnning-du-sql)
+      - [🔍 Etape 2 (2025-06-24) : Création Utilisateur et Base de données minimale fonctionnelle du SQL](#-etape-2-2025-06-24--création-utilisateur-et-base-de-données-minimale-fonctionnelle-du-sql)
       - [🚧 Etape \[Unreleased\] \[Phase 2 - v0.2\]](#-etape-unreleased-phase-2---v02)
   - [🧪 Milestone v0.3 - 2025-06-XX — Tests d’implémentation et jeu d’essai](#-milestone-v03---2025-06-xx--tests-dimplémentation-et-jeu-dessai)
     - [🧭 Phase \[Undefined\] - v0.3](#-phase-undefined---v03)
@@ -96,10 +97,21 @@ Versionnage selon [Semantic Versioning](https://semver.org/lang/fr/).
 
 ### 🧭 Phase 2 - 2025-06-XX — Modèle logique (MRLD) & base SQL
 
-#### 🚧 Etape 1 (2025-06-23) : Organisation documentaire et versionnning du SQL
+#### 🔍 Etape 1 (2025-06-23) : Organisation documentaire et versionnning du SQL
 
 - Génération d'un dossier `/implementation/sql` pour gérer les versions du SQL
-- Initialisation des versions SQL à partir destravaux de tests des outils
+- Initialisation des versions SQL à partir des travaux de tests des outils
+- Ajout de l’historique technique : `HISTORIQUE_sql.md`
+- Suivi dans l’issue #5
+
+🗂️ Dossiers concernés : `/docs/implementation/`, `/sql/`
+
+#### 🔍 Etape 2 (2025-06-24) : Création Utilisateur et Base de données minimale fonctionnelle du SQL
+
+- Génération versions du SQL :
+  - `v0.1.1` : Base versionnée tifosi_v011 sécurisée par un utilisateur dédié (v0.1.2)
+  - `v0.1.2` : utilisateur `tifosi` (administrateur de la base v0.1.1)
+- Scripts de tests des versions
 - Ajout de l’historique technique : `HISTORIQUE_sql.md`
 - Suivi dans l’issue #5
 
@@ -110,7 +122,7 @@ Versionnage selon [Semantic Versioning](https://semver.org/lang/fr/).
 - Génération du script SQL complet dans `MPD_tifosi.sql`
 - Création d’un utilisateur `tifosi` avec droits associés
 - Ajout de l’historique technique : `HISTORIQUE_sql.md`
-- Suivi dans l’issue #4 et #5
+- Suivi dans l’issue #5
 
 🗂️ Dossiers concernés : `/docs/implementation/`, `/sql/`
 
