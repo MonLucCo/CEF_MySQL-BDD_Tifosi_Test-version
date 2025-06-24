@@ -5,7 +5,7 @@
 - [🧪 Tests de validation — Étape v0.1.2](#-tests-de-validation--étape-v012)
   - [🎯 Objectif](#-objectif)
   - [🚀 Initialisation complète](#-initialisation-complète)
-  - [🧪 Protocole de test](#-protocole-de-test)
+  - [🧪 Protocole de test (terminal)](#-protocole-de-test-terminal)
   - [✅ Résultats attendus](#-résultats-attendus)
   - [📎 Fichiers liés](#-fichiers-liés)
 
@@ -23,11 +23,13 @@ Avant de tester les droits de l’utilisateur `tifosi`, il est possible d’init
 
 Fichier : `init_v012.sql`
 
-Commande d’exécution depuis le terminal :
+Commande d’exécution depuis le terminal (**CMD** ou Git Bash) :
 
-Début bash :  
+```bash  
 mysql -u root -p < init_v012.sql  
-Fin bash
+```
+
+>⚠️ En environnement PowerShell, cette commande renverra une erreur (< non reconnu). Dans ce cas, passez d'abord en console CMD avec la commande : _cmd_
 
 Ce script exécute successivement :
 
@@ -38,13 +40,15 @@ La base est alors prête à être utilisée avec l’utilisateur `tifosi` pour l
 
 ---
 
-## 🧪 Protocole de test
+## 🧪 Protocole de test (terminal)
 
 1. Connexion à MySQL avec l’utilisateur `tifosi` :
 
     ```bash
     mysql -u tifosi -p
     ```
+
+    >⚠️ Le mot de passe : TifosiPwd_24
 
 2. Accès à la base `tifosi_v011` :
 
@@ -53,6 +57,10 @@ La base est alors prête à être utilisée avec l’utilisateur `tifosi` pour l
     USE tifosi_v011;
     ```
 
+    > ⚠️ Sortie attendue :
+    > - La base tifosi_v011 est visible
+    > - Les bases système (mysql, information_schema…) ne sont pas visibles.
+
 3. Test des droits complets sur la base :
 
     ```sql
@@ -60,8 +68,9 @@ La base est alors prête à être utilisée avec l’utilisateur `tifosi` pour l
     INSERT INTO test_table VALUES (1);
     SELECT * FROM test_table;
     DROP TABLE test_table;
-    Fin SQL
     ```
+
+    > ⚠️ Sortie attendue : Aucune erreur. Toutes les opérations sont autorisées.
 
 4. Vérification de l’absence de droits sur les bases système :
 
@@ -69,11 +78,15 @@ La base est alors prête à être utilisée avec l’utilisateur `tifosi` pour l
     USE mysql;
     ```
 
+    > ⚠️ Sortie attendue : Erreur 1044 : Access denied for user 'tifosi'...
+
 5. Vérification de l’impossibilité de délégation des droits :
 
     ```sql
     GRANT SELECT ON tifosi_v011.* TO 'autre_user'@'localhost';
     ```
+
+    > ⚠️ Sortie attendue : Erreur 1044 ou 1142 (droit GRANT non accordé à tifosi).
 
 ---
 

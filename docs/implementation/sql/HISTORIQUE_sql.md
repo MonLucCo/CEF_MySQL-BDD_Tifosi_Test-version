@@ -72,6 +72,15 @@ Cette étape intermédiaire a été décomposée plus précisément en :
 - Rédaction des fichiers de définition (`README_user`) et de test (`README_test`)
 - Documentation complète dans `MPD-v0.1.2_tifosi.md`
 
+> 🛠️ Correctif post-tests :
+>
+> - Ajout de la suppression conditionnelle de la base (`DROP DATABASE IF EXISTS`) dans `create_tifosi.sql`
+> - Réécriture de `create_user_tifosi.sql` avec :
+>
+>   - `DROP USER IF EXISTS` (réinitialisable)
+>   - suppression de la commande `REVOKE` (inutile car aucun droit de délégation accordé)
+>   - attribution ciblée des droits sur `tifosi_v011.*`
+
 📎 Fichiers produits :
 
 - `create_user_tifosi.sql`

@@ -139,6 +139,12 @@ Versionnage selon [Semantic Versioning](https://semver.org/lang/fr/).
 - Ajout de l’historique technique : `HISTORIQUE_sql.md`
 - Suivi dans l’issue #5
 
+- 🧹 Correctifs post-vérification de v0.1.2 :
+  - Ajout de `DROP DATABASE IF EXISTS` dans `create_tifosi.sql`
+  - Refonte du script `create_user_tifosi.sql` pour qu’il soit réutilisable sans erreur
+  - Suppression de la commande `REVOKE` inopérante
+  - Clarification dans `README_test-v0.1.2.md` des méthodes PowerShell / CMD
+
 🗂️ Dossiers concernés : `/docs/implementation/`, `/sql/`
 
 #### 🚧 Etape [Unreleased] [Phase 2 - v0.2]

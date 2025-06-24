@@ -32,8 +32,7 @@ La structure relationnelle (tables, clés, relations N:N) est strictement identi
   - `clients_focaccias_jours`
 - Contraintes : clés primaires, clés étrangères, unicité
 
-📎 Structure initialement définie dans :  
-[`MPD-v0.1.1_tifosi.md`](../sql-v0.1.1/MPD-v0.1.1_tifosi.md)
+📎 Structure initialement définie dans : [`MPD-v0.1.1_tifosi.md`](../sql-v0.1.1/MPD-v0.1.1_tifosi.md)
 
 ---
 
@@ -46,6 +45,8 @@ La structure relationnelle (tables, clés, relations N:N) est strictement identi
 - Droit de délégation (`GRANT OPTION`) : **révoqué**
 - Limitation à l’hôte : `'localhost'`
 - Mot de passe : défini dans le script selon les consignes de sécurité
+
+> 🧠 Remarque : Le droit de délégation (GRANT OPTION) n'est pas attribué à l’utilisateur tifosi lors de l'accord des privilèges. Par conséquent, aucune révocation explicite n’est nécessaire.
 
 ### 📎 Documentation associée
 
@@ -69,9 +70,9 @@ Ce script enchaîne deux étapes :
 
 📌 Commande d’exécution recommandée (depuis le terminal) :
 
-Début bash :  
+```bash  
 mysql -u root -p < init_v012.sql  
-Fin bash
+```
 
 ⚠️ Remarque : le script doit être exécuté par un utilisateur SQL disposant des droits `CREATE`, `CREATE USER` et `GRANT`.
 
