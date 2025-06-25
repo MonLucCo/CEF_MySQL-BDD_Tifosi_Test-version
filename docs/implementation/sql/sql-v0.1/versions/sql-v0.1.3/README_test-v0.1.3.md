@@ -49,9 +49,14 @@ Ce document décrit le protocole de vérification fonctionnelle de la version `v
 
 ## 📂 Scripts de test utilisés
 
-- `data-test_v013.sql` : chargement d’un jeu de données de validation
-- `queries-test_v013.sql` : requêtes de test pour vérifier la cohérence
-- `test_v013.sql` : script d’automatisation combinant les deux ci-dessus
+- Pour l'utilisateur `root` :
+  - `create_tifosi.sql` : création de la base (structure seule)
+  - `create_user_tifosi.sql` : création de l'utilisateur `tifosi`
+  - `init_v013.sql` :  script d’automatisation combinant les deux ci-dessus
+- Pour l'utilisateur `tifosi` :
+  - `data-test_v013.sql` : chargement d’un jeu de données de validation
+  - `queries-test_v013.sql` : requêtes de test pour vérifier la cohérence
+  - `test_v013.sql` : script d’automatisation combinant les deux ci-dessus
 
 ---
 

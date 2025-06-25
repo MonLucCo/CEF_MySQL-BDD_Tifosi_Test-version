@@ -37,7 +37,7 @@ Ce répertoire contient tous les fichiers SQL liés à la base de données `tifo
 
 | Fichier | Rôle | État | Version |
 |--|--|--|--|
-| create_tifosi.sql | Script de création des tables et clés | En cours | v0.0 |
+| create_tifosi.sql | Script de création des tables et clés | En cours | v0.1.3 |
 | insert_data.sql  | Insertion des données de test | À venir | — |
 | backup_tifosi.sql | Sauvegarde complète | À venir | — |
 
@@ -74,9 +74,10 @@ Ce projet suit une logique de montée progressive en complexité, avec des versi
 | v0.0 | Validation outil | Script brut de test, table vide  | `sql-v0.0/` |
 | [sql-v0.1](sql-v0.1/README_sql-v0.1.md) | Création de base | Création de la base, de l'utilisateur et des données de tests  | `sql-v0.1/` |
 | [sql-v0.1.1](sql-v0.1/versions/sql-v0.1.1/MPD-v0.1.1_tifosi.md) | Base partielle — vue métier minimale | `clients`, `menus`, `focaccias`, `jours`, relations avec `clients_*` | `sql-v0.1/versions/sql-v0.1.1/` |
-| v0.1.2 | Création de l’utilisateur `tifosi` | Sécurité applicative (`CREATE USER`, `GRANT`) | à venir |
-| v0.1.3 | MPD complet  | Intégration des marques, ingrédients, relations N:N complètes | à venir |
-| v0.2.x  | Données, insertions, tests | `insert_data.sql`, export `.sql`, validations | à venir |
+| v0.1.2 | Création de l’utilisateur `tifosi` | Sécurité applicative (`CREATE USER`, `GRANT`) | `sql-v0.1.2/versions/sql-v0.1.2` |
+| v0.1.3 | MPD complet  | Intégration des marques, ingrédients, relations N:N complètes | `sql-v0.1.3/versions/sql-v0.1.3` |
+| v0.2   | Données, insertions, tests | `insert_data.sql`, export `.sql`, validations | à venir |
+| v0.3   | Données, insertions, tests | `insert_data.sql`, export `.sql`, validations | à venir |
 
 >Chaque version est placée dans un sous-dossier `sql-vX.Y` ou `sql-vX.Y.Z`.
 
@@ -148,8 +149,8 @@ Les étapes de construction logique et physique de la base `tifosi` sont en rela
 📁 Dossier prévu : `sql-v0.1/versions/sql-v0.1.3/`  
 📄 Fichiers attendus :
 
-- `MPD-v0.1.3.drawio` / `create_tifosi_v013.sql`
-- `README_test-v0.1.3.md`
+- `MPD-v0.1.3.md` / `create_tifosi.sql` et `create_user_tifosi.sql`
+- `README_test-v0.1.3.md` / `data-test_v013.sql`, `queries-test_v013.sql`, `model_tifosi_v013.mwb`
 
 ---
 
@@ -205,8 +206,8 @@ Les étapes de construction logique et physique de la base `tifosi` sont en rela
 
 🎯 **Objectif** : Écriture du script SQL de la base Tifosi (tables, clés, contraintes) + définition de l'utilisateur `tifosi`.
 
-📌 **État** : En cours de finalisation – partie 2b (script utilisateur)  
-📦 Étapes réalisées : MPD v0.1.1, `README_test-v0.1.1.md`, MPD v0.1.2 en préparation  
+📌 **État** : réalisée (scripts : création base et utilisateur ; tests de validation)  
+📦 Étapes réalisées : MPD v0.1.1, `README_test-v0.1.1.md`, MPD v0.1.2 et MPD v0.1.3.  
 📂 Versions concernées : `sql-v0.1.1`, `sql-v0.1.2`, `sql-v0.1.3`
 
 ---
