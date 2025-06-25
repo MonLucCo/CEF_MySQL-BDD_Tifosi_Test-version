@@ -11,7 +11,9 @@ _Dernière mise à jour :_ 24 juin 2025
   - [🚫 V0.1 – Section absorbée par les versions détaillées suivantes](#-v01--section-absorbée-par-les-versions-détaillées-suivantes)
   - [✅ V0.1.1 – Modélisation relationnelle et implémentation physique (2025-06-23)](#-v011--modélisation-relationnelle-et-implémentation-physique-2025-06-23)
   - [✅ V0.1.2 – Sécurisation de la base versionnée via utilisateur `tifosi` (2025-06-25)](#-v012--sécurisation-de-la-base-versionnée-via-utilisateur-tifosi-2025-06-25)
-  - [🚧 V0.1.3 – Base de données complète avec  Utilisateur administrateur `tifosi` (2025-06-XX)](#-v013--base-de-données-complète-avec--utilisateur-administrateur-tifosi-2025-06-xx)
+  - [✅ V0.1.3 – Base de données complète avec  Utilisateur administrateur `tifosi` (2025-06-26)](#-v013--base-de-données-complète-avec--utilisateur-administrateur-tifosi-2025-06-26)
+  - [🚧 V0.2 – Chargement des données (2025-06-XX)](#-v02--chargement-des-données-2025-06-xx)
+  - [🚧 V0.3 – Sauvegarde de la base et des données (2025-06-XX)](#-v03--sauvegarde-de-la-base-et-des-données-2025-06-xx)
 
 ---
 
@@ -94,4 +96,28 @@ Cette étape intermédiaire a été décomposée plus précisément en :
 
 ---
 
-## 🚧 V0.1.3 – Base de données complète avec  Utilisateur administrateur `tifosi` (2025-06-XX)
+## ✅ V0.1.3 – Base de données complète avec  Utilisateur administrateur `tifosi` (2025-06-26)
+
+🗓️ Date : 2025-06-26  
+🎯 Objectif : Finaliser la structure physique de la base `tifosi`, en lien avec `MRLD-v1.1`, sans données ni privilèges applicatifs.  
+📘 Référence documentaire : `MPD-v0.1.3_tifosi.md`, `README_test-v0.1.3.md`
+
+✨ Contenu de cette version :
+
+- Script d’initialisation complet : `init_v013.sql` (création base + utilisateur `tifosi`)
+- Données de test : `data-test_v013.sql`
+- Requêtes de validation : `queries-test_v013.sql`
+- Script d’automatisation : `test_v013.sql`
+- Génération du schéma EER : `model_tifosi_v013.mwb` + image non versionnée
+- Résultats validés (requêtes et Workbench) — voir `README_test`
+
+🔐 Tests réalisés avec l’utilisateur `tifosi`, comme prévu
+📌 Cette version clôt le cycle `v0.1.x`
+
+---
+
+## 🚧 V0.2 – Chargement des données (2025-06-XX)
+
+---
+
+## 🚧 V0.3 – Sauvegarde de la base et des données (2025-06-XX)

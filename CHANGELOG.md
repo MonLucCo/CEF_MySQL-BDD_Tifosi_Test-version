@@ -17,7 +17,7 @@ Versionnage selon [Semantic Versioning](https://semver.org/lang/fr/).
       - [🔍 Etape 4 (2025-06-24) : Construction du MRLD v1.1 et alignement avec le MCD v2.1](#-etape-4-2025-06-24--construction-du-mrld-v11-et-alignement-avec-le-mcd-v21)
     - [🧭 Phase 2 - 2025-06-XX — Modèle logique (MRLD) \& base SQL](#-phase-2---2025-06-xx--modèle-logique-mrld--base-sql)
       - [🔍 Etape 1 (2025-06-23) : Organisation documentaire et versionnning du SQL](#-etape-1-2025-06-23--organisation-documentaire-et-versionnning-du-sql)
-      - [🔍 Etape 2 (2025-06-24) : Création Utilisateur et Base de données minimale fonctionnelle du SQL](#-etape-2-2025-06-24--création-utilisateur-et-base-de-données-minimale-fonctionnelle-du-sql)
+      - [🔍 Etape 2 (2025-06-25) : Création Utilisateur et Base de données minimale fonctionnelle du SQL](#-etape-2-2025-06-25--création-utilisateur-et-base-de-données-minimale-fonctionnelle-du-sql)
       - [🚧 Etape \[Unreleased\] \[Phase 2 - v0.2\]](#-etape-unreleased-phase-2---v02)
   - [🧪 Milestone v0.3 - 2025-06-XX — Tests d’implémentation et jeu d’essai](#-milestone-v03---2025-06-xx--tests-dimplémentation-et-jeu-dessai)
     - [🧭 Phase \[Undefined\] - v0.3](#-phase-undefined---v03)
@@ -130,11 +130,12 @@ Versionnage selon [Semantic Versioning](https://semver.org/lang/fr/).
 
 🗂️ Dossiers concernés : `/docs/implementation/`, `/sql/`
 
-#### 🔍 Etape 2 (2025-06-24) : Création Utilisateur et Base de données minimale fonctionnelle du SQL
+#### 🔍 Etape 2 (2025-06-25) : Création Utilisateur et Base de données minimale fonctionnelle du SQL
 
 - Génération versions du SQL :
   - `v0.1.1` : Base versionnée tifosi_v011 sécurisée par un utilisateur dédié (v0.1.2)
   - `v0.1.2` : utilisateur `tifosi` (administrateur de la base v0.1.1)
+  - `v0.1.3` : Base complète (structure) sécurisée par un utilisateur `tifosi`
 - Scripts de tests des versions
 - Ajout de l’historique technique : `HISTORIQUE_sql.md`
 - Suivi dans l’issue #5
@@ -144,6 +145,13 @@ Versionnage selon [Semantic Versioning](https://semver.org/lang/fr/).
   - Refonte du script `create_user_tifosi.sql` pour qu’il soit réutilisable sans erreur
   - Suppression de la commande `REVOKE` inopérante
   - Clarification dans `README_test-v0.1.2.md` des méthodes PowerShell / CMD
+
+- ✨ Description [v0.1.3] – 2025-06-25
+  - `test_v013.sql` : automatisation des tests (chargement + validation)
+  - Données de test : `data-test_v013.sql` (insère clients, menus, jours, relations…)
+  - Requêtes : `queries-test_v013.sql` (6 validations clés)
+  - Fichiers documentaires : `MPD-v0.1.3_tifosi.md`, `README_test-v0.1.3.md`
+  - Modèle graphique de structure : `model_tifosi_v013.mwb`
 
 🗂️ Dossiers concernés : `/docs/implementation/`, `/sql/`
 
