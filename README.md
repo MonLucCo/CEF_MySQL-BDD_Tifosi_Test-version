@@ -17,6 +17,7 @@
     - [4.1- Avancement du projet](#41--avancement-du-projet)
     - [4.2- Suivi des évolutions](#42--suivi-des-évolutions)
   - [📄 5- Licence](#-5--licence)
+  - [🙏 Remerciements](#-remerciements)
 
 ## 📘 1- Projet Tifosi — Base de données MySQL
 
@@ -38,12 +39,15 @@ Ce dépôt constitue le livrable du Devoir n°10 du Centre Européen de Formatio
 Vous pouvez naviguer directement dans les documents du projet depuis cette arborescence interactive.  
 Pour une vue d’ensemble plus détaillée, voir également le fichier [README_docs.md](docs/README_docs.md) qui constitue le **point d’entrée de la documentation**.
 
+---
+
 <details>
 <summary>📁 Racine du dépôt</summary>
 
 > - [README.md](README.md) — Présentation générale du projet (ce document)
 > - [LICENCE](./LICENSE) — Licence MIT
-> - [.gitignore](.gitignore)
+> - [CHANGELOG.md](CHANGELOG.md) — Journal de version
+> - 📁 [`docs/`](docs/) — Documentation complète du projet
 
 <details>
 <summary>📁 docs/ — Dossiers documentaires</summary>
@@ -65,19 +69,12 @@ Pour une vue d’ensemble plus détaillée, voir également le fichier [README_d
 </details>
 
 <details>
-<summary>&nbsp;&nbsp;&nbsp;📁 mcd/ — Modélisation conceptuelle</summary>
-
->> - [tifosi_mcd.png](docs/mcd/tifosi_mcd.png) — Schéma du MCD (modèle conceptuel de données)
->> - [README_analyse.md](docs/mcd/README_analyse.md) — Analyse approfondie du MCD
-
-</details>
-
-<details>
 <summary>&nbsp;&nbsp;&nbsp;📁 implementation/ — Implémentation technique</summary>
 
->> - [MRLD_tifosi.md](docs/implementation/MRLD_tifosi.md) — Modèle Relationnel Logique de Données (MRLD)
->> - [MPD_tifosi.sql](docs/implementation/MPD_tifosi.sql) — Script de création des tables (modèle physique de données)
->> - [README_implementation.md](docs/implementation/README_implementation.md)
+>> - [MCD_tifosi.md](./docs/implementation/mcd/MCD_tifosi.md) — Modèle Conceptuel de Données (MCD)
+>> - [MRLD_tifosi.md](./docs/implementation/mld/MRLD_tifosi.md) — Modèle Relationnel Logique de Données (MRLD)
+>> - [MPD_tifosi.sql](./docs/implementation/sql/README_sql.md) — Script de création des tables (modèle physique de données)
+>> - [README_implementation.md](./docs/implementation/README_implementation.md) — Démarche d'implémentation
 
 </details>
 
@@ -89,14 +86,6 @@ Pour une vue d’ensemble plus détaillée, voir également le fichier [README_d
 >> - [README_sources.md](docs/references/README_sources.md)
 
 </details>
-
-</details>
-
-<details>
-<summary>📁 sql/ — Scripts SQL du projet</summary>
-
-> - [README_sql.md](sql/README_sql.md) — Informations sur les scripts SQL `.sql`
-> - [create_tifosi.sql](sql/create_tifosi.sql) — Création de la base de données relationnelle
 
 </details>
 
@@ -161,5 +150,11 @@ L'historique des décisions et versions est consigné dans :
 
 Ce dépôt est sous licence **MIT** — voir le [fichier `LICENSE`](LICENSE) pour plus d’informations.  
 Les documents issus du devoir (PDF, données test) sont fournis à titre pédagogique uniquement.
+
+---
+
+## 🙏 Remerciements
+
+Projet réalisé avec anthousiasme, rigueur, méthode et une bonne dose de cresson — merci à l’équipe pédagogique du CEF pour ce plat bien relevé à base de modélisation relationnelle. 🍽️
 
 ---

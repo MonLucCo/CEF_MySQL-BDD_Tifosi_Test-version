@@ -1,7 +1,7 @@
 # 🧾 Historique — Scripts SQL & Base de données
 
 _Rédigé par :_ PerLucCo  
-_Dernière mise à jour :_ 24 juin 2025  
+_Dernière mise à jour :_ 26 juin 2025  
 
 ---
 
@@ -12,7 +12,8 @@ _Dernière mise à jour :_ 24 juin 2025
   - [✅ V0.1.1 – Modélisation relationnelle et implémentation physique (2025-06-23)](#-v011--modélisation-relationnelle-et-implémentation-physique-2025-06-23)
   - [✅ V0.1.2 – Sécurisation de la base versionnée via utilisateur `tifosi` (2025-06-25)](#-v012--sécurisation-de-la-base-versionnée-via-utilisateur-tifosi-2025-06-25)
   - [✅ V0.1.3 – Base de données complète avec  Utilisateur administrateur `tifosi` (2025-06-26)](#-v013--base-de-données-complète-avec--utilisateur-administrateur-tifosi-2025-06-26)
-  - [🚧 V0.2 – Chargement des données (2025-06-XX)](#-v02--chargement-des-données-2025-06-xx)
+  - [✅ V0.2.0 – Chargement partiel des données validées (2025-06-26)](#-v020--chargement-partiel-des-données-validées-2025-06-26)
+  - [🚧 V0.2.1 – Chargement des données (2025-06-XX)](#-v021--chargement-des-données-2025-06-xx)
   - [🚧 V0.3 – Sauvegarde de la base et des données (2025-06-XX)](#-v03--sauvegarde-de-la-base-et-des-données-2025-06-xx)
 
 ---
@@ -116,7 +117,42 @@ Cette étape intermédiaire a été décomposée plus précisément en :
 
 ---
 
-## 🚧 V0.2 – Chargement des données (2025-06-XX)
+## ✅ V0.2.0 – Chargement partiel des données validées (2025-06-26)
+
+🗓️ Date : 2025-06-26  
+🎯 Objectif : Charger un premier ensemble cohérent de données dans la base `tifosi`, en exploitant des fichiers `.csv` produits depuis les sources `.xlsx`.
+
+📌 Résultat :
+
+- Données chargées :
+  - `marques` (+ FK sur `boissons`)
+  - `ingredients`
+  - `boissons`
+  - `focaccias`
+  - `focaccias_ingredients` (relation N:N)
+- Scripts stabilisés dans le répertoire `/sql-v0.2/versions/sql-v0.2.0/`
+
+📎 Fichiers produits :
+
+- `create_tifosi.sql` → création de la base + tables + utilisateur `tifosi`
+- `insert_data.sql` → chargement complet des `.csv`
+- `queries-test_v020.sql` → premières requêtes de validation fonctionnelle
+- `README_data-v0.2.0.md`, `README_test-v0.2.0.md`, `README_sql-v0.2.md` → documentation versionnée
+- `model_tifosi_v020.mwb` + `model_tifosi_v020.mwb.png` → modèle EER
+
+⚠️ Constat post-validation :
+Lors des tests (`queries-test_v020.sql`), une **incohérence entre le MCD v2.1 et le MRLD v1.1** a été identifiée, notamment sur la relation `menus` ↔ `focaccias`.  
+Cela a conduit à un **chargement partiel des entités validées uniquement**.
+
+📌 Issue concernée : [#6 (partie 1)](https://github.com/MonLucCo/CEF_MySQL-BDD_Tifosi_Test-version/issues/6) — chargement initial des données
+
+➡️ Une correction du **MRLD** est planifiée dans la version `v0.2.1` via la réouverture des issues #4 et #5, suivie d’un rechargement dans #6.2
+
+---
+
+## 🚧 V0.2.1 – Chargement des données (2025-06-XX)
+
+>🔄 Cette version intégrera les modifications issues de la reprise du cycle MCD → MRLD → MPD initiée après les constats de `v0.2.0`.
 
 ---
 
