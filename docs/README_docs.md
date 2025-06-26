@@ -30,14 +30,22 @@ Ce dossier regroupe tous les documents de référence du projet : consignes, not
 - [MCD_tifosi.md](./implementation/mcd/MCD_tifosi.md) : suivi du Modèle Conceptuel de Données (versions jusqu’à v2.1)
 - [MRLD_tifosi.md](./implementation/mld/MRLD_tifosi.md) : suivi du Modèle Relationnel Logique de Données (versions jusqu’à v1.1)
 - [MPD-v0.1.3_tifosi.md](./implementation/sql/sql-v0.1/versions/sql-v0.1.3/MPD-v0.1.3_tifosi.md) : description complète de la structure physique (base sans données)
-- `README_test-v0.1.3.md` : protocole de validation structurelle de la version `v0.1.3`
-- `model_tifosi_v013.mwb` : fichier EER Workbench du schéma relationnel
+- [README_test-v0.1.3.md](./implementation/sql/sql-v0.1/versions/sql-v0.1.3/README_test-v0.1.3.md) : protocole de validation structurelle de la version `v0.1.3`
 - [README_sql.md](./implementation/sql/README_sql.md) : suivi de l’évolution des scripts SQL
+- [README_sql-v0.2.md](./implementation/sql/sql-v0.2/README_sql-v0.2.md) : suivi de la version `sql-v0.2.x`, documentation du chargement partiel
+- [README_data-v0.2.0.md](./implementation/sql/sql-v0.2/versions/sql-v0.2.0/README_data-v0.2.0.md) : procédure de génération et chargement des données `.csv` (chargement partiel)
+- [README_test-v0.2.0.md](./implementation/sql/sql-v0.2/versions/sql-v0.2.0/README_test-v0.2.0.md) : requêtes de test de cohérence sur les entités chargées
 
 🔎 Autres documents disponibles :
 
-- scripts de structure (`init_v013.sql`, `create_user_tifosi.sql`)
-- scripts de test (`test_v013.sql`, `data-test_v013.sql`, `queries-test_v013.sql`)
+- scripts de structure :
+  - v0.1.3 : `init_v013.sql`, `create_user_tifosi.sql`
+  - v0.2.0 : `create_tifosi.sql`, `insert_data.sql`
+- scripts de test :
+  - v0.1.3 : `test_v013.sql`, `data-test_v013.sql`, `queries-test_v013.sql`
+    - `model_tifosi_v013.mwb` : fichier EER Workbench du schéma relationnel  ([image EER v0.1.3](./implementation/sql/sql-v0.1/versions/sql-v0.1.3/model_tifosi_v013.mwb.png))
+  - v0.2.0 : `queries-test_v020;sql`
+    - `model_tifosi_v020.mwb` : modèle EER généré de la version `v0.2.0` ([image EER v0.2.0](./implementation/sql/sql-v0.2/versions/sql-v0.2.0/model_tifosi_v020.mwb.png))
 - documents de traçabilité (`HISTORIQUE_sql.md`, `CHANGELOG.md`)
 
 ---
@@ -48,7 +56,11 @@ Ce fichier est mis à jour à chaque **merge de PR liée à une version ou un ja
 Dernière mise à jour intégrée : **structure v0.1.3**, validée avec test, documentation et alignement MRLD v1.1.  
 Issue concernée : `#5.1 – Alignement issue#5 avec MRLDv1.1` ([#21](https://github.com/MonLucCo/CEF_MySQL-BDD_Tifosi_Test-version/issues/21))
 
-La mise à jour suivante est attendue avec le merge de l’issue `#6` (chargement des données `v0.2.x`).
+🔄 Dernière mise à jour intégrée : **données v0.2.0**, validées avec chargement partiel, documentation dédiée, et jeu de tests techniques.
+
+- Entités chargées : `marques`, `ingredients`, `boissons`, `focaccias`, `focaccias_ingredients`
+- Correction identifiée : relation `menus` ↔ `focaccias` non conforme au MCD v2.1
+- Prochaine version : `v0.2.1`, après reprise du cycle MCD → MRLD (issue #6.2 à venir)
 
 ---
 
@@ -81,8 +93,12 @@ La mise à jour suivante est attendue avec le merge de l’issue `#6` (chargemen
 
 - **Objectif** : insertion maîtrisée de données cohérentes dans la base `tifosi`
 - **Branche concernée** : `issue#6 – Insertion des données`
-- **Script en cours** : `insert_data_v02x.sql` (via utilisateur `tifosi`)
-- **Alignement attendu avec MRLD/MCD déjà validés**
+- **Livraison de `v0.2.0`** :  
+  - chargement partiel validé pour : `marques`, `ingredients`, `boissons`, `focaccias`, `focaccias_ingredients`
+  - fichiers `.csv` contrôlés dans `/sql-v0.2/versions/sql-v0.2.0`
+  - exécution validée avec l’utilisateur `tifosi` (`LOAD DATA`)
+- **⚠️ Incohérence détectée** sur la relation `menus` ↔ `focaccias` lors des tests fonctionnels (`queries-test_v020.sql`)
+- **Reprise du cycle MCD → MRLD planifiée** pour version `v0.2.1`, avec montée de version à `MRLD v2.0`
 
 ### 🔜 À venir — Cycle validation métier & packaging
 

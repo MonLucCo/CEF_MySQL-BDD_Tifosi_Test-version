@@ -1,6 +1,6 @@
 # 🧱 SQL v0.1 – Construction progressive de la base Tifosi
 
-Cette version regroupe les scripts liés à l’implémentation du **MPD v1** de manière itérative, structurée en sous-versions.
+Cette version regroupe les scripts liés à l’implémentation du **MPD v0.1** de manière itérative, structurée en sous-versions.
 
 ---
 

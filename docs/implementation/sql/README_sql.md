@@ -37,8 +37,8 @@ Ce répertoire contient tous les fichiers SQL liés à la base de données `tifo
 
 | Fichier | Rôle | État | Version |
 |--|--|--|--|
-| create_tifosi.sql | Script de création des tables et clés | En cours | v0.1.3 |
-| insert_data.sql  | Insertion des données de test | À venir | — |
+| create_tifosi.sql | Script de création des tables et clés | Prêt | v0.2.0 |
+| insert_data.sql  | Insertion des données de test | A tester | v0.2.0 |
 | backup_tifosi.sql | Sauvegarde complète | À venir | — |
 
 >🔗 Pour consulter les issues GitHub en cours liées à ces fichiers, voir [Section 3 – Suivi des travaux en cours](#-3---suivi-des-travaux-en-cours-issues-github)
@@ -76,7 +76,8 @@ Ce projet suit une logique de montée progressive en complexité, avec des versi
 | [sql-v0.1.1](sql-v0.1/versions/sql-v0.1.1/MPD-v0.1.1_tifosi.md) | Base partielle — vue métier minimale | `clients`, `menus`, `focaccias`, `jours`, relations avec `clients_*` | `sql-v0.1/versions/sql-v0.1.1/` |
 | v0.1.2 | Création de l’utilisateur `tifosi` | Sécurité applicative (`CREATE USER`, `GRANT`) | `sql-v0.1.2/versions/sql-v0.1.2` |
 | v0.1.3 | MPD complet  | Intégration des marques, ingrédients, relations N:N complètes | `sql-v0.1.3/versions/sql-v0.1.3` |
-| v0.2   | Données, insertions, tests | `insert_data.sql`, export `.sql`, validations | à venir |
+| v0.2.0 | MRLD v1.1 : Base, Utilisateur, insertions données, tests | `insert_data.sql`, insertion partielle des données, ⚠️ identification d'une erreur dans le MRLD v1.1 | `sql-v0.2.0/versions/sql-v0.2.0` |
+| v0.2.1 | MRLD v2.0 : Base, Utilisateur, insertions données, tests | `create_tifosi.sql`, `insert_data.sql`, export `.sql`, validations | à venir |
 | v0.3   | Données, insertions, tests | `insert_data.sql`, export `.sql`, validations | à venir |
 
 >Chaque version est placée dans un sous-dossier `sql-vX.Y` ou `sql-vX.Y.Z`.
@@ -160,10 +161,18 @@ Les étapes de construction logique et physique de la base `tifosi` sont en rela
 
 - Insertion contrôlée (respect des clés étrangères et des formats)
 - Données variées : clients, menus, focaccias, jours, marques, ingrédients
-- Possibilité d’automatiser via un script `insert_data.sql`
+- Script automatisé `insert_data.sql` basé sur des fichiers `.csv` propres
 
-📁 Dossier prévu : `sql-v0.2/`  
-📄 Fichier attendu : `insert_data.sql`
+📁 Dossier : `sql-v0.2/`
+
+🚩**Découverte lors de v0.2.0** :  
+Lors des tests de validation (`queries-test_v020.sql`), une incohérence structurelle a été identifiée entre le **MRLD v1.1** et la logique du **MCD v2.1**, notamment sur la relation `menus ↔ focaccias`.  
+➡️ Cela a conduit à un **chargement partiel**, limité aux entités validées.
+
+📦 Versions concernées :
+
+- [`sql-v0.2.0`](sql-v0.2/versions/sql-v0.2.0/) : chargement stable de `marques`, `ingredients`, `boissons`, `focaccias`, `focaccias_ingredients`
+- `sql-v0.2.1` (_à venir_) : reprise complète après révision du MCD et correction du MRLD en version 2.0
 
 ---
 

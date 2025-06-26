@@ -1,4 +1,4 @@
--- 🧱 Script create_tifosi.sql — Version MPD v0.2
+-- 🧱 Script create_tifosi.sql — Version MPD v0.2.0
 -- Auteur : PerLucCo
 -- Date : 2025-06-25
 

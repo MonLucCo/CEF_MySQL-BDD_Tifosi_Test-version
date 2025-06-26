@@ -1,17 +1,17 @@
-# 🧪 README_data.md — Chargement des données (v0.2)
+# 🧪 README_data-v0.2.0.md — Chargement des données (v0.2.0)
 
 **Base de données** : `tifosi`  
-**Version du modèle** : MPD v0.2  
+**Version du modèle** : MPD v0.2.0  
 **Schéma EER** : `model_tifosi_v020.mwb`, `model_tifosi_v020.mwb.png`  
 **Fichiers d’insertion** : `.csv` exportés depuis Excel  
 **Script de chargement** : `insert_data.sql`  
 **Auteur** : PerLucCo  
-**Date** : 25 juin 2025
+**Date** : 26 juin 2025
 
 ---
 
-- [🧪 README\_data.md — Chargement des données (v0.2)](#-readme_datamd--chargement-des-données-v02)
-  - [📂 Dossiers utilisés](#-dossiers-utilisés)
+- [🧪 README\_data-v0.2.0.md — Chargement des données (v0.2.0)](#-readme_data-v020md--chargement-des-données-v020)
+  - [📂 Dossiers et documents utilisés](#-dossiers-et-documents-utilisés)
   - [🔁 Procédure de chargement](#-procédure-de-chargement)
     - [1. Préparer les fichiers `.csv`](#1-préparer-les-fichiers-csv)
     - [2. Activer le chargement côté serveur (root)](#2-activer-le-chargement-côté-serveur-root)
@@ -22,11 +22,14 @@
 
 ---
 
-## 📂 Dossiers utilisés
+## 📂 Dossiers et documents utilisés
 
-- `docs/sources/datas-xlsx/` : fichiers `.xlsx` sources (un par table)
-- `docs/datas-csv/` : fichiers `.csv` produits depuis les `.xlsx`
-- `sql-v0.2/insert_data.sql` : script de chargement via `LOAD DATA`
+- `docs/sources/datas-xlsx/` : fichiers `.xlsx` sources (un fichier par table)
+- `docs/implementation/sql/sql-v0.2/versions/sql-v0.2.0` : dossier de la présente version
+  - `/datas-csv/` : dossier des fichiers `.csv` produits depuis les fichiers sources `.xlsx`
+  - `/create_tifosi.sql` : script de création de la base de données et de son utilisateur `tifosi`
+  - `/insert_data.sql` : script de chargement via `LOAD DATA`
+  - `/README_test-v0.2.0.md` : test de validation de la version v0.2.0
 
 ---
 
@@ -61,15 +64,16 @@ mysql --local-infile=1 -u tifosi -p < insert_data.sql
 
 ## 🧩 Tables chargées (progressivement)
 
-| Table        | Source CSV                                  |
-|--------------|---------------------------------------------|
-| `marques`    | `marques.csv`                               |
-| `ingredients`| `ingredients.csv`                           |
-| `boissons`   | _à venir (nécessite correspondance marque)_ |
-| `focaccias`  | _à venir (avec ingrédients liés)_           |
-| `menus`      | _à venir (avec tables liées)_               |
-| `clients`    | _à venir (avec tables liées)_               |
-| `jours`      | _à venir (avec tables liées)_               |
+| Table        | Source CSV                    |
+|--------------|-------------------------------|
+| `marques`    | `marques.csv`                 |
+| `ingredients`| `ingredients.csv`             |
+| `boissons`   | `boissons.csv`                |
+| `focaccias`  | `focaccias.csv`                   |
+| `focaccias_ingredients` | `focaccias_ingredients.csv` |
+| `menus`      | _à venir (avec tables liées)_ |
+| `clients`    | _à venir (avec tables liées)_ |
+| `jours`      | _à venir (avec tables liées)_ |
 
 ---
 
@@ -91,7 +95,7 @@ IGNORE 1 LINES;
 
 ## 📎 Remarque
 
-> Ce chargement préliminaire concerne uniquement les **données de référence** (`marques`, `ingredients`).  
+> Ce chargement concerne uniquement les données déjà validées à cette étape du projet : entités simples (`marques`, `ingredients`, etc.) et relations connues (`focaccias_ingredients`).  
 > Les autres entités relationnelles (boissons, menus, relations N:N, etc.) seront chargées dans les étapes suivantes.
 
 ---

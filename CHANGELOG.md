@@ -18,6 +18,8 @@ Versionnage selon [Semantic Versioning](https://semver.org/lang/fr/).
     - [🧭 Phase 2 - 2025-06-XX — Modèle logique (MRLD) \& base SQL](#-phase-2---2025-06-xx--modèle-logique-mrld--base-sql)
       - [🔍 Etape 1 (2025-06-23) : Organisation documentaire et versionnning du SQL](#-etape-1-2025-06-23--organisation-documentaire-et-versionnning-du-sql)
       - [🔍 Etape 2 (2025-06-25) : Création Utilisateur et Base de données minimale fonctionnelle du SQL](#-etape-2-2025-06-25--création-utilisateur-et-base-de-données-minimale-fonctionnelle-du-sql)
+      - [✨ Etape 3 (2025-06-26) : insertion des données en base](#-etape-3-2025-06-26--insertion-des-données-en-base)
+        - [🧭 Insertion partielle des données - Livraison de la version `sql-v0.2.0`](#-insertion-partielle-des-données---livraison-de-la-version-sql-v020)
       - [🚧 Etape \[Unreleased\] \[Phase 2 - v0.2\]](#-etape-unreleased-phase-2---v02)
   - [🧪 Milestone v0.3 - 2025-06-XX — Tests d’implémentation et jeu d’essai](#-milestone-v03---2025-06-xx--tests-dimplémentation-et-jeu-dessai)
     - [🧭 Phase \[Undefined\] - v0.3](#-phase-undefined---v03)
@@ -155,14 +157,37 @@ Versionnage selon [Semantic Versioning](https://semver.org/lang/fr/).
 
 🗂️ Dossiers concernés : `/docs/implementation/`, `/sql/`
 
+#### ✨ Etape 3 (2025-06-26) : insertion des données en base
+
+##### 🧭 Insertion partielle des données - Livraison de la version `sql-v0.2.0`
+
+- 💾 **Script de création** `create_tifosi.sql` mis à jour avec :
+  - réinitialisation propre de la base (`DROP DATABASE IF EXISTS`)
+  - création de l'utilisateur `tifosi` avec mot de passe sécurisé
+  - activation du paramètre `local_infile` pour le chargement de données
+- 📂 **Fichiers `.csv`** stables exportés depuis Excel :  
+  `marques.csv`, `ingredients.csv`, `boissons.csv`, `focaccias.csv`, `focaccias_ingredients.csv`
+- 📥 **Script `insert_data.sql`** exécuté avec succès sous l’utilisateur `tifosi` (`LOAD DATA LOCAL`)
+- 🧪 **Requêtes de test** dans `queries-test_v020.sql` : validation des jointures, intégrité partielle du modèle
+- 🧾 **Documents produits** :
+  - `README_data-v0.2.0.md` (procédure de chargement)
+  - `README_test-v0.2.0.md` (tests sur données chargées)
+  - `README_sql-v0.2.md` (suivi documentaire global SQL)
+- 📉 **Limite identifiée** : incohérence de structure entre `menus` ↔ `focaccias` ➞ nécessite reprise du **MRLD**
+- 🔁 **Reprise de la modélisation prévue** dans `v0.2.1` (MRLD v2.0 → MPD v0.2.1)
+
+📦 Dossier versionné : [`/sql-v0.2/versions/sql-v0.2.0/`](https://github.com/MonLucCo/CEF_MySQL-BDD_Tifosi_Test-version/tree/main/docs/implementation/sql/sql-v0.2/versions/sql-v0.2.0)
+
+📎 Issue concernée : [#6 (partie 1)](https://github.com/MonLucCo/CEF_MySQL-BDD_Tifosi_Test-version/issues/6)
+
 #### 🚧 Etape [Unreleased] [Phase 2 - v0.2]
 
 - Génération du script SQL complet dans `MPD_tifosi.sql`
 - Création d’un utilisateur `tifosi` avec droits associés
 - Ajout de l’historique technique : `HISTORIQUE_sql.md`
-- Suivi dans l’issue #5
+- Suivi dans les issues #4, #5 et #6
 
-🗂️ Dossiers concernés : `/docs/implementation/`, `/sql/`
+🗂️ Dossiers concernés : `/docs/implementation/`, `./mcd/`, `./mld/` et`./sql/`
 
 ---
 
