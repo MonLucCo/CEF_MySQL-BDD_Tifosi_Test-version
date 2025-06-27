@@ -15,6 +15,7 @@ _Dernière mise à jour :_ 24 juin 2025
     - [🧩 MRLD v0.2 — Centralisation de `jour` (essai)](#-mrld-v02--centralisation-de-jour-essai)
     - [🧩 MRLD v1 — Version logique de référence (stabilisée)](#-mrld-v1--version-logique-de-référence-stabilisée)
     - [🧩 MRLD v1.1 — Version logique de référence (complétude)](#-mrld-v11--version-logique-de-référence-complétude)
+    - [🧩 MRLD v2 — Version logique consolidée (MCD v2.1)](#-mrld-v2--version-logique-consolidée-mcd-v21)
 
 ---
 
@@ -52,10 +53,11 @@ Inspirée des recommandations de [LaConsole.dev](https://www.laconsole.dev) et d
 
 | Version | Objectif principal | Document |
 |-|-|-|
-| v0.1 | Transposition brute du MCD | [MRLD-v0.1_tifosi.md](./mrld-versions/MRLD-v0.1_tifosi.md) |
+| v0.1 | Transposition brute du MCD          | [MRLD-v0.1_tifosi.md](./mrld-versions/MRLD-v0.1_tifosi.md) |
 | v0.2 | Tentative de centralisation de l’attribut `jour` | [MRLD-v0.2_tifosi.md](./mrld-versions/MRLD-v0.2_tifosi.md) |
-| v1 | Modèle logique final retenu | [MRLD-v1_tifosi.md](./mrld-versions/MRLD-v1_tifosi.md) |
-| v1.1 | Modèle logique adapté à MCD v2.1 | [MRLD-v1.1_tifosi.md](./mrld-versions/MRLD-v1.1_tifosi.md) |
+| v1   | Modèle logique final retenu         | [MRLD-v1_tifosi.md](./mrld-versions/MRLD-v1_tifosi.md) |
+| v1.1 | Modèle logique adapté à MCD v2.1    | [MRLD-v1.1_tifosi.md](./mrld-versions/MRLD-v1.1_tifosi.md) |
+| v2   | Modèle logique consolidé (MCD v2.1) | [MRLD-v2_tifosi.md](./mrld-versions/MRLD-v2_tifosi.md) |
 
 ---
 
@@ -102,3 +104,17 @@ Version complète, conforme au `MCD v2.1`, intégrant :
 
 📄 Voir : [MRLD-v1.1_tifosi.md](./mrld-versions/MRLD-v1.1_tifosi.md)  
 📐 Schéma : [MRLD-v1.1_tifosi.drawio.png](./schemas/MRLD-v1.1_tifosi.drawio.png)
+
+### 🧩 MRLD v2 — Version logique consolidée (MCD v2.1)
+
+Version consolidée construite à partir du modèle conceptuel MCD v2.1.  
+Elle intègre l’évolution complète de la modélisation avec :
+
+- une factorisation complète de la notion de date via l’entité `jours` ;
+- deux relations **ternaires** : `clients_focaccias_jours` (achats) et `clients_jours_menus` (paiements) ;
+- une formalisation des relations binaires sous forme de **tables N:N** avec clés primaires composées ;
+- une nomenclature stable, cohérente, et des conventions uniformisées à travers toutes les entités et relations ;
+- une structure conforme aux formes normales relationnelles jusqu’en 4NF.
+
+📄 Voir : [MRLD-v2_tifosi.md](./mrld-versions/MRLD-v2_tifosi.md)  
+📐 Schéma : [mrld-v2_tifosi.drawio.png](./schemas/mrld-v2_tifosi.drawio.png)

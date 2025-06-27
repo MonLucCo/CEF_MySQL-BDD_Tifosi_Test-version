@@ -15,6 +15,7 @@ Versionnage selon [Semantic Versioning](https://semver.org/lang/fr/).
       - [🔍 Etape 2 : Installation de l'environnement technique](#-etape-2--installation-de-lenvironnement-technique)
       - [🔍 Etape 3 : Construction du MRLD et alignement avec le MCD v2](#-etape-3--construction-du-mrld-et-alignement-avec-le-mcd-v2)
       - [🔍 Etape 4 (2025-06-24) : Construction du MRLD v1.1 et alignement avec le MCD v2.1](#-etape-4-2025-06-24--construction-du-mrld-v11-et-alignement-avec-le-mcd-v21)
+      - [🔍 Etape 5 (2025-06-27) : Consolidation du MCD et régénération du MRLD v2 (issue #4.1)](#-etape-5-2025-06-27--consolidation-du-mcd-et-régénération-du-mrld-v2-issue-41)
     - [🧭 Phase 2 - 2025-06-XX — Modèle logique (MRLD) \& base SQL](#-phase-2---2025-06-xx--modèle-logique-mrld--base-sql)
       - [🔍 Etape 1 (2025-06-23) : Organisation documentaire et versionnning du SQL](#-etape-1-2025-06-23--organisation-documentaire-et-versionnning-du-sql)
       - [🔍 Etape 2 (2025-06-25) : Création Utilisateur et Base de données minimale fonctionnelle du SQL](#-etape-2-2025-06-25--création-utilisateur-et-base-de-données-minimale-fonctionnelle-du-sql)
@@ -118,6 +119,27 @@ Versionnage selon [Semantic Versioning](https://semver.org/lang/fr/).
 
 📎 Issue concernée : [#4 / #16](https://github.com/MonLucCo/CEF_MySQL-BDD_Tifosi_Test-version/issues/16)  
 📁 Dossiers concernés : `/docs/implementation/mrld-versions/`, `/docs/implementation/.../schemas/`
+
+---
+
+#### 🔍 Etape 5 (2025-06-27) : Consolidation du MCD et régénération du MRLD v2 (issue #4.1)
+
+- Reprise complète du MCD :
+  - analyse formelle et littérale complète du MCD (reprise à la version initiale du modèle conceptuel)
+    - 📄 Relations : [`modelisation_relations.md`](./docs/implementation/mcd/analyse/modelisation_relations.md)
+    - ✅ Conclusion : [`choix_modele.md`](./docs/implementation/mcd/analyse/choix_modele.md)
+  - correction mineure et validation de la version MCD v1.1 (ajout `cp_client`)
+  - validation structurée de la version MCD v2.1 (factorisation avec entité `jours`)
+- Formulation littérale rigoureuse des 8 relations associatives (binaires et ternaires)
+- Comparaison des deux modèles conceptuels dans le dossier `/analyse/`
+- Justification et **choix de MCD v2.1 comme modèle de référence**
+- Génération complète du `MRLD v2` :
+  - refactorisation des relations `achète` et `paye` sous forme de relations ternaires
+  - clarification des tables N:N binaires avec **PK composées**
+- Schéma associé `mrld-v2_tifosi.drawio.png` + documentation logique
+
+📎 Issue concernée : [#4.1](https://github.com/MonLucCo/CEF_MySQL-BDD_Tifosi_Test-version/issues/25)  
+📄 Fichiers : `MCD-v1.1_tifosi.md`, `MCD-v2.1_tifosi.md`, [`MRLD-v2_tifosi.md`](./docs/implementation/mld/mrld-versions/MRLD-v2_tifosi.md)
 
 ---
 
