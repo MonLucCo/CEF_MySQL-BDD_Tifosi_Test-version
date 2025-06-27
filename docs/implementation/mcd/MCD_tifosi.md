@@ -1,7 +1,7 @@
 # 🧾 MCD — Modèle Conceptuel de Données (Tifosi)
 
 _Rédigé par :_ PerLucCo  
-_Dernière mise à jour :_ 21 juin 2025  
+_Dernière mise à jour :_ 27 juin 2025  
 
 ---
 
@@ -27,11 +27,19 @@ Elle contient :
 
 ---
 
+## 🔎 Analyse et choix de version
+
+Une étude formelle des modélisations a été réalisée dans le dossier [`/analyse/`](./analyse/), avec une formulation littérale des relations et une comparaison des modèles MCD v1.1 et v2.1.  
+La conclusion de cette étude, disponible ici : [`choix_modele.md`](./analyse/choix_modele.md), officialise le choix de la version retenue pour la suite de l’implémentation.
+
+---
+
 ## 🧭 Versions structurées
 
 | Version | Objectif principal | Document |
 |---------|---------------------|----------|
 | v1      | MCD instancié à partir du sujet, sans restructuration | [MCD-v1_tifosi.md](./versions/MCD-v1_tifosi.md) |
+| v1.1    | Ajout attribut `cp_client` dans l'entité `clients` | [MCD-v1.1_tifosi.md](./versions/MCD-v1.1_tifosi.md) |
 | v2      | Centralisation de `jour` via entité dédiée + clarification des actions client | [MCD-v2_tifosi.md](./versions/MCD-v2_tifosi.md) |
 | v2.1    | Ajout attribut `cp_client` dans l'entité `clients` | [MCD-v2.1_tifosi.md](./versions/MCD-v2.1_tifosi.md) |
 
