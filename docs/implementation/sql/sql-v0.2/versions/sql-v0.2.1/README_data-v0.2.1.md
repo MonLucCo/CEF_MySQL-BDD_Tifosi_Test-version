@@ -31,6 +31,11 @@
   - `/create_tifosi.sql` : script de création de la base de données et de son utilisateur `tifosi`
   - `/insert_data.sql` : script de chargement via `LOAD DATA`
   - `/README_test-v0.2.1.md` : test de validation de la version v0.2.1
+  - `/DATA-TESTING.md` : vues métiers du jeu de données (référence pour les cycles d'instantiation-tests de validation)
+  - `model_tifosi_v021-initial.mwb.png` : schéma initial MPDv0.2.1 avec clés primaires composites (avant issue #6.1)
+  - `model_tifosi_v021-final.mwb.png` : schéma final MPDv0.2.1 avec identifiants techniques dans les tables de liaison
+  - `result-queries-test_v021-initial.txt` : export de validation sur MPD initial (avant correction)
+  - `result-queries-test_v021-final.txt` : export validé après correction structurelle (aligné DATAS-TESTING.md)
 
 ---
 

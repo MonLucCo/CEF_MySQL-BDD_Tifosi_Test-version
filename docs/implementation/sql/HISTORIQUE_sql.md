@@ -182,6 +182,8 @@ Cela a conduit à un **chargement partiel des entités validées uniquement**.
 - Script `insert_data.sql` (préparation complète de l’insertion des données en `.csv`)
 - Fichier `queries-test_v021.sql` (requêtes de vérification post-insertion)
 - Fichier `DATAS-TESTING.md` (synthèse agrégée des jeux de données injectables)
+- Fichier `result-queries-test_v021.txt` (résultats des requêtes de validation de `queries-test_v021.sql`)
+- Fichier image `model_tifosi_v021.mwb.png` (fichier d'exécution des tests en mode terminal)
 - Classeur `datas-tests.xlsx` (en préparation) + archive `datas-csv_v021.zip` (13 fichiers `.csv`)
 
 ⚠️ Ces fichiers sont **préparés mais non encore exécutés** : l’injection effective des données sera tracée en `v0.2.2`.
