@@ -37,7 +37,7 @@ Ce répertoire contient tous les fichiers SQL liés à la base de données `tifo
 
 | Fichier | Rôle | État | Version |
 |--|--|--|--|
-| create_tifosi.sql | Script de création des tables et clés | Prêt | v0.2.0 |
+| create_tifosi.sql | Script de création des tables et clés | Prêt | v0.2.1 |
 | insert_data.sql  | Insertion des données de test | A tester | v0.2.0 |
 | backup_tifosi.sql | Sauvegarde complète | À venir | — |
 
@@ -77,7 +77,7 @@ Ce projet suit une logique de montée progressive en complexité, avec des versi
 | v0.1.2 | Création de l’utilisateur `tifosi` | Sécurité applicative (`CREATE USER`, `GRANT`) | `sql-v0.1.2/versions/sql-v0.1.2` |
 | v0.1.3 | MPD complet  | Intégration des marques, ingrédients, relations N:N complètes | `sql-v0.1.3/versions/sql-v0.1.3` |
 | v0.2.0 | MRLD v1.1 : Base, Utilisateur, insertions données, tests | `insert_data.sql`, insertion partielle des données, ⚠️ identification d'une erreur dans le MRLD v1.1 | `sql-v0.2.0/versions/sql-v0.2.0` |
-| v0.2.1 | MRLD v2.0 : Base, Utilisateur, insertions données, tests | `create_tifosi.sql`, `insert_data.sql`, export `.sql`, validations | à venir |
+| v0.2.1 | MRLD v2.0 : base stable + doc (#5.2) | `create_tifosi.sql` finalisé, `README_data`, `README_test` prêts | `sql-v0.2.1/` |
 | v0.3   | Données, insertions, tests | `insert_data.sql`, export `.sql`, validations | à venir |
 
 >Chaque version est placée dans un sous-dossier `sql-vX.Y` ou `sql-vX.Y.Z`.
@@ -172,13 +172,17 @@ Lors des tests de validation (`queries-test_v020.sql`), une incohérence structu
 📦 Versions concernées :
 
 - [`sql-v0.2.0`](sql-v0.2/versions/sql-v0.2.0/) : chargement stable de `marques`, `ingredients`, `boissons`, `focaccias`, `focaccias_ingredients`
-- `sql-v0.2.1` (_à venir_) : reprise complète après révision du MCD et correction du MRLD en version 2.0
+- [`sql-v0.2.1`](./sql-v0.2/versions/sql-v0.2.1/) (_en version intermédiaire_) : reprise complète après révision du MCD et correction du MRLD en version 2.0
+  - [#5.2] : `create_tifosi.sql` disponible et documentation associée à la version MPD v0.2.1.
+  - [#6.1] : (_à venir_) version complète comprenant `create_tifosi.sql`, `insert_data.sql`, les tests de validation et la documentation associée.
 
 ---
 
 ##### 🧪 Étape 5 — Requêtes de test et sauvegarde (liée à #7)
 
 🎯 Objectif : Vérifier la consistance de la base via des requêtes SQL et produire une sauvegarde `.sql` prête pour la livraison.
+
+À venir après l’injection des données (#6.1) :
 
 - Écriture de requêtes de sélection, de jointures, de filtres
 - Validation des comportements fonctionnels (commandes, paiements, notes)
@@ -216,8 +220,14 @@ Lors des tests de validation (`queries-test_v020.sql`), une incohérence structu
 🎯 **Objectif** : Écriture du script SQL de la base Tifosi (tables, clés, contraintes) + définition de l'utilisateur `tifosi`.
 
 📌 **État** : réalisée (scripts : création base et utilisateur ; tests de validation)  
-📦 Étapes réalisées : MPD v0.1.1, `README_test-v0.1.1.md`, MPD v0.1.2 et MPD v0.1.3.  
-📂 Versions concernées : `sql-v0.1.1`, `sql-v0.1.2`, `sql-v0.1.3`
+📦 Étapes réalisées :
+
+- Issue #5 : MPD v0.1.1, `README_test-v0.1.1.md`, MPD v0.1.2 et MPD v0.1.3.
+- Issue #5.2 : MPD v0.2.1
+📂 Versions concernées :
+
+- Issue #5 : `sql-v0.1.1`, `sql-v0.1.2`, `sql-v0.1.3`
+- Issue #5.2 : `sql-v0.2.1`
 
 ---
 

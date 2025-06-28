@@ -152,7 +152,45 @@ Cela a conduit à un **chargement partiel des entités validées uniquement**.
 
 ## 🚧 V0.2.1 – Chargement des données (2025-06-XX)
 
->🔄 Cette version intégrera les modifications issues de la reprise du cycle MCD → MRLD → MPD initiée après les constats de `v0.2.0`.
+>🔄 Cette version intégre les modifications issues de la reprise du cycle MCD → MRLD → MPD initiée après les constats de `v0.2.0`.
+
+🗓️ Date : 2025-06-28  
+🎯 Objectif : Finaliser la structure relationnelle complète de la base `tifosi`, incluant les 13 tables, les relations binaires et ternaires, et les contraintes référentielles.
+
+📌 Cette version couvre deux issues distinctes :
+
+- 🔹 **Issue #5.2** : création et documentation de la base (sans insertion de données)
+- 🔹 **Issue #6.1** : préparation de l’insertion des données de test (structure uniquement)
+
+---
+
+🔧 **Contenu de l’issue #5.2 - Structure complète de la base `tifosi` conforme au MRLD v2** (2025-06-28)
+
+- Script `create_tifosi.sql` : déclaration des 12 tables avec leurs contraintes (PK, FK, NOT NULL, relations N:N et ternaires)
+- Documentation :
+  - `README_data-v0.2.1.md` (description structurée des entités)
+  - `README_test-v0.2.1.md` (cahier de test fonctionnel lié à la structure)
+- Modèle relationnel :
+  - `model_tifosi_v021.mwb` + image EER exportée
+
+🟢 Cette sous-version est une **base stable, documentée et testable**, sans encore charger de données.
+
+---
+
+📦 **Contenu préparatoire de l’issue #6.1 - Chargement des données conforme au MRLD v2**
+
+- Script `insert_data.sql` (préparation complète de l’insertion des données en `.csv`)
+- Fichier `queries-test_v021.sql` (requêtes de vérification post-insertion)
+- Fichier `DATAS-TESTING.md` (synthèse agrégée des jeux de données injectables)
+- Classeur `datas-tests.xlsx` (en préparation) + archive `datas-csv_v021.zip` (13 fichiers `.csv`)
+
+⚠️ Ces fichiers sont **préparés mais non encore exécutés** : l’injection effective des données sera tracée en `v0.2.2`.
+
+📂 Dossier concerné : `/sql-v0.2/versions/sql-v0.2.1/`  
+📌 Issues liées :  
+
+- [#5.2 – Structure complète de la base](https://github.com/MonLucCo/CEF_MySQL-BDD_Tifosi_Test-version/issues/5)  
+- [#6.1 – Préparation au chargement des données de test](https://github.com/MonLucCo/CEF_MySQL-BDD_Tifosi_Test-version/issues/6)
 
 ---
 
