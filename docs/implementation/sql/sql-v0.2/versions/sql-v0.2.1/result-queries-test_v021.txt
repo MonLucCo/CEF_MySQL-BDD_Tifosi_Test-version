@@ -1,0 +1,134 @@
+id_jour	date_jour
+1	2025-06-01
+2	2025-06-02
+3	2025-06-03
+4	2025-06-04
+5	2025-06-05
+6	2025-06-06
+id_client	nom_client	age	cp_client
+1	Armand CAMUS	55	78110
+2	Lucia BELLINI	40	92130
+3	Nour KHADIJA	32	92130
+4	Andréa MANCINI	24	78230
+5	Olivier FELTRE	59	75016
+id_marque	nom_marque
+1	Coca-cola
+2	Cristalline
+3	Monster
+4	Pepsico
+id_boisson	nom_boisson	marque_associée
+1	Coca-cola zéro	Coca-cola
+2	Coca-cola original	Coca-cola
+3	Fanta citron	Coca-cola
+4	Fanta orange	Coca-cola
+5	Capri-sun	Coca-cola
+6	Pepsi	Pepsico
+7	Pepsi Max Zéro	Pepsico
+8	Lipton zéro citron	Pepsico
+9	Lipton Peach	Pepsico
+10	Monster energy ultra gold	Monster
+11	Monster energy ultra blue	Monster
+12	Eau de source 	Cristalline
+id_ingredient	nom_ingredient
+1	Ail
+2	Ananas
+3	Artichaut
+4	Bacon
+5	Base crème
+6	Base tomate
+7	Champignon
+8	Chèvre
+9	Cresson
+10	Emmental
+11	Gorgonzola
+12	Jambon cuit
+13	Jambon fumé
+14	Mozarella
+15	Oeuf
+16	Oignon
+17	Olive noire
+18	Olive verte
+19	Parmesan
+20	Piment
+21	Poivre
+22	Pomme de terre
+23	Raclette
+24	Salami
+25	Tomate cerise
+id_focaccia	nom_focaccia	prix_focaccia	ingredients
+1	Mozaccia	9.80	Ail, Artichaut, Base tomate, Champignon, Cresson, Jambon fumé, Mozarella, Olive noire, Parmesan, Poivre
+2	Gorgonzollaccia	10.80	Ail, Base tomate, Champignon, Cresson, Gorgonzola, Olive noire, Parmesan, Poivre
+3	Raclaccia	8.90	Ail, Base tomate, Champignon, Cresson, Parmesan, Poivre, Raclette
+4	Emmentalaccia	9.80	Base crème, Champignon, Cresson, Emmental, Oignon, Parmesan, Poivre
+5	Tradizione	8.90	Base tomate, Champignon, Cresson, Jambon cuit, Mozarella, Olive noire, Olive verte, Parmesan, Poivre
+6	Hawaienne	11.20	Ananas, Bacon, Base tomate, Cresson, Mozarella, Olive noire, Parmesan, Piment, Poivre
+7	Américaine	10.80	Bacon, Base tomate, Cresson, Mozarella, Olive noire, Parmesan, Poivre, Pomme de terre
+8	Paysanne	12.80	Ail, Artichaut, Base crème, Champignon, Chèvre, Cresson, Jambon fumé, Oeuf, Olive noire, Parmesan, Poivre, Pomme de terre
+id_menu	nom_menu	prix_menu
+1	Solo : 1 focaccia + 1 boisson	13.00
+2	Duo : 2 focaccias + 2 boissons	24.00
+3	Famille : 4 focaccias + 4 boissons	42.00
+4	Solo Soif : 1 focaccia + 2 boissons	18.00
+5	Duo Soif : 2 focaccias + 3 boissons	28.00
+6	Famille Soif : 4 focaccias + 5 boissons	45.00
+7	Solo Faim : 2 focaccias + 1 boisson	21.00
+8	Duo Faim : 4 focaccias + 2 boissons	41.00
+9	Famille Faim : 6 focaccias + 4 boissons	55.00
+10	Soirée : 10 focaccias + 10 boissons	90.00
+id_menu	nom_menu	focaccias
+1	Solo : 1 focaccia + 1 boisson	Emmentalaccia, Mozaccia
+2	Duo : 2 focaccias + 2 boissons	Américaine, Gorgonzollaccia, Hawaienne, Mozaccia, Paysanne
+3	Famille : 4 focaccias + 4 boissons	Gorgonzollaccia, Hawaienne, Paysanne, Raclaccia
+5	Duo Soif : 2 focaccias + 3 boissons	Raclaccia
+7	Solo Faim : 2 focaccias + 1 boisson	Américaine, Tradizione
+id_menu	nom_menu	boissons
+1	Solo : 1 focaccia + 1 boisson	Coca-cola original
+2	Duo : 2 focaccias + 2 boissons	Coca-cola original, Coca-cola zéro, Fanta orange
+3	Famille : 4 focaccias + 4 boissons	Coca-cola original
+5	Duo Soif : 2 focaccias + 3 boissons	Coca-cola original, Fanta citron
+7	Solo Faim : 2 focaccias + 1 boisson	Coca-cola original
+id_menu	nom_menu	focaccias	boissons
+1	Solo : 1 focaccia + 1 boisson	Emmentalaccia, Mozaccia	Coca-cola original
+2	Duo : 2 focaccias + 2 boissons	Américaine, Gorgonzollaccia, Hawaienne, Mozaccia, Paysanne	Coca-cola original, Coca-cola zéro, Fanta orange
+3	Famille : 4 focaccias + 4 boissons	Gorgonzollaccia, Hawaienne, Paysanne, Raclaccia	Coca-cola original
+4	Solo Soif : 1 focaccia + 2 boissons	NULL	NULL
+5	Duo Soif : 2 focaccias + 3 boissons	Raclaccia	Coca-cola original, Fanta citron
+6	Famille Soif : 4 focaccias + 5 boissons	NULL	NULL
+7	Solo Faim : 2 focaccias + 1 boisson	Américaine, Tradizione	Coca-cola original
+8	Duo Faim : 4 focaccias + 2 boissons	NULL	NULL
+9	Famille Faim : 6 focaccias + 4 boissons	NULL	NULL
+10	Soirée : 10 focaccias + 10 boissons	NULL	NULL
+id_jour	date_jour
+1	01/06/2025
+2	02/06/2025
+3	03/06/2025
+4	04/06/2025
+5	05/06/2025
+6	06/06/2025
+jour	client	menu	prix	composition paiement menus
+01/06/2025	Lucia BELLINI	Duo Soif : 2 focaccias + 3 boissons	28.00	{ focaccias (Raclaccia) & boissons (Coca-cola original, Fanta citron) }
+02/06/2025	Armand CAMUS	Duo : 2 focaccias + 2 boissons	24.00	{ focaccias (Américaine, Paysanne) & boissons (Coca-cola original, Coca-cola zéro, Fanta orange) }
+03/06/2025	Armand CAMUS	Solo : 1 focaccia + 1 boisson	13.00	{ focaccias (Mozaccia) & boissons (Coca-cola original) }
+03/06/2025	Lucia BELLINI	Duo : 2 focaccias + 2 boissons	24.00	{ focaccias (Hawaienne, Mozaccia) & boissons (Coca-cola original, Coca-cola zéro, Fanta orange) }
+05/06/2025	Lucia BELLINI	Solo : 1 focaccia + 1 boisson	13.00	{ focaccias (Emmentalaccia, Paysanne, Raclaccia) & boissons (Coca-cola original) }
+05/06/2025	Lucia BELLINI	Famille : 4 focaccias + 4 boissons	42.00	{ focaccias (Emmentalaccia, Paysanne, Raclaccia) & boissons (Coca-cola original) }
+05/06/2025	Nour KHADIJA	Solo Faim : 2 focaccias + 1 boisson	21.00	{ focaccias (Américaine, Tradizione) & boissons (Coca-cola original) }
+06/06/2025	Olivier FELTRE	Duo : 2 focaccias + 2 boissons	24.00	{ focaccias (Américaine, Gorgonzollaccia) & boissons (Coca-cola original, Coca-cola zéro, Fanta orange) }
+jour	client	composition achat focaccias	prix
+01/06/2025	Lucia BELLINI	{ Raclaccia }	8.90
+02/06/2025	Armand CAMUS	{ Américaine, Paysanne }	23.60
+03/06/2025	Armand CAMUS	{ Mozaccia }	9.80
+03/06/2025	Lucia BELLINI	{ Hawaienne, Mozaccia }	21.00
+05/06/2025	Lucia BELLINI	{ Emmentalaccia, Paysanne, Raclaccia }	31.50
+05/06/2025	Nour KHADIJA	{ Américaine, Tradizione }	19.70
+06/06/2025	Olivier FELTRE	{ Américaine, Gorgonzollaccia }	21.60
+nb_clients
+5
+nb_menus
+10
+nb_focaccias
+8
+nb_boissons
+12
+nb_jours
+6

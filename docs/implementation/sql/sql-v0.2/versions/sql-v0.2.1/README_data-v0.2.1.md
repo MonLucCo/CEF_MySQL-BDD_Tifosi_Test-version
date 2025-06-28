@@ -17,6 +17,7 @@
     - [2. Activer le chargement côté serveur (root)](#2-activer-le-chargement-côté-serveur-root)
     - [3. Lancer le chargement avec l’utilisateur `tifosi`](#3-lancer-le-chargement-avec-lutilisateur-tifosi)
   - [🧩 Tables chargées (progressivement)](#-tables-chargées-progressivement)
+    - [🛠️ Remarque importante sur les tables de liaison `*_menus`](#️-remarque-importante-sur-les-tables-de-liaison-_menus)
   - [⚙️ Structure de `insert_data.sql`](#️-structure-de-insert_datasql)
   - [📎 Remarque](#-remarque)
 
@@ -71,15 +72,23 @@ mysql --local-infile=1 -u tifosi -p < insert_data.sql
 | `boissons`                   | `boissons.csv`                   | ✅ chargée           |
 | `focaccias`                  | `focaccias.csv`                  | ✅ chargée           |
 | `focaccias_ingredients`      | `focaccias_ingredients.csv`      | ✅ chargée           |
-| `menus`                      | `menus.csv`                      | 🕓 à charger         |
-| `boissons_menus`             | `boissons_menus.csv`             | 🕓 à charger         |
-| `focaccias_menus`            | `focaccias_menus.csv`            | 🕓 à charger         |
-| `clients`                    | `clients.csv`                    | 🕓 à charger         |
-| `jours`                      | `jours.csv`                      | 🕓 à charger         |
-| `clients_jours_menus`        | `clients_jours_menus.csv`        | 🕓 à charger         |
-| `clients_focaccias_jours`    | `clients_focaccias_jours.csv`    | 🕓 à charger         |
+| `menus`                      | `menus.csv`                      | ✅ chargée           |
+| `boissons_menus`             | `boissons_menus.csv`             | ✅ chargée           |
+| `focaccias_menus`            | `focaccias_menus.csv`            | ✅ chargée           |
+| `clients`                    | `clients.csv`                    | ✅ chargée           |
+| `jours`                      | `jours.csv`                      | ✅ chargée           |
+| `clients_jours_menus`        | `clients_jours_menus.csv`        | ✅ chargée           |
+| `clients_focaccias_jours`    | `clients_focaccias_jours.csv`    | ✅ chargée           |
 
 > statut au fil du chargement ✅ chargée, 🕓 à charger, ⛔️ si un fichier est bloquant.
+
+### 🛠️ Remarque importante sur les tables de liaison `*_menus`
+
+Les tables `boissons_menus` et `focaccias_menus` peuvent contenir volontairement **plusieurs occurrences d'un même couple (boisson ou focaccia, menu)**, afin de représenter fidèlement les quantités servies dans un menu (ex. : 2× Coca-cola original dans un menu).
+
+Le modèle relationnel logique (MRLDv2) le permet. En revanche, le MPDv0.2.1 interdisait dans sa première mise en oeuvre cette configuration via une **clé primaire composite**, ce qui bloquait normalement le chargement des données.
+
+Dans le script `create_tifosi.sql` final, cette contrainte a donc été retirée, conformément à l'issue #6.1 (_instantiation-validation_) en utilisant une clé primaire pour chaque composition.
 
 ---
 
