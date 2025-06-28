@@ -19,7 +19,7 @@ Cette version regroupe les scripts liés à l’implémentation du **MPD v0.2** 
 | Version         | Objectif principal                            | Liens associés |
 |-----------------|-----------------------------------------------|----------------|
 | [`v0.2.0`](./versions/sql-v0.2.0/README_data-v0.2.0.md) | Chargement partiel (données simples)              | `create_tifosi.sql`, `insert_data.sql`, `focaccias_ingredients.csv`, `model_tifosi_v020.mwb` |
-| [`v0.2.1`](./versions/sql-v0.2.1/README_data-v0.2.1.md) | Chargement complet (12 tables + jeux de test)     | `datas-tests.xlsx`, `insert_data.sql`, `queries-test_v021.sql`, `model_tifosi_v021.mwb` |
+| [`v0.2.1`](./versions/sql-v0.2.1/README_data-v0.2.1.md) | Chargement complet (12 tables + jeux de test)     | `datas-tests.xlsx`, `insert_data.sql`, `queries-test_v021.sql`, `model_tifosi_v021(-intial et -final).mwb`, `DATAS-TESTING.md` |
 
 ---
 
@@ -56,7 +56,7 @@ Chaque sous-version dispose de son propre dossier avec :
 
 ## 🧱 Prochaine étape
 
-> La version `v0.2.1` constitue une **base stable complète**, incluant le modèle, les scripts, le jeu de données, la documentation, et les tests.  
+> La version `v0.2.1` constitue une **base stable complète**, incluant le modèle, les scripts, le jeu de données, la documentation, et les tests (cycles d'instatiation-validation exploitant DATAS-TESTING.md et des fichiers de résultats `result-queries-test_v021.txt`).  
 > Elle peut servir de **socle de référence** pour :
 
 - le maquettage de vues SQL,
@@ -73,6 +73,6 @@ La branche `sql-v0.2` est donc **clôturable**, sauf retours correctifs mineurs 
 - 🧠 Issue fonctionnelle : `#6` — Chargement progressif via CSV (v0.2) et `#6.1` — Insertion complète des données sur structure corrigée (sql-v0.2.1)
 - 📘 Changelog SQL : [`HISTORIQUE_sql.md`](./HISTORIQUE_sql.md)
 - 🧪 Jeu de test synthétique : [`DATAS-TESTING.md`](./versions/sql-v0.2.1/DATAS-TESTING.md)
-- 🔁 Modèles visuels : `model_tifosi_v020.mwb`, `model_tifosi_v021.mwb` + exports `.png`
+- 🔁 Modèles visuels : `model_tifosi_v020.mwb`, `model_tifosi_v021(-initial et -final).mwb` + exports `.png`
 
 ---

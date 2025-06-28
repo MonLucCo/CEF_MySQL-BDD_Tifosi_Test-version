@@ -68,9 +68,9 @@ CREATE TABLE menus (
 -- Relation associative binaire
 -- ================================
 CREATE TABLE focaccias_menus (
-    focaccia_id INT,
-    menu_id INT,
-    PRIMARY KEY (focaccia_id, menu_id),
+    id_focaccia_menu INT AUTO_INCREMENT PRIMARY KEY,
+    focaccia_id INT NOT NULL,
+    menu_id INT NOT NULL,
     FOREIGN KEY (focaccia_id) REFERENCES focaccias (id_focaccia),
     FOREIGN KEY (menu_id) REFERENCES menus (id_menu)
 ) ENGINE = InnoDB;
@@ -150,9 +150,9 @@ CREATE TABLE boissons (
 -- Relation associative binaire
 -- ================================
 CREATE TABLE boissons_menus (
-    boisson_id INT,
-    menu_id INT,
-    PRIMARY KEY (menu_id, boisson_id),
+    id_boisson_menu INT AUTO_INCREMENT PRIMARY KEY,
+    boisson_id INT NOT NULL,
+    menu_id INT NOT NULL,
     FOREIGN KEY (boisson_id) REFERENCES boissons (id_boisson),
     FOREIGN KEY (menu_id) REFERENCES menus (id_menu)
 ) ENGINE = InnoDB;

@@ -38,7 +38,7 @@ Ce répertoire contient tous les fichiers SQL liés à la base de données `tifo
 | Fichier | Rôle | État | Version |
 |--|--|--|--|
 | create_tifosi.sql | Script de création des tables et clés | Prêt | v0.2.1 |
-| insert_data.sql  | Insertion des données de test | A tester | v0.2.0 |
+| insert_data.sql  | Insertion des données de test | Prêt | v0.2.1 |
 | backup_tifosi.sql | Sauvegarde complète | À venir | — |
 
 >🔗 Pour consulter les issues GitHub en cours liées à ces fichiers, voir [Section 3 – Suivi des travaux en cours](#-3---suivi-des-travaux-en-cours-issues-github)
@@ -77,7 +77,7 @@ Ce projet suit une logique de montée progressive en complexité, avec des versi
 | v0.1.2 | Création de l’utilisateur `tifosi` | Sécurité applicative (`CREATE USER`, `GRANT`) | `sql-v0.1.2/versions/sql-v0.1.2` |
 | v0.1.3 | MPD complet  | Intégration des marques, ingrédients, relations N:N complètes | `sql-v0.1.3/versions/sql-v0.1.3` |
 | v0.2.0 | MRLD v1.1 : Base, Utilisateur, insertions données, tests | `insert_data.sql`, insertion partielle des données, ⚠️ identification d'une erreur dans le MRLD v1.1 | `sql-v0.2.0/versions/sql-v0.2.0` |
-| v0.2.1 | MRLD v2.0 : base stable + doc (#5.2) | `create_tifosi.sql` finalisé, `README_data`, `README_test` prêts | `sql-v0.2.1/` |
+| v0.2.1 | MRLD v2.0 : base stable + doc (#5.2) | `create_tifosi.sql` finalisé, `README_data`, `README_test` prêts. La version inclut deux variantes du MPD : avec cPK (initial) puis avec identifiants techniques (#6.1) | `sql-v0.2.1/` |
 | v0.3   | Données, insertions, tests | `insert_data.sql`, export `.sql`, validations | à venir |
 
 >Chaque version est placée dans un sous-dossier `sql-vX.Y` ou `sql-vX.Y.Z`.
@@ -174,7 +174,12 @@ Lors des tests de validation (`queries-test_v020.sql`), une incohérence structu
 - [`sql-v0.2.0`](sql-v0.2/versions/sql-v0.2.0/) : chargement stable de `marques`, `ingredients`, `boissons`, `focaccias`, `focaccias_ingredients`
 - [`sql-v0.2.1`](./sql-v0.2/versions/sql-v0.2.1/) (_en version intermédiaire_) : reprise complète après révision du MCD et correction du MRLD en version 2.0
   - [#5.2] : `create_tifosi.sql` disponible et documentation associée à la version MPD v0.2.1.
-  - [#6.1] : (_à venir_) version complète comprenant `create_tifosi.sql`, `insert_data.sql`, les tests de validation et la documentation associée.
+  - [#6.1] : version complète comprenant `create_tifosi.sql`, `insert_data.sql`, les tests de validation et la documentation associée.
+    - Partie 1 : instanciation du MPDv0.2.1 pour engager les cycles de vérification avec la référence du jeu de données `DATAS-TESTING.md`
+    - 🔄 Partie 2 : optimisation du MPD v0.2.1 à partir des cycles de validation :
+      - Les tables de liaison `focaccias_menus` et `boissons_menus` ont été modifiées pour remplacer les clés primaires composites (cPK) par un identifiant technique `id_xxx_menu`.  
+      - Cela permet d’accueillir les doublons fonctionnels nécessaires à l’instanciation correcte du jeu de données `DATAS-TESTING.md`.  
+      - Deux schémas visuels (`model_tifosi_v021-initial.mwb.png` et `...-final.mwb.png`) permettent de visualiser l’évolution structurelle.
 
 ---
 

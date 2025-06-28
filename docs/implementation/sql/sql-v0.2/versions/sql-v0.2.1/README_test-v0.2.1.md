@@ -11,6 +11,7 @@
 
 - [🧪 README\_test-v0.2.1.md — Requêtes de validation de la base `tifosi`](#-readme_test-v021md--requêtes-de-validation-de-la-base-tifosi)
   - [🎯 Objectif](#-objectif)
+  - [🧪 Version validée MPDv0.2.1](#-version-validée-mpdv021)
   - [🛠️ Pré-requis](#️-pré-requis)
     - [📂 Scripts de test utilisés](#-scripts-de-test-utilisés)
     - [🔍 Contenu des tests](#-contenu-des-tests)
@@ -34,6 +35,17 @@ Vérifier la structure et la cohérence des données insérées dans la base `ti
 - la création de la structure de la base et de l'utilisateur `tifosi`
 - la bonne insertion des données boissons.csv, ingrédients.csv, marques.csv, focaccias.csv et de la liaison boissons avec marques et de focaccias avec ingredients.
 - l’exploitation en lecture des principales entités métiers `boissons` et `focaccias`
+
+---
+
+## 🧪 Version validée MPDv0.2.1
+
+Les tests ont été réalisés sur deux itérations du modèle physique :
+
+- Version initiale : avec clés primaires composites (`focaccias_menus`, `boissons_menus`)
+- Version finale : avec identifiants techniques (`id_focaccia_menu`, `id_boisson_menu`), conformément à l’issue #6.1
+
+Les exports `result-queries-test_v021-initial.txt` et `...-final.txt` permettent de tracer les deux validations successives.
 
 ---
 
@@ -147,7 +159,9 @@ Le résultat attendu s’affiche dans le terminal ou dans l’onglet SQL de Work
 Le schéma a été généré à partir de la base `tifosi` via la fonction **"Reverse Engineer"** de MySQL Workbench.
 
 - 📍 Fichier modèle : `sql-v0.2.1/model_tifosi_v021.mwb`
-- 📷 Export visuel : ![model_tifosi_v021.mwb.png](model_tifosi_v021.mwb.png)
+- 📷 Export visuel :
+  - Version initiale avant cycle de _instantiation-validation_ : ![model_tifosi_v021-initial.mwb.png](model_tifosi_v021-initial.mwb.png)
+  - Version finale avec optimisation des clés primaires composées : ![model_tifosi_v021-final.mwb.png](model_tifosi_v021-final.mwb.png)
 
 **Observations :**
 
@@ -163,16 +177,16 @@ Le schéma a été généré à partir de la base `tifosi` via la fonction **"Re
 
 #### 🔎 Résultats des requêtes de validation
 
-Les requêtes présentes dans `queries-test_v021.sql`, exécutées avec l’utilisateur `tifosi`, retournent les résultats attendus :
+Les requêtes présentes dans `queries-test_v021.sql`, exécutées avec l’utilisateur `tifosi`, retournent les résultats attendus en conformité avec [`DATAS-TESTING.md`](./DATAS-TESTING.md) :
 
 | Test                                  | 🧪 Résultat attendu | 🧾 Commentaire |
 |---------------------------------------|---------------------|-----------------|
-| Clients présents                      | 🚫 Non  | Table vide  |
-| Menus + Focaccias associés            | 🚫 Non  | Table vide  |
-| Menus + Boissons associés             | 🚫 Non  | Table vide  |
+| Clients présents                      | ✅ Oui  | Selon tableau _Clients_ |
+| Menus + Focaccias associés            | ✅ Oui  | Selon tableau _activités des menus_ |
+| Menus + Boissons associés             | ✅ Oui  | Selon tableau _activités des menus_ |
 | Focaccias + Ingrédients               | ✅ Oui  | Selon tableau _composition des focaccias_ |
-| Historique de consommation (menus)    | 🚫 Non  | Table vide  |
-| Historique de consommation (focaccias)| 🚫 Non  | Table vide  |
+| Historique de consommation (menus)    | ✅ Oui  | Selon tableau _activités des menus_ |
+| Historique de consommation (focaccias)| ✅ Oui  | Selon tableau _activités des menus / focaccias_  |
 | Droits utilisateur                    | ✅ Oui  | Insertion/lecture autorisées, pas d'accès à `mysql`, `information_schema`, etc. |
 
 ---

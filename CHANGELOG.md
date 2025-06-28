@@ -21,7 +21,8 @@ Versionnage selon [Semantic Versioning](https://semver.org/lang/fr/).
       - [🔍 Etape 2 (2025-06-25) : Création Utilisateur et Base de données minimale fonctionnelle du SQL](#-etape-2-2025-06-25--création-utilisateur-et-base-de-données-minimale-fonctionnelle-du-sql)
       - [✨ Etape 3 (2025-06-26) : insertion des données en base](#-etape-3-2025-06-26--insertion-des-données-en-base)
         - [🧭 Insertion partielle des données - Livraison de la version `sql-v0.2.0`](#-insertion-partielle-des-données---livraison-de-la-version-sql-v020)
-      - [🚧 Etape \[Unreleased\] \[Phase 2 - v0.2\]](#-etape-unreleased-phase-2---v02)
+    - [✨ Étape 4 (2025-06-28) : Ajustement structurel du MPDv0.2.1 — issue #6.1](#-étape-4-2025-06-28--ajustement-structurel-du-mpdv021--issue-61)
+    - [✨ Étape 5 (2025-06-29) : Correction structurelle — passage à des identifiants techniques](#-étape-5-2025-06-29--correction-structurelle--passage-à-des-identifiants-techniques)
   - [🧪 Milestone v0.3 - 2025-06-XX — Tests d’implémentation et jeu d’essai](#-milestone-v03---2025-06-xx--tests-dimplémentation-et-jeu-dessai)
     - [🧭 Phase \[Undefined\] - v0.3](#-phase-undefined---v03)
       - [🚧 Etape \[Unreleased\] \[Phase X - v0.3\]](#-etape-unreleased-phase-x---v03)
@@ -202,14 +203,24 @@ Versionnage selon [Semantic Versioning](https://semver.org/lang/fr/).
 
 📎 Issue concernée : [#6 (partie 1)](https://github.com/MonLucCo/CEF_MySQL-BDD_Tifosi_Test-version/issues/6)
 
-#### 🚧 Etape [Unreleased] [Phase 2 - v0.2]
+### ✨ Étape 4 (2025-06-28) : Ajustement structurel du MPDv0.2.1 — issue #6.1
 
-- Génération du script SQL complet dans `MPD_tifosi.sql`
-- Création d’un utilisateur `tifosi` avec droits associés
-- Ajout de l’historique technique : `HISTORIQUE_sql.md`
-- Suivi dans les issues #4, #5 et #6
+- **Mise en évidence d’une limite** dans le MPDv0.2.1 lors de l’instanciation complète des données issues de `DATAS-TESTING.md`
+- Les tables `focaccias_menus` et `boissons_menus` utilisaient des **clés primaires composites (cPK)**, empêchant l’insertion de doublons attendus dans certains menus (ex. : 2× Coca-cola original dans un menu)
+- 📎 Ajout d’un export `result-queries-test_v021-initial.txt` validant le blocage partiel
+- 📎 Schéma initial : `model_tifosi_v021-initial.mwb.png`
 
-🗂️ Dossiers concernés : `/docs/implementation/`, `./mcd/`, `./mld/` et`./sql/`
+### ✨ Étape 5 (2025-06-29) : Correction structurelle — passage à des identifiants techniques
+
+- Évolution du MPDv0.2.1 : suppression des cPK des tables `*_menus`, remplacées par des identifiants `id_focaccia_menu`, `id_boisson_menu` en `AUTO_INCREMENT`
+- Aucun impact sur le MRLDv2 — simple adaptation physique du modèle pour permettre la redondance légitime
+- 📎 Schéma corrigé : `model_tifosi_v021-final.mwb.png`
+- 📎 Données corrigées : fichiers `.csv` enrichis (première colonne vide ignorée par `LOAD DATA`)
+- 📎 Export validé : `result-queries-test_v021-final.txt` conforme à `DATAS-TESTING.md`
+- 🗂️ Fichiers mis à jour : `create_tifosi.sql`, `README_data-v0.2.1.md`, `README_sql-v0.2.md`, `HISTORIQUE_sql.md`
+- > 👉 Cette évolution structurelle n’affecte pas le MRLDv2, mais relève strictement de la mise en œuvre physique du MPD.
+
+> Clôture de la version v0.2 avec les scripts `create_tifosi.sql` et `insert_data.sql` conforme au MCD v22.1 et MRLD v2.
 
 ---
 
