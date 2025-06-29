@@ -1,7 +1,7 @@
 # 🧮 Scripts SQL du projet Tifosi
 
 _Rédigé par :_ PerLucCo  
-_Dernière mise à jour :_ 24 juin 2025  
+_Dernière mise à jour :_ 29 juin 2025  
 
 Ce répertoire contient tous les fichiers SQL liés à la base de données `tifosi`, manipulés dans le cadre du devoir.
 
@@ -14,7 +14,7 @@ Ce répertoire contient tous les fichiers SQL liés à la base de données `tifo
   - [♻️ 2- Gestion de versions](#️-2--gestion-de-versions)
     - [🛠️ 2.1- Principes et suivis](#️-21--principes-et-suivis)
     - [🧭 2.2- Plan de réalisation](#-22--plan-de-réalisation)
-      - [🪜 2.2.1- Versions du projet](#-221--versions-du-projet)
+      - [🪜 2.2.1 – Versions du projet](#-221--versions-du-projet)
       - [🔧 2.2.2- Etapes de réalisation](#-222--etapes-de-réalisation)
         - [📐 Étape 1 — MPD v0 (liée à #5)](#-étape-1--mpd-v0-liée-à-5)
         - [🧱 Étape 2 — MPD partiel : v0.1.1 + v0.1.2 (liée à #5)](#-étape-2--mpd-partiel--v011--v012-liée-à-5)
@@ -37,9 +37,9 @@ Ce répertoire contient tous les fichiers SQL liés à la base de données `tifo
 
 | Fichier | Rôle | État | Version |
 |--|--|--|--|
-| create_tifosi.sql | Script de création des tables et clés | Prêt | v0.2.1 |
-| insert_data.sql  | Insertion des données de test | Prêt | v0.2.1 |
-| backup_tifosi.sql | Sauvegarde complète | À venir | — |
+| create_tifosi.sql | Script de création des tables et clés | Prêt | v0.3 |
+| insert_data.sql  | Insertion des données de test | Prêt | v0.3 |
+| backup_tifosi.sql | Sauvegarde complète | Prêt | v0.3 |
 
 >🔗 Pour consulter les issues GitHub en cours liées à ces fichiers, voir [Section 3 – Suivi des travaux en cours](#-3---suivi-des-travaux-en-cours-issues-github)
 
@@ -65,20 +65,20 @@ Le suivi des versions est défini dans [`HISTORIQUE_sql.md`](HISTORIQUE_sql.md).
 
 ### 🧭 2.2- Plan de réalisation
 
-#### 🪜 2.2.1- Versions du projet
+#### 🪜 2.2.1 – Versions du projet
 
 Ce projet suit une logique de montée progressive en complexité, avec des versions incrémentales de la base `tifosi`.  
 
-| Version SQL | Objectif principal  | Description | Dossier associé |
-|--|--|--|--|
-| v0.0 | Validation outil | Script brut de test, table vide  | `sql-v0.0/` |
-| [sql-v0.1](sql-v0.1/README_sql-v0.1.md) | Création de base | Création de la base, de l'utilisateur et des données de tests  | `sql-v0.1/` |
-| [sql-v0.1.1](sql-v0.1/versions/sql-v0.1.1/MPD-v0.1.1_tifosi.md) | Base partielle — vue métier minimale | `clients`, `menus`, `focaccias`, `jours`, relations avec `clients_*` | `sql-v0.1/versions/sql-v0.1.1/` |
-| v0.1.2 | Création de l’utilisateur `tifosi` | Sécurité applicative (`CREATE USER`, `GRANT`) | `sql-v0.1.2/versions/sql-v0.1.2` |
-| v0.1.3 | MPD complet  | Intégration des marques, ingrédients, relations N:N complètes | `sql-v0.1.3/versions/sql-v0.1.3` |
-| v0.2.0 | MRLD v1.1 : Base, Utilisateur, insertions données, tests | `insert_data.sql`, insertion partielle des données, ⚠️ identification d'une erreur dans le MRLD v1.1 | `sql-v0.2.0/versions/sql-v0.2.0` |
-| v0.2.1 | MRLD v2.0 : base stable + doc (#5.2) | `create_tifosi.sql` finalisé, `README_data`, `README_test` prêts. La version inclut deux variantes du MPD : avec cPK (initial) puis avec identifiants techniques (#6.1) | `sql-v0.2.1/` |
-| v0.3   | Données, insertions, tests | `insert_data.sql`, export `.sql`, validations | à venir |
+| Version SQL | Objectif principal | Description | Dossier associé |
+|-------------|--------------------|-------------|------------------|
+| `v0.0` | Validation outil | Script brut de test, table vide | `sql-v0.0/` |
+| [`sql-v0.1`](sql-v0.1/README_sql-v0.1.md) | Création de base | Création de la base, de l'utilisateur et des données de tests | `sql-v0.1/` |
+| [`sql-v0.1.1`](sql-v0.1/versions/sql-v0.1.1/MPD-v0.1.1_tifosi.md) | Base partielle — vue métier minimale | `clients`, `menus`, `focaccias`, `jours`, relations avec `clients_*` | `sql-v0.1/versions/sql-v0.1.1/` |
+| `v0.1.2` | Création de l’utilisateur `tifosi` | Sécurité applicative (`CREATE USER`, `GRANT`) | `sql-v0.1.2/versions/sql-v0.1.2/` |
+| `v0.1.3` | MPD complet | Intégration des marques, ingrédients, relations N:N complètes | `sql-v0.1.3/versions/sql-v0.1.3/` |
+| `v0.2.0` | MRLD v1.1 : Base, Utilisateur, insertions données, tests | Insertion partielle des données, ⚠️ erreur MRLD v1.1 détectée | `sql-v0.2.0/versions/sql-v0.2.0/` |
+| `v0.2.1` | MRLD v2.0 corrigé + doc (#6.1) | Instanciation complète + amélioration des tables N:N et clés techniques | `sql-v0.2.1/` |
+| [`sql-v0.3`](sql-v0.3/README_sql-v0.3.md) 🔒 | Requêtes métier, sauvegarde complète et documentation finale | Livraison complète incluant tests validés, export `mysqldump`, validation post-restore (`result-test-queries_v03-postRestoreBackup.txt`) et documentation croisée (`README_backup.md`, `README_test-v0.3.md`) | `sql-v0.3/` |
 
 >Chaque version est placée dans un sous-dossier `sql-vX.Y` ou `sql-vX.Y.Z`.
 
@@ -187,18 +187,18 @@ Lors des tests de validation (`queries-test_v020.sql`), une incohérence structu
 
 🎯 Objectif : Vérifier la consistance de la base via des requêtes SQL et produire une sauvegarde `.sql` prête pour la livraison.
 
-À venir après l’injection des données (#6.1) :
+État : réalisée (requêtes, sauvegarde, README documentés)
 
-- Écriture de requêtes de sélection, de jointures, de filtres
-- Validation des comportements fonctionnels (commandes, paiements, notes)
-- Génération d’une sauvegarde MySQL complète : `backup_tifosi.sql`
+📁 Dossier : `sql-v0.3/`  
+📄 Fichiers disponibles :
 
-📁 Dossier visé : `sql-v0.2/` ou `sql-v1.0/`  
-📄 Fichiers attendus :
-
-- `requêtes_test.sql`
+- `create_tifosi.sql`
+- `insert_data.sql`
 - `backup_tifosi.sql`
-- `README_test-v1.0.md`
+- `DATAS-TESTING.md`
+- `README_backup.md`
+- `README_test-v0.3.md`
+- `README_sql-v0.3.md`
 
 ---
 
@@ -240,9 +240,9 @@ Lors des tests de validation (`queries-test_v020.sql`), une incohérence structu
 
 🎯 **Objectif** : Fournir des données de test réalistes pour valider les comportements métier de la base.
 
-📌 **État** : À venir  
-📦 Travaux attendus : `insert_data.sql`, validations de contraintes, cohérence inter-tables  
-📂 Dossier cible : `sql-v0.2/`
+📌 **État** : réalisé (requête, insertion des données, README documentés)
+📦 Travaux : `insert_data.sql`, validations de contraintes, cohérence inter-tables  
+📂 Dossier concerné : `sql-v0.2/`
 
 ---
 
@@ -250,13 +250,10 @@ Lors des tests de validation (`queries-test_v020.sql`), une incohérence structu
 
 🎯 **Objectif** : Produire les requêtes d’évaluation, vérifier la consistance métier, exporter la base complète (`backup_tifosi.sql`) et finaliser la documentation technique.
 
-📌 **État** : À venir  
-📦 Travaux attendus :
+📌 **État** : réalisée (requêtes, sauvegarde, README documentés)
 
-- `requêtes_test.sql`
-- `README_test-v1.0.md`
-- `backup_tifosi.sql`  
-📂 Dossiers concernés : `sql-v0.2/`, `docs/livraison/`
+📦 Travaux : `backup_tifosi.sql`, validation de la restauration, tests de validation  
+📂 Dossier concerné : `sql-v0.3/`
 
 ---
 

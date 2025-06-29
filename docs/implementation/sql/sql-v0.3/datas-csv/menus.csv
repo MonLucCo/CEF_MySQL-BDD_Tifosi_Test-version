@@ -1,0 +1,11 @@
+﻿id_menu;nom_menu;prix_menu
+1;Solo : 1 focaccia + 1 boisson;13
+2;Duo : 2 focaccias + 2 boissons;24
+3;Famille : 4 focaccias + 4 boissons;42
+4;Solo Soif : 1 focaccia + 2 boissons;18
+5;Duo Soif : 2 focaccias + 3 boissons;28
+6;Famille Soif : 4 focaccias + 5 boissons;45
+7;Solo Faim : 2 focaccias + 1 boisson;21
+8;Duo Faim : 4 focaccias + 2 boissons;41
+9;Famille Faim : 6 focaccias + 4 boissons;55
+10;Soirée : 10 focaccias + 10 boissons;90
