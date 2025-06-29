@@ -7,7 +7,7 @@
 - [CEF\_MySQL-BDD\_Tifosi\_Test-version](#cef_mysql-bdd_tifosi_test-version)
   - [📘 1- Projet Tifosi — Base de données MySQL](#-1--projet-tifosi--base-de-données-mysql)
     - [🎯 1.1- Objectifs pédagogiques](#-11--objectifs-pédagogiques)
-    - [🧱 1.2- Arborescence du dépôt](#-12--arborescence-du-dépôt)
+    - [🧱 1.2- Structure du dépôt](#-12--structure-du-dépôt)
   - [⚙️ 2- Installation \& exploitation](#️-2--installation--exploitation)
     - [🔁 2.1- Cloner et exploiter le dépôt](#-21--cloner-et-exploiter-le-dépôt)
     - [🛠️ 2.2- Pré-requis](#️-22--pré-requis)
@@ -21,25 +21,41 @@
 
 ## 📘 1- Projet Tifosi — Base de données MySQL
 
-Ce dépôt constitue le livrable du Devoir n°10 du Centre Européen de Formation. Il contient la modélisation, la création, le peuplement et la sauvegarde d'une base de données locale MySQL pour le restaurant fictif **Le Tifosi**.
+Ce dépôt constitue le livrable du **Devoir n°10** du *Centre Européen de Formation (CEF)*. Il documente pas à pas la **modélisation, l’implémentation, le peuplement et la sauvegarde** d’une base de données relationnelle dédiée au restaurant fictif **Le Tifosi**.
+
+L’ensemble du projet est réalisé en environnement **local MySQL 5.7+**, selon une démarche structurée, versionnée et documentée.
+
+> 🔹 **Objectif principal** : démontrer la maîtrise des concepts SGBDR (MCD → MRLD → MPD → SQL) dans un cadre réaliste.
 
 ---
 
 ### 🎯 1.1- Objectifs pédagogiques
 
-- Concevoir une base de données relationnelle selon un modèle donné
-- Manipuler MySQL Server avec des scripts SQL
-- Gérer les étapes du projet dans un environnement Git/GitHub
-- Documenter le processus de réalisation de manière claire et reproductible
+- Concevoir un modèle de données relationnel à partir d’un cahier des charges
+- Traduire ce modèle en scripts SQL exécutables (structure + données)
+- Exploiter un serveur local MySQL avec gestion d’utilisateur dédié
+- Produire une sauvegarde exploitable et rejouable via `mysqldump`
+- Documenter chaque étape du projet avec Git et GitHub
 
 ---
 
-### 🧱 1.2- Arborescence du dépôt
+### 🧱 1.2- Structure du dépôt
+
+L’arborescence suit une logique modulaire claire :
+
+| Répertoire | Contenu |
+|-----------|---------|
+| [`docs/`](./docs/) | Documentation complète du projet (modèles, planification, tests) |
+| [`sql/`](./sql/) | Scripts SQL, données insérées, requêtes de test et exports |
+| [`process/`](./docs/process/) | Suivi de la démarche méthodologique |
+| [`sources/`](./docs/sources/) | Énoncé PDF fourni par le CEF |
+| [`references/`](./docs/references/) | Ressources externes et supports complémentaires |
+
+📌 Point d’entrée documentaire recommandé : [`README_docs.md`](./docs/README_docs.md)
+
+---
 
 Vous pouvez naviguer directement dans les documents du projet depuis cette arborescence interactive.  
-Pour une vue d’ensemble plus détaillée, voir également le fichier [README_docs.md](docs/README_docs.md) qui constitue le **point d’entrée de la documentation**.
-
----
 
 <details>
 <summary>📁 Racine du dépôt</summary>

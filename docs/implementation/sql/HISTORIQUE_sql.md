@@ -1,7 +1,7 @@
 # 🧾 Historique — Scripts SQL & Base de données
 
 _Rédigé par :_ PerLucCo  
-_Dernière mise à jour :_ 26 juin 2025  
+_Dernière mise à jour :_ 29 juin 2025  
 
 ---
 
@@ -13,8 +13,8 @@ _Dernière mise à jour :_ 26 juin 2025
   - [✅ V0.1.2 – Sécurisation de la base versionnée via utilisateur `tifosi` (2025-06-25)](#-v012--sécurisation-de-la-base-versionnée-via-utilisateur-tifosi-2025-06-25)
   - [✅ V0.1.3 – Base de données complète avec  Utilisateur administrateur `tifosi` (2025-06-26)](#-v013--base-de-données-complète-avec--utilisateur-administrateur-tifosi-2025-06-26)
   - [✅ V0.2.0 – Chargement partiel des données validées (2025-06-26)](#-v020--chargement-partiel-des-données-validées-2025-06-26)
-  - [🚧 V0.2.1 – Chargement des données (2025-06-XX)](#-v021--chargement-des-données-2025-06-xx)
-  - [🚧 V0.3 – Sauvegarde de la base et des données (2025-06-XX)](#-v03--sauvegarde-de-la-base-et-des-données-2025-06-xx)
+  - [✅ V0.2.1 – Chargement des données (2025-06-28)](#-v021--chargement-des-données-2025-06-28)
+  - [✅ V0.3 – Sauvegarde de la base et validation par requêtes métier (2025-06-29)](#-v03--sauvegarde-de-la-base-et-validation-par-requêtes-métier-2025-06-29)
 
 ---
 
@@ -150,7 +150,7 @@ Cela a conduit à un **chargement partiel des entités validées uniquement**.
 
 ---
 
-## 🚧 V0.2.1 – Chargement des données (2025-06-XX)
+## ✅ V0.2.1 – Chargement des données (2025-06-28)
 
 >🔄 Cette version intégre les modifications issues de la reprise du cycle MCD → MRLD → MPD initiée après les constats de `v0.2.0`.
 
@@ -196,4 +196,43 @@ Cela a conduit à un **chargement partiel des entités validées uniquement**.
 
 ---
 
-## 🚧 V0.3 – Sauvegarde de la base et des données (2025-06-XX)
+## ✅ V0.3 – Sauvegarde de la base et validation par requêtes métier (2025-06-29)
+
+🗓️ Date : 2025-06-29  
+🎯 Objectif : Produire une **version figée et validée** de la base `tifosi`, comprenant :
+
+- la structure complète issue du MPD final (`v0.2.1`)
+- les données chargées via `insert_data.sql`
+- la sauvegarde complète via `mysqldump`
+- les requêtes de validation métier et la preuve de restauration
+
+📎 Contenu de cette version :
+
+- **Sauvegarde SQL `backup_tifosi.sql`** :
+
+  - générée avec l’utilisateur `tifosi` via :  
+
+    ```bash
+    mysqldump --no-tablespaces -u tifosi -p tifosi > backup_tifosi.sql
+    ```
+
+  - fichier textuel contenant toute la structure (`CREATE TABLE`) et les données (`INSERT`)
+- **Tests métier (`queries_test_v03.sql`)** :
+  - rejoués avant et après restauration pour valider la consistance
+  - résultats identiques confirmés par fichier :
+    - `result-test-queries_v03-initial.txt`
+    - `result-test-queries_v03-postRestoreBackup.txt`
+- **Documentation** :
+  - [`README_backup.md`](sql-v0.3/README_bakup.md) : procédure de sauvegarde/restauration
+  - [`README_test-v0.3.md`](sql-v0.3/README_test-v0.3.md) : description détaillée des requêtes, objectifs métier et preuve de validation
+  - [`README_sql-v0.3.md`](sql-v0.3/README_sql-v0.3.md) : vue synthétique de la version, fichiers et validation croisée
+
+>✅ Cette version constitue une **livraison stable et complète** du projet SQL `tifosi`, avec rejouabilité garantie et livrables vérifiés.
+>
+>🔒 Cette version fige la base Tifosi pour évaluation ou livraison externe.
+
+📂 Dossier associé : [`sql-v0.3`](./sql-v0.3/)
+
+📌 Issue concernée : [#7 – Sauvegarde, tests & finalisation SQL](https://github.com/MonLucCo/CEF_MySQL-BDD_Tifosi_Test-version/issues/7)  
+
+---

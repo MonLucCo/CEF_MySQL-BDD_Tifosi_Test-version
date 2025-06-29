@@ -23,9 +23,12 @@ Versionnage selon [Semantic Versioning](https://semver.org/lang/fr/).
         - [🧭 Insertion partielle des données - Livraison de la version `sql-v0.2.0`](#-insertion-partielle-des-données---livraison-de-la-version-sql-v020)
     - [✨ Étape 4 (2025-06-28) : Ajustement structurel du MPDv0.2.1 — issue #6.1](#-étape-4-2025-06-28--ajustement-structurel-du-mpdv021--issue-61)
     - [✨ Étape 5 (2025-06-29) : Correction structurelle — passage à des identifiants techniques](#-étape-5-2025-06-29--correction-structurelle--passage-à-des-identifiants-techniques)
-  - [🧪 Milestone v0.3 - 2025-06-XX — Tests d’implémentation et jeu d’essai](#-milestone-v03---2025-06-xx--tests-dimplémentation-et-jeu-dessai)
-    - [🧭 Phase \[Undefined\] - v0.3](#-phase-undefined---v03)
-      - [🚧 Etape \[Unreleased\] \[Phase X - v0.3\]](#-etape-unreleased-phase-x---v03)
+  - [🧪 Milestone v0.3 — 2025-06-30 — Sauvegarde complète et validation métier](#-milestone-v03--2025-06-30--sauvegarde-complète-et-validation-métier)
+    - [🧭 Phase unique — Implémentation validée et sauvegardable](#-phase-unique--implémentation-validée-et-sauvegardable)
+      - [🛠️ Étape 1 : Requêtes de test métier (`queries_test_v03.sql`)](#️-étape-1--requêtes-de-test-métier-queries_test_v03sql)
+      - [🗄️ Étape 2 : Sauvegarde complète SQL (`backup_tifosi.sql`)](#️-étape-2--sauvegarde-complète-sql-backup_tifosisql)
+      - [🔁 Étape 3 : Validation post-restauration](#-étape-3--validation-post-restauration)
+      - [📚 Étape 4 : Documentation finale de la version SQL](#-étape-4--documentation-finale-de-la-version-sql)
   - [📘 Milestone v0.4 - 2025-06-XX — Documentation finale](#-milestone-v04---2025-06-xx--documentation-finale)
     - [🧭 Phase \[Undefined\] - v0.4](#-phase-undefined---v04)
       - [🚧 \[Unreleased\] \[Phase X - v0.4\]](#-unreleased-phase-x---v04)
@@ -224,18 +227,41 @@ Versionnage selon [Semantic Versioning](https://semver.org/lang/fr/).
 
 ---
 
-## 🧪 Milestone v0.3 - 2025-06-XX — Tests d’implémentation et jeu d’essai
+## 🧪 Milestone v0.3 — 2025-06-30 — Sauvegarde complète et validation métier
 
-### 🧭 Phase [Undefined] - v0.3
+### 🧭 Phase unique — Implémentation validée et sauvegardable
 
-#### 🚧 Etape [Unreleased] [Phase X - v0.3]
+#### 🛠️ Étape 1 : Requêtes de test métier (`queries_test_v03.sql`)
 
-- Création d’un script d’insertion de données minimales (`init_tifosi.sql`)
-- Ajout d’un jeu de tests dans phpMyAdmin / Workbench
-- Validation des contraintes d’intégrité
-- Journal de tests ou `README_tests.md`
+- Création d’un jeu de requêtes SQL métier (menus, prix, clients, cas limites)
+- Exécution initiale : `result-test-queries_v03-initial.txt`
+- Résultats utilisés comme référence de validation
 
-🧪 Objectif : s’assurer que la base est exploitable et conforme aux choix modélisés
+#### 🗄️ Étape 2 : Sauvegarde complète SQL (`backup_tifosi.sql`)
+
+- Génération d’une sauvegarde complète de la base via `mysqldump`
+- Sauvegarde incluant structure + données
+- Fichier livré : `backup_tifosi.sql`
+- Documentation associée : `README_backup.md`
+
+#### 🔁 Étape 3 : Validation post-restauration
+
+- Recréation complète de la base depuis la sauvegarde
+- Réexécution des requêtes de test ➤ `result-test-queries_v03-postRestoreBackup.txt`
+- Aucune différence détectée ⇒ test de rejouabilité validé
+- Comparaison documentée dans `README_test-v0.3.md`
+
+#### 📚 Étape 4 : Documentation finale de la version SQL
+
+- Mise à jour : `README_sql-v0.3.md` pour synthèse de la version et de ses livrables
+- Références croisées vers tous les fichiers `.sql`, `.txt`, `.md`
+- Historique documenté dans `HISTORIQUE_sql.md`
+- Ajout des liens dans `README_docs.md`, `README_implementation.md`
+
+🔐 Cette version marque un **point de stabilité SQL** : structure complète + données + test + sauvegarde validée.
+
+📎 Issue clôturée : [#7 – sauvegarde, requêtes, validation](https://github.com/MonLucCo/CEF_MySQL-BDD_Tifosi_Test-version/issues/7)  
+📁 Dossier : [`/docs/implementation/sql/sql-v0.3/`](https://github.com/MonLucCo/CEF_MySQL-BDD_Tifosi_Test-version/tree/main/docs/implementation/sql/sql-v0.3)
 
 ---
 
