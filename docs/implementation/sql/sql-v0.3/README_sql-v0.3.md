@@ -1,6 +1,7 @@
 # 🗄️ README_sql-v0.3 — Livraison structurelle finale de la base Tifosi
 
-Version SQL stable et exploitable du modèle physique `tifosi_v03`, dérivée de `MPDv0.2.1` final corrigé (issue #6.1).  
+Version SQL stable et exploitable du modèle physique `tifosi_v03`, dérivée de `MPDv0.2.1` final corrigé (issue #6.1) et conforme à [`MPD-v0.3_tifosi.md`](./MPD-v0.3_tifosi.md) (issue #11).
+
 Cette version constitue la **base livrable du projet Tifosi**, complète, testée, et documentée.
 
 ---
@@ -11,6 +12,7 @@ Cette version constitue la **base livrable du projet Tifosi**, complète, testé
   - [🛠️ Informations techniques](#️-informations-techniques)
   - [✅ Validation](#-validation)
   - [🧭 Historique](#-historique)
+  - [Liens de référence](#liens-de-référence)
 
 ---
 
@@ -34,6 +36,7 @@ Livrer une version consolidée et validée de la base Tifosi, incluant tous les 
 | `README_backup.md`                          | Contexte et procédure de sauvegarde et restauration |
 | `model_tifosi_v03.mwb.png`                  | Schéma EER final du MPD `tifosi_v03` |
 | `DATAS-TESTING.md`                          | Spécification des cas de test et résultats attendus |
+| `MPD-v0.3_tifosi.md`                        | Modèle physique documenté complet de la structure finale |
 | `README_sql-v0.3.md` _(ce fichier)_         | Présentation et objectifs de la version livrée |
 
 ---
@@ -68,3 +71,10 @@ Livrer une version consolidée et validée de la base Tifosi, incluant tous les 
 
 **📌 Remarque** : Cette version `v0.3` clôt techniquement la construction du MPD Tifosi.  
 >Cette version peut être utilisée telle quelle comme base technique pour un projet applicatif, un support pédagogique ou un livrable d’évaluation.
+
+---
+
+## Liens de référence
+
+🔗 Modèle physique de référence : [`MPD-v0.3_tifosi.md`](./MPD-v0.3_tifosi.md)  
+📚 Rattachement documentaire [`README_docs.md`](../../../README_docs.md) (v0.4)

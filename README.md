@@ -51,8 +51,6 @@ L’arborescence suit une logique modulaire claire :
 | [`sources/`](./docs/sources/) | Énoncé PDF fourni par le CEF |
 | [`references/`](./docs/references/) | Ressources externes et supports complémentaires |
 
-📌 Point d’entrée documentaire recommandé : [`README_docs.md`](./docs/README_docs.md)
-
 ---
 
 Vous pouvez naviguer directement dans les documents du projet depuis cette arborescence interactive.  
@@ -127,10 +125,11 @@ cd CEF_MySQL-BDD_Tifosi_Test-version
 
 ### 📦 2.3- Exploitation du devoir
 
-1. Exécuter `/sql/create_tifosi.sql` pour créer la base de données
-2. Exécuter `insert_data.sql` une fois disponible
-3. Générer le backup avec `backup_tifosi.sql`
-4. Suivre les consignes du sujet dans `/docs/`
+1. Exécuter `/sql/sql-v0.3/create_tifosi.sql` pour créer la base de données
+2. Charger les données depuis `/sql/sql-v0.3/insert_data.sql`
+3. Tester les requêtes via `/sql/sql-v0.3/queries-test_v03.sql`
+4. Générer le backup avec `/sql/sql-v0.3/backup_tifosi.sql`
+5. Consulter les documents associés dans `/docs/implementation/sql/sql-v0.3/`
 
 ---
 
@@ -142,6 +141,8 @@ Les issues sont utilisées comme outil de suivi projet personnel.
 ---
 
 ## 📊 4- État du projet
+
+> 🔒 **Version stable actuelle** : `v0.3` — livrée, testée, sauvegardée
 
 ### 4.1- Avancement du projet
 
@@ -174,3 +175,5 @@ Les documents issus du devoir (PDF, données test) sont fournis à titre pédago
 Projet réalisé avec anthousiasme, rigueur, méthode et une bonne dose de cresson — merci à l’équipe pédagogique du CEF pour ce plat bien relevé à base de modélisation relationnelle. 🍽️
 
 ---
+
+📚 Pour une vue d'ensemble de la documentation, voir : [`README_docs.md`](./docs/README_docs.md)

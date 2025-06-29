@@ -15,6 +15,7 @@ _Dernière mise à jour :_ 29 juin 2025
   - [✅ V0.2.0 – Chargement partiel des données validées (2025-06-26)](#-v020--chargement-partiel-des-données-validées-2025-06-26)
   - [✅ V0.2.1 – Chargement des données (2025-06-28)](#-v021--chargement-des-données-2025-06-28)
   - [✅ V0.3 – Sauvegarde de la base et validation par requêtes métier (2025-06-29)](#-v03--sauvegarde-de-la-base-et-validation-par-requêtes-métier-2025-06-29)
+  - [✅ V0.4 – Alignement documentaire de la base Tifosi (2025-06-29)](#-v04--alignement-documentaire-de-la-base-tifosi-2025-06-29)
 
 ---
 
@@ -234,5 +235,26 @@ Cela a conduit à un **chargement partiel des entités validées uniquement**.
 📂 Dossier associé : [`sql-v0.3`](./sql-v0.3/)
 
 📌 Issue concernée : [#7 – Sauvegarde, tests & finalisation SQL](https://github.com/MonLucCo/CEF_MySQL-BDD_Tifosi_Test-version/issues/7)  
+
+---
+
+## ✅ V0.4 – Alignement documentaire de la base Tifosi (2025-06-29)
+
+🎯 Objectif : Finaliser la documentation de la version `v0.3` de la base `tifosi`, sans modifier la structure SQL.
+
+📌 Contenu de la version `v0.4` :
+
+- Consolidation documentaire transversale :
+  - `MPD-v0.3_tifosi.md` : modèle physique directement dérivé du script `create_tifosi.sql`
+  - Explication du typage `DECIMAL(5,2)` pour les prix (voir `README_implementation.md`)
+  - Harmonisation des liens entre les README : `sql`, `docs`, `implementation`
+- Aucune modification du script SQL de structure (`create_tifosi.sql`)
+- Aucune nouvelle donnée insérée
+
+📎 Fichiers concernés :
+
+- `README_implementation.md`, `README_docs.md`, `README_sql-v0.3.md`, `MPD-v0.3_tifosi.md`
+
+📌 Issue liée : [#11 – documentation unifiée (v0.4)](https://github.com/MonLucCo/CEF_MySQL-BDD_Tifosi_Test-version/issues/11)
 
 ---

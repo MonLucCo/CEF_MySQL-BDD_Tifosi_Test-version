@@ -24,10 +24,11 @@ Ce répertoire contient tous les fichiers SQL liés à la base de données `tifo
         - [🧬 Étape 4 — Insertion des données (liée à #6)](#-étape-4--insertion-des-données-liée-à-6)
         - [🧪 Étape 5 — Requêtes de test et sauvegarde (liée à #7)](#-étape-5--requêtes-de-test-et-sauvegarde-liée-à-7)
         - [📦 Étape 6 — Finalisation documentaire et livraison (liée à #7)](#-étape-6--finalisation-documentaire-et-livraison-liée-à-7)
-  - [🔗 3 - Suivi des travaux en cours (issues GitHub)](#-3---suivi-des-travaux-en-cours-issues-github)
+  - [📋 3 - Suivi des travaux en cours (issues GitHub)](#-3---suivi-des-travaux-en-cours-issues-github)
     - [🟢 #5 — Création de la base SQL + utilisateur `issue #5`](#-5--création-de-la-base-sql--utilisateur-issue-5)
     - [🟠 #6 — Insertion des données `issue #6`](#-6--insertion-des-données-issue-6)
     - [🟠 #7 — Requêtes de test, sauvegarde et documentation `issue #7`](#-7--requêtes-de-test-sauvegarde-et-documentation-issue-7)
+  - [🔗 Références croisées et documentation associée](#-références-croisées-et-documentation-associée)
 
 ---
 
@@ -218,7 +219,7 @@ Lors des tests de validation (`queries-test_v020.sql`), une incohérence structu
 
 ---
 
-## 🔗 3 - Suivi des travaux en cours (issues GitHub)
+## 📋 3 - Suivi des travaux en cours (issues GitHub)
 
 ### 🟢 #5 — Création de la base SQL + utilisateur [`issue #5`](https://github.com/MonLucCo/CEF_MySQL-BDD_Tifosi_Test-version/issues/5)
 
@@ -261,3 +262,10 @@ Lors des tests de validation (`queries-test_v020.sql`), une incohérence structu
 → [Onglet Issues GitHub](https://github.com/MonLucCo/CEF_MySQL-BDD_Tifosi_Test-version/issues)
 
 ---
+
+## 🔗 Références croisées et documentation associée
+
+📎 Modèle physique utilisé pour la version `v0.3` :  
+→ [`MPD-v0.3_tifosi.md`](../sql/sql-v0.3/MPD-v0.3_tifosi.md) — structure documentée à partir du script `create_tifosi.sql`
+
+🧭 Documentation consolidée dans : [`README_docs.md`](../../README_docs.md)

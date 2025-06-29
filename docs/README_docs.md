@@ -7,6 +7,8 @@ Ce dossier regroupe tous les documents de référence du projet : consignes, not
 
 > 🧭 Version courante du projet : **v0.3 – Sauvegarde & validation métier**  
 > 🔎 Pour le détail des évolutions, consulter la section [🔄 Suivi des évolutions par domaine](#-suivi-des-évolutions-par-domaine).
+> 📁 Phase documentaire en cours : **v0.4 – Harmonisation README & historiques**  
+> 🔄 Issue concernée : [`#11`](https://github.com/MonLucCo/CEF_MySQL-BDD_Tifosi_Test-version/issues/11)
 
 ---
 
@@ -20,6 +22,7 @@ Ce dossier regroupe tous les documents de référence du projet : consignes, not
       - [✅ Réalisé — Cycle données v0.2.x](#-réalisé--cycle-données-v02x)
       - [✅ Réalisé — Cycle validation métier v0.3](#-réalisé--cycle-validation-métier-v03)
       - [🔜 Prochain cycle — packaging pédagogique \& vues](#-prochain-cycle--packaging-pédagogique--vues)
+  - [🔗 Navigation complémentaire](#-navigation-complémentaire)
 
 ---
 
@@ -27,24 +30,20 @@ Ce dossier regroupe tous les documents de référence du projet : consignes, not
 
 - `README_docs.md` : ce document – point d’entrée vers la documentation
 - [Sujet-Devoir10_BddTifosiAvecMySQL.pdf](./sources/Sujet-Devoir10_BddTifosiAvecMySQL.pdf) : énoncé officiel du devoir (accès : `./sources/`)
+- [`README_plan.md`](./process/README_plan.md) : planification par jalons, progression des issues
+- [`README_process.md`](./process/README_process.md) : méthode projet, conventions, branches, PR
 - [planification du projet](./process/README_plan.md) : plan de réalisation et d'avancement du projet
-- [README_process.md](./process/README_process.md) : journal et méthode projet
-- [README_tools.md](./tools/README_tools.md) : outils et usages pour l'exploitation du projet
+- [`README_process.md`](./process/README_process.md) : journal et méthode projet
+- [`README_tools.md`](./tools/README_tools.md) : outils et usages pour l'exploitation du projet
 
-- [MCD_tifosi.md](./implementation/mcd/MCD_tifosi.md) : Modèle Conceptuel de Données (v2.1)
-- [MRLD_tifosi.md](./implementation/mld/MRLD_tifosi.md) : Modèle Relationnel Logique (v2.0)
-- [MPD-v0.1.3_tifosi.md](./implementation/sql/sql-v0.1/versions/sql-v0.1.3/MPD-v0.1.3_tifosi.md) : MPD final sans données
-- [README_test-v0.1.3.md](./implementation/sql/sql-v0.1/versions/sql-v0.1.3/README_test-v0.1.3.md) : validation structurelle v0.1.3
+- [`MCD_tifosi.md`](./implementation/mcd/MCD_tifosi.md) : Modèle Conceptuel de Données (v2.1)
+- [`MRLD_tifosi.md`](./implementation/mld/MRLD_tifosi.md) : Modèle Relationnel Logique (v2.0)
+- [`MPD-v0.3_tifosi.md`](./implementation/sql/sql-v0.3/MPD-v0.3_tifosi.md) : MPD final sans données
 
-- [README_sql.md](./implementation/sql/README_sql.md) : suivi des versions SQL
-- [README_sql-v0.2.md](./implementation/sql/sql-v0.2/README_sql-v0.2.md) : documentation du chargement partiel (v0.2)
-- [README_data-v0.2.0.md](./implementation/sql/sql-v0.2/versions/sql-v0.2.0/README_data-v0.2.0.md) : génération des données `.csv`
-- [README_test-v0.2.0.md](./implementation/sql/sql-v0.2/versions/sql-v0.2.0/README_test-v0.2.0.md) : tests partiels sur entités chargées
-
-🔹 Nouveaux livrables v0.3 :
-- [README_sql-v0.3.md](./implementation/sql/sql-v0.3/README_sql-v0.3.md) : livraison complète avec sauvegarde, tests, et documentation
-- [README_test-v0.3.md](./implementation/sql/sql-v0.3/README_test-v0.3.md) : validation métier post-restauration
-- [README_backup.md](./implementation/sql/sql-v0.3/README_backup.md) : procédure `mysqldump` et vérification
+- [`README_sql.md`](./implementation/sql/README_sql.md) : suivi des versions SQL
+- [`README_sql-v0.3.md`](./implementation/sql/sql-v0.3/README_sql-v0.3.md) : livraison complète avec sauvegarde, tests, et documentation
+- [`README_test-v0.3.md`](./implementation/sql/sql-v0.3/README_test-v0.3.md) : tests sur entités chargées et validation structurelle
+- [`README_backup.md`](./implementation/sql/sql-v0.3/README_backup.md) : procédure `mysqldump` et vérification
 
 ---
 
@@ -55,6 +54,9 @@ Ce fichier est mis à jour à chaque **merge de PR liée à une version ou un ja
 Dernière mise à jour intégrée : **v0.3 – sauvegarde complète, validation métier et documentation croisée**  
 📌 Issue concernée : `#7 – sauvegarde, requêtes, validation`
 
+Dernier alignement documentaire : **v0.4 – harmonisation des README, typage prix, documentation MPD**  
+📌 Issue concernée : `#11 – documentation unifiée`
+
 ---
 
 ## 🧩 Versions de référence par niveau
@@ -63,7 +65,7 @@ Dernière mise à jour intégrée : **v0.3 – sauvegarde complète, validation 
 |--------------------------|----------------|------------------------|
 | **MCD** (_conceptuel_)   | v2.1           | [`MCD_tifosi.md`](./implementation/mcd/MCD_tifosi.md) |
 | **MRLD** (_relationnel logique_) | v2.0 | [`MRLD_tifosi.md`](./implementation/mld/MRLD_tifosi.md) |
-| **MPD** (_physique — structure sans données_) | v0.1.3 | [`MPD-v0.1.3_tifosi.md`](./implementation/sql/sql-v0.1/versions/sql-v0.1.3/MPD-v0.1.3_tifosi.md) |
+| **MPD** (_physique – structure SQL déployée_) | v0.3 | [`MPD-v0.3_tifosi.md`](./implementation/sql/sql-v0.3/MPD-v0.3_tifosi.md) |
 | **SQL** (_structure + insertions + tests_) | v0.3 | [`README_sql-v0.3.md`](./implementation/sql/sql-v0.3/README_sql-v0.3.md) |
 
 ---
@@ -116,3 +118,12 @@ Dernière mise à jour intégrée : **v0.3 – sauvegarde complète, validation 
 - Packaging versionnée (`sql-v1/`, `TifosiDB.zip`…)
 
 ---
+
+## 🔗 Navigation complémentaire
+
+- [`README.md`](../README.md) : présentation générale du dépôt
+- [`README_plan.md`](./process/README_plan.md) : jalons et contenu des issues
+- [`README_process.md`](./process/README_process.md) : méthode de travail
+- [`CHANGELOG.md`](../CHANGELOG.md) : livraisons versionnées et évolutions
+- [`README_implementation.md`](./implementation/README_implementation.md) : développements et réalisations
+- [`MPD-v0.3_tifosi.md`](./implementation/sql/sql-v0.3/MPD-v0.3_tifosi.md) : structure physique documentée de la base réelle (`v0.3`)

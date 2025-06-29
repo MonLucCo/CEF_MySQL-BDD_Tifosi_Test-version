@@ -1,16 +1,17 @@
-# 📎 Documentation README_plan.md – Planification opérationnelle du projet
+# 📎 Documentation README_plan.md – Planification opérationnelle du projet — version documentaire finale (milestone v0.4)
 
 Ce document rassemble l’ensemble des issues planifiées pour le projet **Tifosi**.  
 Elles sont regroupées par **jalon (milestone)**, chacune décrite par son objectif, son label principal, sa branche et son état d’avancement.
 
 ---
 
-- [📎 Documentation README\_plan.md – Planification opérationnelle du projet](#-documentation-readme_planmd--planification-opérationnelle-du-projet)
+- [📎 Documentation README\_plan.md – Planification opérationnelle du projet — version documentaire finale (milestone v0.4)](#-documentation-readme_planmd--planification-opérationnelle-du-projet--version-documentaire-finale-milestone-v04)
   - [🎯 Objectif du document](#-objectif-du-document)
-  - [🧩 Organisation des tâches](#-organisation-des-tâches)
+  - [🧩 Organisation par jalon (milestone)](#-organisation-par-jalon-milestone)
     - [🚩 Milestone `v0.1 – Structuration`](#-milestone-v01--structuration)
     - [🚩 Milestone `v0.2 – Modélisation & base`](#-milestone-v02--modélisation--base)
     - [🚩 Milestone `v0.3 – Requêtes & livraison`](#-milestone-v03--requêtes--livraison)
+    - [🚩 Milestone `v0.4 – Harmonisation documentaire`](#-milestone-v04--harmonisation-documentaire)
     - [🚩 Milestone `v1.0 – Version finale`](#-milestone-v10--version-finale)
   - [🧰 Contenu attendu par issue](#-contenu-attendu-par-issue)
   - [✍️ Auteur](#️-auteur)
@@ -25,7 +26,7 @@ Elles sont regroupées par **jalon (milestone)**, chacune décrite par son objec
 
 ---
 
-## 🧩 Organisation des tâches
+## 🧩 Organisation par jalon (milestone)
 
 ### 🚩 Milestone `v0.1 – Structuration`
 
@@ -58,10 +59,10 @@ Elles sont regroupées par **jalon (milestone)**, chacune décrite par son objec
 
 |Issue|Titre | Label principal | Branche prévue | État |
 |-|-|-|-|-|
-| #2 | Mise au point de l’environnement | `Tifosi-SQL` | `MonLucCo/issue2` | ✔️ terminée |
-| #3 | Modélisation MCD et MLD | `Tifosi-Modélisation` | `MonLucCo/issue3`| ⬜ à venir |
-| #4 | Création de la base SQL + utilisateur | `Tifosi-SQL` | `MonLucCo/issue4` | ⬜ à venir |
-| #5 | Insertion des données | `Tifosi-Import` | `MonLucCo/issue5` | ⬜ à venir |
+| #3 | Mise au point de l’environnement | `Tifosi-SQL` | `MonLucCo/issue2` | ✔️ terminée |
+| #4 | Modélisation MCD et MLD | `Tifosi-Modélisation` | `MonLucCo/issue3`| ✔️ terminée |
+| #5 | Création de la base SQL + utilisateur | `Tifosi-SQL` | `MonLucCo/issue4` | ✔️ terminée |
+| #6 | Insertion des données | `Tifosi-Import` | `MonLucCo/issue5` | ✔️ terminée |
 
 ---
 
@@ -78,7 +79,27 @@ Elles sont regroupées par **jalon (milestone)**, chacune décrite par son objec
 
 | Issue | Titre | Label principal | Branche prévue | État |
 |-|-|-|-|-|
-| #6 |Requêtes de test + sauvegarde + documentation|`Tifosi-Livrable`|`MonLucCo/issue6`| ⬜ à venir |
+| #7 |Requêtes de test + sauvegarde + documentation|`Tifosi-Livrable`|`MonLucCo/issue6`| ✔️ terminée |
+
+---
+
+### 🚩 Milestone `v0.4 – Harmonisation documentaire`
+
+> **Description :**  
+> Finalisation transversale des documents `README*` et fichiers d’historique (`CHANGELOG`, `HISTORIQUE_*`).  
+> Intégration des révisions finales post-livraison `MPD-SQL v0.3` avant packaging et release.
+>
+> Phase intermédiaire assurant la cohérence documentaire avant release v1.0.
+>
+> **Livrables attendus :**
+>
+> - Harmonisation des fichiers `README.md`, `README_docs.md`, `README_sql.md`, etc.  
+> - Gel des historiques : `HISTORIQUE_sql.md`, `CHANGELOG.md`  
+> - Préparation des fichiers en vue du packaging `v1.0`
+
+| Issue | Titre | Label principal | Branche prévue | État |
+|-|-|-|-|-|
+| #11 | Harmonisation documentaire & historiques | `Tifosi-Docs` | `MonLucCo/issue11` | 🔄 en cours |
 
 ---
 
@@ -94,7 +115,7 @@ Elles sont regroupées par **jalon (milestone)**, chacune décrite par son objec
 
 | Issue | Titre | Label principal | Branche prévue | État |
 |-|-|-|-|-|
-| #7    | Préparation de la livraison | `Tifosi-Clôture`      | `MonLucCo/issue7`     | ⬜ à venir |
+| #8    | Préparation de la livraison | `Tifosi-Clôture`      | `MonLucCo/issue7`     | ⬜ à venir |
 
 ---
 
@@ -108,12 +129,13 @@ Chaque issue donne lieu à :
 | Issue | Tâches principales | Livrable attendu |
 |-|-|-|
 | #1 | Structuration, planification, Kanban, documentation de méthode | `README_process.md`, `README_building.md`, `README_plan.md`, labels, Kanban |
-| #2 | Installation WAMP/XAMPP, accès phpMyAdmin, création base `tifosi` vide | Export de la base vide (`create_tifosi.sql`) |
-| #3 | Reproduction du MCD fourni + élaboration MLD | Fichier `.drawio` ou image du MCD, script `mld.sql` si applicable |
-| #4 | Écriture du script SQL avec tables + utilisateur | `create_tifosi.sql`, création utilisateur `tifosi` |
-| #5 | Exploitation des données Excel + insertion | `insert_data.sql` prêt à charger les données |
-| #6 | Requêtes SQL de test + sauvegarde de la BDD | `requetes_tests.sql`, `backup_tifosi.sql` |
-| #7 | Vérification finale, clean des fichiers, publication de la release | README finaux, tag v1.0.0, export compressé si besoin |
+| #3 | Installation WAMP/XAMPP, accès phpMyAdmin, création base `tifosi` vide | Export de la base vide (`create_tifosi.sql`) |
+| #4 | Reproduction du MCD fourni + élaboration MLD | Fichier `.drawio` ou image du MCD, script `mld.sql` si applicable |
+| #5 | Écriture du script SQL avec tables + utilisateur | `create_tifosi.sql`, création utilisateur `tifosi` |
+| #6 | Exploitation des données Excel + insertion | `insert_data.sql` prêt à charger les données |
+| #7 | Requêtes SQL de test + sauvegarde de la BDD | `requetes_tests.sql`, `backup_tifosi.sql` |
+| #11 | Alignement documentaire et historiques | README, HISTORIQUE et CHANGELOG alignés sur les travaux réalisés |
+| #8 | Vérification finale, clean des fichiers, publication de la release | README finaux, tag v1.0.0, export compressé si besoin |
 
 ---
 
