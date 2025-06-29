@@ -224,7 +224,7 @@ Cela a conduit à un **chargement partiel des entités validées uniquement**.
     - `result-test-queries_v03-initial.txt`
     - `result-test-queries_v03-postRestoreBackup.txt`
 - **Documentation** :
-  - [`README_backup.md`](sql-v0.3/README_bakup.md) : procédure de sauvegarde/restauration
+  - [`README_backup.md`](sql-v0.3/README_backup.md) : procédure de sauvegarde/restauration
   - [`README_test-v0.3.md`](sql-v0.3/README_test-v0.3.md) : description détaillée des requêtes, objectifs métier et preuve de validation
   - [`README_sql-v0.3.md`](sql-v0.3/README_sql-v0.3.md) : vue synthétique de la version, fichiers et validation croisée
 
