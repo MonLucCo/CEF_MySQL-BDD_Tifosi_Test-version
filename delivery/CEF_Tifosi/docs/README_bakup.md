@@ -1,10 +1,10 @@
-# 💾 README_backup.md — Sauvegarde SQL `tifosi` v0.3
+# 💾 README_backup.md — Sauvegarde SQL `tifosi` v1.0
 
 Ce fichier documente la génération et l’utilisation de la sauvegarde complète `backup_tifosi.sql` — livrable technique du projet Tifosi.
 
 ---
 
-- [💾 README\_backup.md — Sauvegarde SQL `tifosi` v0.3](#-readme_backupmd--sauvegarde-sql-tifosi-v03)
+- [💾 README\_backup.md — Sauvegarde SQL `tifosi` v1.0](#-readme_backupmd--sauvegarde-sql-tifosi-v10)
   - [🎯 Objectif](#-objectif)
   - [🧪 Génération](#-génération)
   - [🔁 Restauration](#-restauration)
@@ -14,7 +14,7 @@ Ce fichier documente la génération et l’utilisation de la sauvegarde complè
 
 ## 🎯 Objectif
 
-Permettre la restauration complète et validée de la base de données `tifosi` dans sa version figée `v0.3`, incluant :
+Permettre la restauration complète et validée de la base de données `tifosi` dans sa version figée `v1.0`, incluant :
 
 - Structure de la base
 - Données de peuplement complètes
@@ -24,7 +24,7 @@ Permettre la restauration complète et validée de la base de données `tifosi` 
 
 ## 🧪 Génération
 
-La sauvegarde a été générée après validation complète des scripts `create_tifosi.sql`, `insert_data.sql` et `queries_test_v03.sql`.
+La sauvegarde a été générée après validation complète des scripts `create_tifosi.sql`, `insert_data.sql` et `queries_test.sql`.
 
 **Commande exécutée le 2025-06-30 :**
 
@@ -66,7 +66,7 @@ Mot de passe : `TifosiPwd_24` _(saisi lors de l’exécution)_
 La commande suivante a été exécutée avec succès :
 
 ```bash
-mysql -u tifosi -p tifosi < queries-test_v03.sql > result-queries-test_v03-postRestoreBackup.txt
+mysql -u tifosi -p tifosi < queries-test.sql > result-queries-test-postRestoreBackup.txt
 ```
 
 📎 Aucun écart détecté entre le fichier pré-backup et post-backup.  
