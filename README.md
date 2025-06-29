@@ -171,7 +171,6 @@ Alternative prévue pour une exécution **hors ligne**, sans Git ni GitHub :
 > ℹ️ L’exploitation via archive ZIP permet d’utiliser la base `tifosi`, mais **n’inclut qu’une partie de la documentation**.  
 > Pour accéder à l’ensemble des documents (modèles, historiques, README détaillés), consulter le [dépôt GitHub complet](https://github.com/MonLucCo/CEF_MySQL-BDD_Tifosi_Test-version).
 
-
 ---
 
 ## 💬 3- Contribution

@@ -5,8 +5,8 @@
 | Documentation          | Objectif                                                       |
 |------------------------|----------------------------------------------------------------|
 | `README_livraison.md`  | Présent document – Manuel d’emploi de la livraison            |
-| [`README_test`](../docs/README_test.md)     | Commandes SQL et tests manuels                        |
-| [`README_backup`](../docs/README_backup.md) | Procédures de sauvegarde et de restauration de la base |
+| [`README_test`](./docs/README_test.md)     | Commandes SQL et tests manuels                        |
+| [`README_backup`](./docs/README_backup.md) | Procédures de sauvegarde et de restauration de la base |
 
 ---
 
