@@ -58,3 +58,29 @@ modélisation relationnelle, schémas d’évolution, scripts SQL.
 - [`sql/`](./sql/) — Racine des scripts et historiques :
   - [`README_sql.md`](./sql/README_sql.md) : récapitulatif des versions SQL livrées
   - [`HISTORIQUE_sql.md`](./sql/HISTORIQUE_sql.md) : suivi de l’évolution technique de la base
+
+---
+
+---
+
+## 📐 Règle transversale de conception des champs "prix" ( FLOAT vs DECIMAL ou INT)
+
+> 🔎 Tous les champs correspondant à un **prix** (ex. : `prix_focaccia`, `prix_menu`) sont modélisés avec le type `DECIMAL` dès le niveau **MRLD**, puis repris sans modification dans le **MPD** avec la précision `DECIMAL(5,2)` et dans le **code SQL** final (`v0.3`).
+
+🎯 Objectif principal : garantir une précision exacte à 2 décimales (centimes), sans erreurs d’arrondi.
+
+Cette décision repose sur :
+
+- 🧾 **Contraintes comptables** : les prix doivent être représentés avec fiabilité pour des calculs (totaux, menus, commandes)
+- 🧠 **Recommandations MySQL** : `DECIMAL` est le type recommandé pour les montants monétaires fixes (vs `FLOAT`)
+- 🔄 **Cohérence documentaire** : ce choix est appliqué sans rupture dans :
+  - MRLD v2.0 (type logique `DECIMAL`)
+  - MPD v0.3 (précision fixée à `(5,2)`)
+  - Script `create_tifosi.sql` (livré en `v0.3`)
+
+ℹ️ Une alternative aurait été d’utiliser `INT` pour gérer les prix en centimes (ex. : stocker 5,95 € sous la forme `595`), mais cette option a été écartée pour :
+
+- ne pas alourdir les traitements applicatifs (conversion à l’affichage et lors des calculs),
+- préserver la lisibilité et la transparence du modèle métier.
+
+🧩 Cette règle de conception est transversale à toute la chaîne : elle exprime une contrainte métier explicite du domaine de la restauration.

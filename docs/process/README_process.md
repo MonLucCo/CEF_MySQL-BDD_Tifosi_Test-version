@@ -1,32 +1,33 @@
-# 📘 Documentation README_process.md – Cadre méthodologique global
+# 📘 README_process.md — Cadre méthodologique global
 
-Ce document formalise une démarche générique d’organisation et de suivi de projet Git/GitHub dans un contexte pédagogique (objectif initial) avec une adaptation possible à un contexte professionnel (finalité).
-Il fournit des conventions durables réutilisables pour tout projet structuré autour d’issues, de milestones, de branches et de livrables vérifiables.
+> 🧭 **Méthodologie appliquée dans ce projet** :
+> Planification par jalons (`v0.1` à `v1.0`), suivi rigoureux par `issue + branche + PR`, documentation versionnée, bonne pratique GitHub et livrables vérifiables.
 
 ---
 
-- [📘 Documentation README\_process.md – Cadre méthodologique global](#-documentation-readme_processmd--cadre-méthodologique-global)
+- [📘 README\_process.md — Cadre méthodologique global](#-readme_processmd--cadre-méthodologique-global)
   - [🎯 Objectif du document](#-objectif-du-document)
   - [🧩 Recommandations de la méthode](#-recommandations-de-la-méthode)
     - [🗂️ Architecture recommandée d’un dépôt](#️-architecture-recommandée-dun-dépôt)
     - [🚀 Logique de suivi recommandée](#-logique-de-suivi-recommandée)
     - [🏷️ Conventions de nommage](#️-conventions-de-nommage)
-  - [🔄 Déroulement de mise en oeuvre](#-déroulement-de-mise-en-oeuvre)
-    - [🧱 Phase d'amorçage](#-phase-damorçage)
-    - [🛠️ Première étape : organiser son projet](#️-première-étape--organiser-son-projet)
-    - [⚙️ Etape itérative : plan et développement](#️-etape-itérative--plan-et-développement)
-    - [🧾 Dernière étape itérative : clôture du projet](#-dernière-étape-itérative--clôture-du-projet)
-  - [💬 Remarques](#-remarques)
+  - [🔄 Déroulement de mise en œuvre](#-déroulement-de-mise-en-œuvre)
+    - [🧱 Phase d’amorçage](#-phase-damorçage)
+    - [🛠️ Structuration initiale du projet](#️-structuration-initiale-du-projet)
+    - [⚙️ Cycles successifs de travail](#️-cycles-successifs-de-travail)
+    - [🧾 Clôture documentaire](#-clôture-documentaire)
+  - [🗃 Statut du projet](#-statut-du-projet)
+  - [📎 Liens croisés](#-liens-croisés)
   - [✍️ Auteur](#️-auteur)
 
 ---
 
 ## 🎯 Objectif du document
 
-- Énoncer une méthode stable et transférable.
-- Définir les règles de structuration du dépôt (répertoires, fichiers, suivi).
-- Clarifier les principes de nommage, d’organisation des tâches et de livraison.
-- Capitaliser sur une méthodologie reproductible pour de futurs projets similaires.
+- Énoncer une méthode stable et transférable à d'autres projets
+- Définir une structure modulaire : répertoires, fichiers, logique de version
+- Clarifier les conventions de nommage et de pilotage GitHub
+- Capitaliser sur une méthode reproductible pour un travail autonome, structuré et traçable
 
 ---
 
@@ -35,116 +36,122 @@ Il fournit des conventions durables réutilisables pour tout projet structuré a
 ### 🗂️ Architecture recommandée d’un dépôt
 
 ```txt
-/          # racine avec README.md et LICENSE
+/                  # racine avec README.md, LICENSE
 │
-├── /docs/             # documentation du projet
-│   ├── readme_docs.md
-│   ├── /process/      # suivi et méthode projet
-│   │   ├── readme_process.md   # ce fichier – cadre méthodologique
-│   │   ├── readme_building.md  # Réalisation contextualisée
-│   │   └── issues_plan.md      # Liste et pilotage des issues
-│   └── /[...]/        # Notes techniques spécifiques
+├── /docs/         # documentation globale du projet
+│   ├── README_docs.md
+│   ├── /process/        # suivi de la méthode projet
+│   │   ├── README_process.md     # ce document
+│   │   ├── README_plan.md        # planification par jalons
+│   │   └── issues_plan.md        # planification détaillée par ticket (optionnel)
+│   └── /[modules]/       # mcd, mld, sql, etc.
 │
-├── /[thème de travail]/    # scripts SQL
-│   ├── readme_[thème de travail].md    # documentation des travaux  
-│   ├── ...                             # différents documents...  
+├── /sql/          # scripts SQL et livrables techniques
+│   ├── README_sql.md
+│   └── sql-v0.x/  # versions successives
 ```
 
 ### 🚀 Logique de suivi recommandée
 
-  • Suivi via GitHub Issues liées à des milestones
-  • Branche automatique par issue via Visual Studio Code
-  • Chaque issue mène à un livrable vérifiable dans le dépôt
-  • Documentation pilotée dans /docs/process/
+- Gestion via issues GitHub liées à des jalons `vX.X`
+- Branches thématiques issues des issues (créées automatiquement via VS Code)
+- Chaque PR correspond à une livraison traçable
+- Documentation pilotée depuis `/docs/process/`
+
+**Cycle schématique :**
+
+```txt
+Issue (#X) ➝ Création de branche ➝ Commits ➝ Push ➝ Pull Request ➝ Merge ➝ Issue close
+```
 
 ### 🏷️ Conventions de nommage
 
-| Élément | Convention |
-|---------|------------|
-| Branche | MonLucCo/issueXX-[description] |
-| Labels | Tifosi-<thème> |
-| Milestones | v0.1, v0.2, … jusqu’à v1.0 |
-| Releases Git | vX.Y.Z selon état fonctionnel du projet |
+| Élément      | Convention                   |
+|--------------|-------------------------------|
+| Branche      | MonLucCo/issueXX-[thème]     |
+| Labels       | Tifosi-[thème]               |
+| Jalons       | v0.1, v0.2 … v1.0            |
+| Nom de PR    | 📦 Issue #X – [sujet]         |
+| Commit final | `Fixes #X` ou `Closes #X`    |
 
 ---
 
-## 🔄 Déroulement de mise en oeuvre
+## 🔄 Déroulement de mise en œuvre
 
-### 🧱 Phase d'amorçage
+### 🧱 Phase d’amorçage
 
-**Commit `chore(init)` – Initialisation du dépôt** :
+**Commit initial `chore(init)`** :
 
-- Création des dossiers :
-
-  ```txt
-  /[thème de travail]
-  /docs
-  /docs/process
-  ```
-
-- Ajout des fichiers :
-  - `README.md` (présentation du projet)
-  - `LICENSE` (MIT)
-  - `[thème de travail]/readme_[thème de travail].md`
-  - `docs/readme_docs.md`
-  - `docs/process/readme_process.md` (ce fichier)
-- Dépôt initialisé sur la branche `main`
+- Arborescence minimale créée :
+  - `/docs/`, `/docs/process/`
+  - `README.md`, `LICENSE`, `README_docs.md`, `README_process.md`
+- Dépôt initialisé sur `main`
+- Ajout des premières issues (#1)
 
 ---
 
-### 🛠️ Première étape : organiser son projet
+### 🛠️ Structuration initiale du projet
 
-Création de l’**Issue n°1** :  
-🎯 _Organisation du projet — Kanban, issues du projet, documentation process_
+Issue #1 – Structuration documentaire et gestion du projet
 
 Objectifs :
 
-- Créer et structurer les issues du backlog
-- Mettre en place le tableau **GitHub Project** (Kanban)
-- Compléter ce fichier avec :
-  - le plan de jalons
-  - les conventions de branches / commits
-  - la structure des livrables
+- Mise en place du Kanban GitHub
+- Création du `README_process.md`, conventions et jalons
+- Définition des conventions internes (branches, commits, versionnement)
+- Planification globale par milestone via `README_plan.md`
 
 ---
 
-### ⚙️ Etape itérative : plan et développement
+### ⚙️ Cycles successifs de travail
 
-Ce projet suit une logique de branches + PR :
+Chaque milestone correspond à une livraison partielle :
 
-- `main` : branche stable et livrable
-- `feature/*` : branches thématiques pour chaque évolution
-- `docs/*` : branches spécifiques à la documentation
-- Versionnement manuel (`v0.1.0`, etc.) dans les fichiers `readme_*.md`
+- v0.1 → modèle de données (MCD / MRLD / MPD)
+- v0.2 → insertion et peuplement (`csv`, `insert_data.sql`)
+- v0.3 → tests métier, sauvegarde MySQL (`mysqldump`)
+- v0.4 → harmonisation documentaire (README*, historiques)
+- v1.0 → packaging et version pédagogique finale
 
----
+Chaque cycle suit :
 
-### 🧾 Dernière étape itérative : clôture du projet
-
-Réalisation de l’**Issue finale** :  
-🎯 _inalisation du projet — contrôle, livrables, archivages_
-
-Objectifs :
-
-- S’assurer que tous les livrables sont présents :
-  - différentes réalisations en version finale
-  - README finaux
-  - captures ou exports associés
-- Vérifier l’état du tableau Kanban (tout doit être “Terminé”)
-- Fermer toutes les issues
-- Marquer la dernière release (v1.0.0)
-- Archiver le dépôt ou produire une copie distante
+```txt
+branche ➝ commit ➝ README spécifique ➝ historique ➝ tests ➝ validation finale
+```
 
 ---
 
-## 💬 Remarques
+### 🧾 Clôture documentaire
 
-Ce cadre peut être appliqué à d’autres projets de bases de données, de développement ou de documentation. Il constitue une référence pour stabiliser les pratiques de travail en mode projet.
+Livraison finale = toutes les issues et PR fermées, avec :
+
+- Tous les `README_*.md` à jour
+- Les fichiers `CHANGELOG.md`, `HISTORIQUE_*.md` cohérents
+- Archive livrable complète : `/sql-v1/` (optionnel)
+- Documentation d'accompagnement “figée”
+
+---
+
+## 🗃 Statut du projet
+
+- 🟢 Méthode appliquée sur tout le projet Tifosi (`v0.1` → `v1.0`)
+- 🔒 Document figé en version documentaire finale (`v1.0`)
+- 🔗 Références croisées dans `README_plan.md` et `README_docs.md`
+
+---
+
+## 📎 Liens croisés
+
+- 📄 Planification par jalon : [`README_plan.md`](./README_plan.md)
+- 📘 Sommaire général documentaire : [`README_docs.md`](../README_docs.md)
+
+---
 
 ## ✍️ Auteur
 
-Projet conçu et documenté par **PerLucCo**
-📫 contac : [contact.perlucco@gmail.com](mailto:contact.perlucco@gmail.com)
-🧩 Contexte : Devoir N°10 – CEF, base de données Tifosi avec MySQL
+Projet conçu et structuré par **PerLucCo**  
+🎓 CEF – Devoir N°10 — base de données *Le Tifosi*
+
+📫 Contact : [contact.perlucco@gmail.com](mailto:contact.perlucco@gmail.com)
 
 ---
