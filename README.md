@@ -9,12 +9,12 @@
     - [🎯 1.1- Objectifs pédagogiques](#-11--objectifs-pédagogiques)
     - [🧱 1.2- Structure du dépôt](#-12--structure-du-dépôt)
   - [⚙️ 2- Installation \& exploitation](#️-2--installation--exploitation)
-    - [🔁 2.1- Cloner et exploiter le dépôt](#-21--cloner-et-exploiter-le-dépôt)
-    - [🛠️ 2.2- Pré-requis](#️-22--pré-requis)
-    - [📦 2.3- Exploitation du devoir](#-23--exploitation-du-devoir)
+    - [🛠️ 2.1- Pré-requis techniques](#️-21--pré-requis-techniques)
+    - [📦 2.2- Exploitation directe depuis le dépôt GitHub (dossier `delivery/`)](#-22--exploitation-directe-depuis-le-dépôt-github-dossier-delivery)
+    - [💾 2.3- Exploitation autonome hors GitHub (mode archive ZIP)](#-23--exploitation-autonome-hors-github-mode-archive-zip)
   - [💬 3- Contribution](#-3--contribution)
   - [📊 4- État du projet](#-4--état-du-projet)
-    - [4.1- Avancement du projet](#41--avancement-du-projet)
+    - [4.1- Finalisation de la livraison](#41--finalisation-de-la-livraison)
     - [4.2- Suivi des évolutions](#42--suivi-des-évolutions)
   - [📄 5- Licence](#-5--licence)
   - [🙏 Remerciements](#-remerciements)
@@ -62,6 +62,7 @@ Vous pouvez naviguer directement dans les documents du projet depuis cette arbor
 > - [LICENCE](./LICENSE) — Licence MIT
 > - [CHANGELOG.md](CHANGELOG.md) — Journal de version
 > - 📁 [`docs/`](docs/) — Documentation complète du projet
+> - 📁 [`delivery/`](delivery/) — Livrables d’exploitation et version packagée
 
 <details>
 <summary>📁 docs/ — Dossiers documentaires</summary>
@@ -103,33 +104,73 @@ Vous pouvez naviguer directement dans les documents du projet depuis cette arbor
 
 </details>
 
+<details>
+<summary>📁 delivery/ — Livrables d’exploitation et version packagée</summary>
+
+> - [`ZIP_Tifosi.zip`](./delivery/ZIP_Tifosi.zip) — Archive complète pour exécution hors ligne (ZIP à extraire)
+> - 📁 [`CEF_Tifosi/`](./delivery/CEF_Tifosi/) — Répertoire d'exploitation locale autonome (mode manuel)
+
+<details>
+<summary>&nbsp;&nbsp;&nbsp;📁 CEF_Tifosi/ Exploitation locale autonome (mode manuel)</summary>
+
+>> - [`README_livraison.md`](./delivery/README_livraison.md) — Guide de mise en place de la base `tifosi`  
+>> - [`import_tifosi.sql`](./delivery/import_tifosi.sql) — Script SQL pour créer la structure de la base  
+>> - [`insert_data_tifosi.sql`](./delivery/insert_data_tifosi.sql) — Jeu de données de test  
+>> - [`backup_tifosi.sql`](./delivery/backup_tifosi.sql) — Dump SQL complet (`mysqldump`)  
+
+</details>
+
+</details>
+
 </details>
 
 ---
 
 ## ⚙️ 2- Installation & exploitation
 
-### 🔁 2.1- Cloner et exploiter le dépôt
+### 🛠️ 2.1- Pré-requis techniques
+
+- Système : **Windows recommandé**
+- Serveur : **MySQL Server 5.7+** (via WampServer, XAMPP ou MySQL natif)
+- Optionnel : MySQL Workbench, VS Code, Git
+
+---
+
+### 📦 2.2- Exploitation directe depuis le dépôt GitHub (dossier `delivery/`)
+
+Le dossier [`delivery/`](./delivery/) contient tous les fichiers nécessaires à la mise en place rapide de la base `tifosi` (structure, données, sauvegarde).
+
+👉 **Avant toute manipulation**, lire attentivement [`README_livraison.md`](./delivery/README_livraison.md) — ce document présente :
+
+- La création de la base via script `import_tifosi.sql`
+- Le peuplement avec les données de test `insert_data_tifosi.sql`
+- La restauration à partir du dump `backup_tifosi.sql`
+- L’identification des utilisateurs MySQL associés (optionnel)
+
+💡 Cloner le projet pour accéder au dossier `delivery/` :
 
 ```bash
 git clone https://github.com/MonLucCo/CEF_MySQL-BDD_Tifosi_Test-version.git
 cd CEF_MySQL-BDD_Tifosi_Test-version
 ```
 
-### 🛠️ 2.2- Pré-requis
+---
 
-- **Windows**
-- **WampServer** avec MySQL Server 5.7+ (ou MySQL Community Server)
-- **MySQL Workbench** (facultatif mais recommandé)
-- **Git** et/ou **Visual Studio Code** pour le suivi
+### 💾 2.3- Exploitation autonome hors GitHub (mode archive ZIP)
 
-### 📦 2.3- Exploitation du devoir
+Alternative prévue pour une exécution **hors ligne**, sans Git ni GitHub :
 
-1. Exécuter `/sql/sql-v0.3/create_tifosi.sql` pour créer la base de données
-2. Charger les données depuis `/sql/sql-v0.3/insert_data.sql`
-3. Tester les requêtes via `/sql/sql-v0.3/queries-test_v03.sql`
-4. Générer le backup avec `/sql/sql-v0.3/backup_tifosi.sql`
-5. Consulter les documents associés dans `/docs/implementation/sql/sql-v0.3/`
+1. Télécharger le projet en ZIP depuis GitHub (“Code” > “Download ZIP”)  
+2. Extraire le contenu dans un dossier local
+3. Ouvrir le dossier `/delivery/` :
+   - Lancer `import_tifosi.sql` pour créer la structure
+   - Lancer `insert_data_tifosi.sql` pour insérer les données tests
+   - (optionnel) Tester la restauration via `backup_tifosi.sql`
+4. Suivre les instructions détaillées dans `README_livraison.md` inclus dans le dossier `delivery/`
+
+> ℹ️ L’exploitation via archive ZIP permet d’utiliser la base `tifosi`, mais **n’inclut qu’une partie de la documentation**.  
+> Pour accéder à l’ensemble des documents (modèles, historiques, README détaillés), consulter le [dépôt GitHub complet](https://github.com/MonLucCo/CEF_MySQL-BDD_Tifosi_Test-version).
+
 
 ---
 
@@ -142,15 +183,19 @@ Les issues sont utilisées comme outil de suivi projet personnel.
 
 ## 📊 4- État du projet
 
-> 🔒 **Version stable actuelle** : `v0.3` — livrée, testée, sauvegardée
+> 🔒 **Version stable livrée** : `v1.0.0` — scripts validés, base testée, documentation consolidée
 
-### 4.1- Avancement du projet
+### 4.1- Finalisation de la livraison
 
-> 🟢 **Projet en cours de réalisation**  
-> Ce dépôt évolue par étapes avec des commits itératifs documentés dans un GitHub Project (kanban).
+Cette version `v1.0.0` correspond à la livraison finale du devoir CEF :
 
-Pour suivre l’avancement et la roadmap :
-👉 [Tableau de projet GitHub associé](https://github.com/users/MonLucCo/projects/3/views/1?layout=board)
+- 🎯 Base `tifosi` créée, peuplée et sauvegardée
+- 📘 Documentation complète intégrée dans [`docs/`](./docs/)
+- 🧾 Journal de suivi et d’évolution dans les fichiers `HISTORIQUE_*`
+- 📦 Dossier [`delivery/`](./delivery/) disponible pour exploitation directe ou par fichier ZIP
+- 🔐 Milestone [`v1.0 – Version finale`](https://github.com/MonLucCo/CEF_MySQL-BDD_Tifosi_Test-version/milestone/5) clôturée avec succès
+
+➡️ Le projet est désormais figé et archivé. Aucune évolution fonctionnelle supplémentaire n’est prévue.
 
 ### 4.2- Suivi des évolutions
 

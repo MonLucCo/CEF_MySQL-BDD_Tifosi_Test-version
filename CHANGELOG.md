@@ -29,12 +29,11 @@ Versionnage selon [Semantic Versioning](https://semver.org/lang/fr/).
       - [🗄️ Étape 2 : Sauvegarde complète SQL (`backup_tifosi.sql`)](#️-étape-2--sauvegarde-complète-sql-backup_tifosisql)
       - [🔁 Étape 3 : Validation post-restauration](#-étape-3--validation-post-restauration)
       - [📚 Étape 4 : Documentation finale de la version SQL](#-étape-4--documentation-finale-de-la-version-sql)
-  - [📘 Milestone v0.4 - 2025-06-XX — Documentation finale](#-milestone-v04---2025-06-xx--documentation-finale)
-    - [🧭 Phase \[Undefined\] - v0.4](#-phase-undefined---v04)
-      - [🚧 \[Unreleased\] \[Phase X - v0.4\]](#-unreleased-phase-x---v04)
-  - [📦 Milestone \[v1.0\] – 2025-06-XX - Version finale](#-milestone-v10--2025-06-xx---version-finale)
-    - [🧭 Phase \[Undefined\] - v1.0](#-phase-undefined---v10)
-      - [🚧 \[Unreleased\] \[Phase X - v1.0\]](#-unreleased-phase-x---v10)
+    - [📘 Milestone v0.4 — 2025-06-29 — Documentation consolidée](#-milestone-v04--2025-06-29--documentation-consolidée)
+      - [📚 Travaux réalisés](#-travaux-réalisés)
+    - [📦 Milestone v1.0 — 2025-06-30 — Livraison finale stable](#-milestone-v10--2025-06-30--livraison-finale-stable)
+      - [📦 Livraison technique](#-livraison-technique)
+      - [📚 Documentation utilisateur](#-documentation-utilisateur)
 
 ---
 
@@ -265,36 +264,48 @@ Versionnage selon [Semantic Versioning](https://semver.org/lang/fr/).
 
 ---
 
-## 📘 Milestone v0.4 - 2025-06-XX — Documentation finale
+### 📘 Milestone v0.4 — 2025-06-29 — Documentation consolidée
 
-### 🧭 Phase [Undefined] - v0.4
+🎯 Version de stabilisation documentaire, sans modification structurelle SQL.  
+Objectif : assurer la traçabilité complète entre la base réelle (`v0.3`) et les documents techniques de référence.
 
-#### 🚧 [Unreleased] [Phase X - v0.4]
+#### 📚 Travaux réalisés
 
-- Intégration de tous les fichiers `README.md` dans `/docs`
-- Compléments aux fichiers :
-  - `README_docs.md` (sommaire global)
-  - `mrld-historique.md`, `sql-historique.md`
-  - `CHANGELOG.md` finalisé jusqu’à v1.0
-- Ajout d’une vue de synthèse (organigramme, image recap, etc.)
-- Structuration pour évaluation pédagogique
+- **Ajout du modèle physique documenté** : `MPD-v0.3_tifosi.md`  
+  ↳ Description de la base réelle à partir du script `create_tifosi.sql`
+- **Formalisation de la règle de typage** :  
+  ↳ Justification du champ `prix` en `DECIMAL(5,2)` dans `README_implementation.md`
+- **Harmonisation croisée des documents** :
+  - Ajout des liens entre `README_docs.md`, `README_sql.md`, `README_sql-v0.3.md`, `README_implementation.md`
+  - Regroupement des références techniques en fin de fichiers
+- **Consolidation finale** dans : `README_docs.md`, avec mise à jour des sections de version et de navigation
+
+📌 Issue liée : [#11 — Documentation unifiée](https://github.com/MonLucCo/CEF_MySQL-BDD_Tifosi_Test-version/issues/11)  
+📁 Dossiers concernés : `/docs/implementation/sql/sql-v0.3/`, `/docs/`, `/sql/`
 
 ---
 
-## 📦 Milestone [v1.0] – 2025-06-XX - Version finale
+### 📦 Milestone v1.0 — 2025-06-30 — Livraison finale stable
 
-### 🧭 Phase [Undefined] - v1.0
+🚀 Finalisation du projet Tifosi — **version stable, livrable, et prête à être évaluée**
 
-#### 🚧 [Unreleased] [Phase X - v1.0]
+#### 📦 Livraison technique
 
-🎉 Version stable de la base Tifosi – **fonctionnelle, testée, documentée**
+- Création du dossier [`delivery/`](./delivery/) :  
+  ↳ fichiers `.sql` pour création, insertion, sauvegarde, et un guide `README_livraison.md`
+- Fourniture de deux supports d’exploitation :
+  - [`CEF_Tifosi/`](./delivery/CEF_Tifosi/) : répertoire à extraire pour usage manuel
+  - [`ZIP_Tifosi.zip`](./delivery/ZIP_Tifosi.zip) : archive prête à l’emploi
 
-- MCD vérifié et cohérent
-- MRLD et MPD complets, export SQL disponible
-- Jeu d’essai inséré et testé
-- Documentation livrée avec historique et lecture métier
-- Arborescence claire du dépôt (`docs`, `sql`, `sources`, `README`)
+#### 📚 Documentation utilisateur
 
-📦 Prêt pour déploiement local ou intégration dans une future application PHP/MySQL
+- **Ajout des sections 2.3 et 2.4** dans `README.md` :  
+  ↳ Exploitation directe depuis le dépôt ou en local hors ligne
+- **Bloc de navigation complet** pour `delivery/` via `<details>`
+- **État du projet (section 4)** mis à jour avec référence à la milestone `v1.0`
+- **Mise à jour du `CHANGELOG.md`** pour clore l’historique du projet
+
+📌 Issue liée : [#8 — Préparation de la livraison finale](https://github.com/MonLucCo/CEF_MySQL-BDD_Tifosi_Test-version/issues/8)  
+🔐 Milestone clôturée : `v1.0`
 
 ---

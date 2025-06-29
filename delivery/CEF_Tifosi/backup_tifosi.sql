@@ -1,10 +1,9 @@
 -- =========================================================================
---  🔐 Sauvegarde SQL complète — Projet Tifosi v0.3
+--  🔐 Sauvegarde SQL complète — Projet Tifosi v1.0
 --  📅 Date de génération : 2025-06-29
 --  👤 Utilisateur : tifosi (dump local avec privilèges limités)
 --  💾 Commande utilisée :
 --     mysqldump --no-tablespaces -u tifosi -p tifosi > backup_tifosi.sql
---  📂 Fichier généré dans : /docs/implementation/sql/sql-v0.3/
 -- =========================================================================
 
 -- MariaDB dump 10.19  Distrib 10.10.3-MariaDB, for Win64 (AMD64)

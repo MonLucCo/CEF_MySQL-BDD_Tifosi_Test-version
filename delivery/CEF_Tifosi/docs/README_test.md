@@ -1,10 +1,10 @@
-# 🧪 README_test-v0.3.md — Requêtes de validation `tifosi` v0.3
+# 🧪 README_test.md — Requêtes de validation `tifosi` v1.0
 
-Ce fichier documente les requêtes métier et techniques de test utilisées pour valider la base `tifosi` dans sa version finale `v0.3`.
+Ce fichier documente les requêtes métier et techniques de test utilisées pour valider la base `tifosi` dans sa version finale.
 
 ---
 
-- [🧪 README\_test-v0.3.md — Requêtes de validation `tifosi` v0.3](#-readme_test-v03md--requêtes-de-validation-tifosi-v03)
+- [🧪 README\_test.md — Requêtes de validation `tifosi` v1.0](#-readme_testmd--requêtes-de-validation-tifosi-v10)
   - [🎯 Objectifs des requêtes](#-objectifs-des-requêtes)
   - [📂 Fichier principal](#-fichier-principal)
   - [🔍 Typologie des requêtes](#-typologie-des-requêtes)
@@ -27,7 +27,7 @@ Ce fichier documente les requêtes métier et techniques de test utilisées pour
 
 ## 📂 Fichier principal
 
-- `queries-test_v03.sql` : script SQL contenant une série de requêtes, commentées et structurées par bloc
+- `queries-test.sql` : script SQL contenant une série de requêtes, commentées et structurées par bloc
 
 Chaque requête est :
 
@@ -51,7 +51,7 @@ Chaque requête est :
 
 ## 📎 Résultat attendu
 
-Deux fichiers `.txt` produits à partir de l’exécution de `queries-test_v03.sql` :
+Deux fichiers `.txt` produits à partir de l’exécution de `queries-test.sql` :
 
 ### 1️⃣ Avant génération du backup
 
@@ -65,7 +65,7 @@ mysql -u tifosi -p < insert_data.sql
 Exécuté après la création et l’initialisation de la base pour tester la validité fonctionnelle :
 
 ```bash
-mysql -u tifosi -p tifosi < queries-test_v03.sql > result-queries-test_v03-initial.txt
+mysql -u tifosi -p tifosi < queries-test.sql > result-queries-test.txt
 ```
 
 Exécuté pour sauvegarder la base chargée de données, puis insertion d'un en-tête de singularisation de la sauvegarde
@@ -83,7 +83,7 @@ En-tête type inséré directement par éditeur dans le fichier de sauvegarde `b
 --  👤 Utilisateur : tifosi (dump local avec privilèges limités)
 --  💾 Commande utilisée :
 --     mysqldump --no-tablespaces -u tifosi -p tifosi > backup_tifosi.sql
---  📂 Fichier généré dans : /docs/implementation/sql/sql-v0.3/
+--  📂 Fichier généré dans : ...
 -- =========================================================================
 ```
 
@@ -97,7 +97,7 @@ Procédure complète :
 mysql -u tifosi -p -e "DROP DATABASE tifosi"
 mysql -u tifosi -p -e "CREATE DATABASE tifosi DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci"
 mysql -u tifosi -p tifosi < backup_tifosi.sql
-mysql -u tifosi -p tifosi < queries-test_v03.sql > result-queries-test_v03-postRestoreBackup.txt
+mysql -u tifosi -p tifosi < queries_test.sql > result-queries-test-postRestoreBackup.txt
 ```
 
 ➡️ Le fichier obtenu (`postRestoreBackup`) est **strictement identique** à la version initiale, validant la reproductibilité de la base.
