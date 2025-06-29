@@ -1,5 +1,5 @@
--- 🧪 queries-test_v021.sql — Tests de validation de la base tifosi
--- Version : v0.2.1 — Issue #6.1
+-- 🧪 queries-test.sql — Tests de validation de la base tifosi
+-- Version : MPD v0.3 — Issue #8
 -- Auteur : PerLucCo
 -- Objectif : Reproduction des tableaux du fichier DATAS-TESTING.md
 
