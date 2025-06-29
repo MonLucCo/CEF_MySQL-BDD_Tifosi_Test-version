@@ -1,6 +1,6 @@
--- 🧱 Script create_tifosi.sql — Version MPD v0.2.1
+-- 🧱 Script create_tifosi.sql — Version MPD v0.3
 -- Auteur : PerLucCo
--- Date : 2025-06-27
+-- Date : 2025-06-29
 
 -- ⚠️ Réinitialisation de la base et de l'utilisateur
 DROP DATABASE IF EXISTS tifosi;

@@ -1,7 +1,7 @@
 -- 🧪 insert_data.sql — Chargement partiel (marques, ingredients)
--- Version : v0.2.1
+-- Version : MPD v0.3
 -- Auteur : PerLucCo
--- Date : 2025-06-27
+-- Date : 2025-06-29
 -- Source du script : /docs/implementation/sql/sql-v0.2/versions/sql-v0.2.1
 -- Source des données : fichiers .csv exportés depuis /docs/implementation/sql/sql-v0.2/versions/sql-v0.2.1/datas-csv/
 -- Utilisateur : tifosi
